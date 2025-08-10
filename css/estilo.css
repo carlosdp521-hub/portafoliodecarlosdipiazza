@@ -1,0 +1,347 @@
+/* ========= RESET Y VARIABLES ========= */
+:root {
+    --primary: #00d4ff;
+    --secondary: #ff00d4;
+    --card: #1c1c1c;
+    --radius: 12px;
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ========= NAVBAR ========= */
+.navbar {
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+}
+
+.nav-logo {
+    color: var(--primary);
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+/* Botón hamburguesa solo visible en móviles */
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ======= RESPONSIVE NAV ======= */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #000;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        display: none;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+}
+
+/* ========= HEADER ========= */
+header {
+    position: relative;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+}
+
+.logo-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.header-content h2 {
+    font-weight: 400;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.header-content p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #ccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background var(--transition);
+}
+
+.btn:hover {
+    background: var(--secondary);
+}
+
+/* ========= CENTRADO DE SECCIONES ========= */
+#proyectos,
+#sobre-mi,
+#contacto {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========= GALERÍA ========= */
+.gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.gallery-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    flex: 0 0 calc(33.333% - 2rem);
+    min-width: 280px;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
+
+.image-container {
+    position: relative;
+}
+
+.gallery-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity var(--transition);
+    padding: 1rem;
+}
+
+.overlay p {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item h3 {
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.gallery-prev, .gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+    border-radius: var(--radius);
+    transition: background var(--transition);
+}
+
+.gallery-prev:hover, .gallery-next:hover {
+    background: var(--primary);
+    color: #111;
+}
+
+.gallery-prev {
+    left: 0.5rem;
+}
+
+.gallery-next {
+    right: 0.5rem;
+}
+
+/* ========= SOBRE MÍ ========= */
+#sobre-mi {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    align-items: start;
+    justify-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.about-text h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.about-extra {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--secondary);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: #111;
+}
+
+/* ========= CONTACTO ========= */
+#contacto {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+#contacto h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+input, textarea {
+    padding: 0.6rem;
+    border-radius: var(--radius);
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ========= FOOTER ========= */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #000;
+    color: #888;
+}
