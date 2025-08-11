@@ -103,3 +103,22 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link) {
         }
     });
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();  // Evita el comportamiento por defecto del enlace
+
+        const targetId = this.getAttribute('href').substring(1); // Obtiene el ID al que apunta el enlace
+
+        // Usamos pushState para actualizar la URL sin recargar la página
+        window.history.pushState(null, null, `/${targetId}`);
+
+        // Desplazamos a la sección correspondiente
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });  // Realiza el desplazamiento con suavidad
+        }
+    });
+});
+
+
