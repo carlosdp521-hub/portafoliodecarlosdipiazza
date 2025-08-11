@@ -79,46 +79,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-});
+    /* ===========================
+       NAVEGACIÓN SUAVE Y CAMBIO DE URL
+    ============================ */
+    const links = document.querySelectorAll('a[href^="#"]');
 
-document.getElementById('mi-enlace').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.history.pushState(null, null, '/portafoliodecarlosdipiazza/sobre-mi');
-    // Aquí podrías agregar lógica para mostrar la sección sin hacer scroll
-});
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();  // Evita el comportamiento por defecto del enlace
 
-document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();  // Evita el comportamiento por defecto del enlace
+            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID al que apunta el enlace
 
-        const targetId = this.getAttribute('href').substring(1); // Obtiene el ID al que apunta el enlace
+            // Usamos pushState para actualizar la URL sin recargar la página
+            window.history.pushState(null, null, `/${targetId}`);
 
-        // Usamos pushState para actualizar la URL sin recargar la página
-        window.history.pushState(null, null, `/${targetId}`);
-
-        // Desplazamos a la sección correspondiente
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });  // Realiza el desplazamiento con suavidad
-        }
+            // Desplazamos a la sección correspondiente
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });  // Realiza el desplazamiento con suavidad
+            }
+        });
     });
+
 });
-
-document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();  // Evita el comportamiento por defecto del enlace
-
-        const targetId = this.getAttribute('href').substring(1); // Obtiene el ID al que apunta el enlace
-
-        // Usamos pushState para actualizar la URL sin recargar la página
-        window.history.pushState(null, null, `/${targetId}`);
-
-        // Desplazamos a la sección correspondiente
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });  // Realiza el desplazamiento con suavidad
-        }
-    });
-});
-
-
