@@ -80,3 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+document.getElementById('mi-enlace').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.history.pushState(null, null, '/portafoliodecarlosdipiazza/sobre-mi');
+    // Aquí podrías agregar lógica para mostrar la sección sin hacer scroll
+});
