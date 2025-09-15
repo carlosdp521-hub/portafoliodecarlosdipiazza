@@ -296,42 +296,7 @@ section {
     border-radius: var(--radius);
 }
 
-/* ========= CONTACTO ========= */
-#contacto {
-    text-align: center;
-}
-
-#contacto h2 {
-    margin-bottom: 1rem;
-    color: var(--primary);
-}
-
-form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin: 0.5rem 0 0.2rem;
-}
-
-input,
-textarea {
-    padding: 0.6rem;
-    border-radius: var(--radius);
-    border: none;
-    outline: none;
-    margin-bottom: 1rem;
-    font-family: inherit;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
+/* Sección Contacto */
 .contacto {
   background: #f5f5f5;
   padding: 60px 20px;
@@ -457,5 +422,6 @@ footer {
 }
 
 /* Pantallas muy pequeñas
+
 
 
