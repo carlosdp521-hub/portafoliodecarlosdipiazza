@@ -1,3 +1,14 @@
+document.querySelector(".contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
+    .then(() => {
+      alert("✅ Mensaje enviado con éxito!");
+      this.reset();
+    }, (error) => {
+      alert("❌ Error al enviar: " + JSON.stringify(error));
+    });
+});
 /* ==========================
    NAVBAR TOGGLE (Responsive)
 ========================== */
@@ -57,3 +68,4 @@ const appearOnScroll = new IntersectionObserver(
 fadeElements.forEach(el => {
   appearOnScroll.observe(el);
 });
+
