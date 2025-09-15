@@ -1,31 +1,47 @@
-// Detectar preferencia del sistema
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+// NAVBAR TOGGLE
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+if(navToggle){
+  navToggle.addEventListener("click",()=>{ navMenu.classList.toggle("active"); });
+}
+document.querySelectorAll(".nav-link").forEach(link=>{
+  link.addEventListener("click",()=>{ navMenu.classList.remove("active"); });
+});
 
-function applyTheme(theme) {
-  document.body.classList.remove("dark-theme", "light-theme");
+// SCROLL SUAVE
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener("click",function(e){
+    const target=document.getElementById(this.getAttribute("href").substring(1));
+    if(target){ e.preventDefault(); window.scrollTo({ top:target.offsetTop-60, behavior:"smooth" }); }
+  });
+});
+
+// ANIMACIONES SCROLL
+const fadeElements=document.querySelectorAll(".fade-in");
+const appearOnScroll=new IntersectionObserver((entries,observer)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){ entry.target.classList.add("visible"); observer.unobserve(entry.target);}
+  });
+},{ threshold:0.2 });
+fadeElements.forEach(el=>appearOnScroll.observe(el));
+
+// EMAILJS
+document.querySelector(".contact-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  emailjs.sendForm("TU_SERVICE_ID","TU_TEMPLATE_ID",this)
+  .then(()=>{ alert("✅ Mensaje enviado con éxito!"); this.reset(); },
+  (error)=>{ alert("❌ Error al enviar: "+JSON.stringify(error)); });
+});
+
+// MODO OSCURO
+const themeBtn=document.getElementById("theme-toggle");
+const prefersDarkScheme=window.matchMedia("(prefers-color-scheme: dark)");
+function applyTheme(theme){
+  document.body.classList.remove("dark-theme","light-theme");
   document.body.classList.add(theme);
 }
-
-// Aplicar según preferencia inicial
-applyTheme(prefersDarkScheme.matches ? "dark-theme" : "light-theme");
-
-// Función para alternar
-function toggleTheme() {
-  if (document.body.classList.contains("dark-theme")) {
-    applyTheme("light-theme");
-  } else {
-    applyTheme("dark-theme");
-  }
-}
-
-// Ejemplo: botón de alternar (agrega en navbar)
-const themeBtn = document.createElement("button");
-themeBtn.textContent = "🌙";
-themeBtn.className = "theme-toggle-btn";
-themeBtn.style.cssText = `
-position: fixed; bottom: 20px; right: 20px; 
-padding: 10px 15px; border: none; border-radius: 50%; 
-background: var(--btn-color); color:#121212; cursor:pointer; z-index:10000;
-`;
-document.body.appendChild(themeBtn);
-themeBtn.addEventListener("click", toggleTheme);
+applyTheme(prefersDarkScheme.matches?"dark-theme":"light-theme");
+themeBtn.addEventListener("click",()=>{
+  if(document.body.classList.contains("dark-theme")) applyTheme("light-theme");
+  else applyTheme("dark-theme");
+});
