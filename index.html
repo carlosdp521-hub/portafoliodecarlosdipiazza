@@ -44,9 +44,9 @@
     <section id="proyectos" aria-labelledby="titulo-proyectos">
       <h2 id="titulo-proyectos">Proyectos Destacados</h2>
       <p>Explora mi colección de trabajos que unen diseño, programación y experiencia de usuario.</p>
-      <div class="gallery-container">
+      <div class="gallery-container" id="gallery-container">
         <button class="gallery-prev" aria-label="Proyecto anterior">&#10094;</button>
-        <div class="gallery-grid">
+        <div class="gallery-grid" id="gallery-grid">
           <!-- Proyecto 1 -->
           <article class="gallery-item fade-in">
             <div class="image-container">
@@ -69,7 +69,50 @@
             </div>
             <h3>Gestor de Tareas</h3>
           </article>
-          <!-- Agrega más proyectos según necesites -->
+          <!-- Proyecto 3 -->
+          <article class="gallery-item fade-in">
+            <div class="image-container">
+              <img src="img/proyecto3.png" alt="Registro de Usuarios" class="gallery-img" loading="lazy">
+              <div class="overlay">
+                <p>Sistema de registro y login con validación de datos.</p>
+                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
+              </div>
+            </div>
+            <h3>Registro de Usuarios</h3>
+          </article>
+          <!-- Proyecto 4 -->
+          <article class="gallery-item fade-in">
+            <div class="image-container">
+              <img src="img/proyecto4.png" alt="Tienda Online" class="gallery-img" loading="lazy">
+              <div class="overlay">
+                <p>Desarrollo de una tienda online con carrito de compras y pasarela de pago.</p>
+                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
+              </div>
+            </div>
+            <h3>Tienda Online</h3>
+          </article>
+          <!-- Proyecto 5 -->
+          <article class="gallery-item fade-in">
+            <div class="image-container">
+              <img src="img/proyecto5.png" alt="Blog Personal" class="gallery-img" loading="lazy">
+              <div class="overlay">
+                <p>Blog personal con sistema de publicaciones y comentarios.</p>
+                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
+              </div>
+            </div>
+            <h3>Blog Personal</h3>
+          </article>
+          <!-- Proyecto 6 -->
+          <article class="gallery-item fade-in">
+            <div class="image-container">
+              <img src="img/proyecto6.png" alt="Dashboard Analítico" class="gallery-img" loading="lazy">
+              <div class="overlay">
+                <p>Dashboard interactivo con estadísticas en tiempo real.</p>
+                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
+              </div>
+            </div>
+            <h3>Dashboard Analítico</h3>
+          </article>
         </div>
         <button class="gallery-next" aria-label="Siguiente proyecto">&#10095;</button>
       </div>
@@ -104,14 +147,12 @@
       <h2>Contacto</h2>
       <p class="intro">¿Quieres ponerte en contacto conmigo? Escríbeme y te responderé lo antes posible.</p>
       <div class="contact-grid">
-        <!-- Información de contacto -->
         <div class="contact-info">
           <p>📧 <strong>Email:</strong> <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
           <p>🌐 <strong>GitHub:</strong> <a href="https://github.com/carlosdp521-hub" target="_blank">github.com/carlosdp521-hub</a></p>
           <p>💼 <strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/carlosdipiazza</a></p>
         </div>
 
-        <!-- Formulario de contacto -->
         <form class="contact-form">
           <input type="text" name="nombre" placeholder="Tu nombre" required>
           <input type="email" name="email" placeholder="Tu correo" required>
@@ -122,15 +163,12 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 Carlos Di Piazza. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- BOTÓN MODO OSCURO -->
   <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema">🌙</button>
 
-  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script src="js/script.js"></script>
 </body>
