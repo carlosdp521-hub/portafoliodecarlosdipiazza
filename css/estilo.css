@@ -1,3 +1,10 @@
+:root {
+  --background-color: #121212;
+  --text-color: #E0E0E0;
+  --link-color: #BB86FC;
+  --button-color: #03DAC6;
+}
+
 /* ==========================
    ESTILOS GENERALES
 ========================== */
@@ -427,3 +434,4 @@ footer p {
   opacity: 1;
   transform: translateY(0);
 }
+
