@@ -1,43 +1,59 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const galleryGrid = document.querySelector(".gallery-grid");
-    const prevBtn = document.querySelector(".gallery-prev");
-    const nextBtn = document.querySelector(".gallery-next");
+/* ==========================
+   NAVBAR TOGGLE (Responsive)
+========================== */
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
-    const scrollAmount = 300;
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+}
 
-    // Botones manuales
-    nextBtn.addEventListener("click", () => {
-        galleryGrid.scrollBy({ left: scrollAmount, behavior: "smooth" });
+/* ==========================
+   CERRAR MENÚ AL HACER CLIC
+========================== */
+document.querySelectorAll(".nav-link").forEach(link =>
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  })
+);
+
+/* ==========================
+   SCROLL SUAVE
+========================== */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href").substring(1);
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({
+        top: target.offsetTop - 60, // ajuste para navbar fija
+        behavior: "smooth"
+      });
+    }
+  });
+});
+
+/* ==========================
+   ANIMACIONES SCROLL (Fade-in)
+========================== */
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const appearOnScroll = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
     });
+  },
+  { threshold: 0.2 }
+);
 
-    prevBtn.addEventListener("click", () => {
-        galleryGrid.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    });
-
-    // Movimiento automático infinito
-    setInterval(() => {
-        if (galleryGrid.scrollLeft + galleryGrid.clientWidth >= galleryGrid.scrollWidth - 1) {
-            galleryGrid.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-            galleryGrid.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        }
-    }, 3000);
-
-    // Animación fade-in
-    const items = document.querySelectorAll(".fade-in");
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.2 });
-
-    items.forEach(item => observer.observe(item));
-
-    // Menú responsive
-    document.querySelector(".nav-toggle").addEventListener("click", () => {
-        document.querySelector(".nav-menu").classList.toggle("show");
-    });
+fadeElements.forEach(el => {
+  appearOnScroll.observe(el);
 });
