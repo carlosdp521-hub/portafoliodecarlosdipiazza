@@ -144,6 +144,20 @@ header {
     color: #111;
 }
 
+.btn-cv {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0078ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-cv:hover {
+  background: #005fcc;
+}
+
 /* ========= SECCIONES ========= */
 section {
     padding: 3rem 1.5rem;
@@ -370,3 +384,4 @@ footer {
 }
 
 /* Pantallas muy pequeñas
+
