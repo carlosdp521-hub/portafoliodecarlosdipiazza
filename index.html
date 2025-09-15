@@ -1,175 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carlos Di Piazza - Desarrollador Web</title>
-  <meta name="description" content="Portafolio de Carlos Di Piazza, Desarrollador Web y Programador.">
-  <meta name="keywords" content="Carlos Di Piazza, Desarrollador Web, Programador, Portafolio">
-  <meta name="author" content="Carlos Di Piazza">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Di Piazza - Desarrollador Web</title>
+    <meta name="description" content="Portafolio de Carlos Di Piazza, Desarrollador Web y Programador.">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar">
     <div class="logo-container">
-      <img src="img/Logo.png" alt="Logo de Carlos Di Piazza" class="logo" loading="lazy">
+        <img src="img/Logo.png" alt="Logo de Carlos Di Piazza" class="logo" loading="lazy">
     </div>
     <div class="nav-container">
-      <a href="#inicio" class="nav-logo">Carlos Di Piazza</a>
-      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
-      <ul class="nav-menu">
-        <li><a href="#inicio" class="nav-link">Inicio</a></li>
-        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
-      </ul>
+        <a href="#inicio" class="nav-logo">Carlos Di Piazza</a>
+        <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+        <ul class="nav-menu">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
     </div>
-  </nav>
+</nav>
 
-  <!-- HEADER -->
-  <header id="inicio">
+<!-- HEADER -->
+<header id="inicio">
     <div class="header-content">
-      <h1>Carlos Di Piazza</h1>
-      <h2>Desarrollador Web y Programador</h2>
-      <p>Estudiante en IACC especializado en programación y desarrollo web,<br>creando soluciones creativas y funcionales para el mundo digital.</p>
-      <a href="#proyectos" class="btn">Ver mis proyectos</a>
+        <h1>Carlos Di Piazza</h1>
+        <h2>Desarrollador Web y Programador</h2>
+        <p>Estudiante en IACC especializado en programación y desarrollo web,<br>creando soluciones creativas y funcionales para el mundo digital.</p>
+        <a href="#proyectos" class="btn">Ver mis proyectos</a>
     </div>
-  </header>
+</header>
 
-  <main>
+<main>
     <!-- GALERÍA DE PROYECTOS -->
     <section id="proyectos" aria-labelledby="titulo-proyectos">
-      <h2 id="titulo-proyectos">Proyectos Destacados</h2>
-      <p>Explora mi colección de trabajos que unen diseño, programación y experiencia de usuario.</p>
-      <div class="gallery-container" id="gallery-container">
-        <button class="gallery-prev" aria-label="Proyecto anterior">&#10094;</button>
-        <div class="gallery-grid" id="gallery-grid">
-          <!-- Proyecto 1 -->
-          <article class="gallery-item fade-in">
-            <div class="image-container">
-              <img src="img/proyecto1.png" alt="Portafolio Personal" class="gallery-img" loading="lazy">
-              <div class="overlay">
-                <p>Diseño y desarrollo de un portafolio personal en HTML, CSS y JS.</p>
-                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
-              </div>
+        <h2 id="titulo-proyectos">Proyectos Destacados</h2>
+        <p>Explora mi colección de trabajos que unen diseño,<br>programación y experiencia de usuario.</p>
+        <div class="gallery-container">
+            <button class="gallery-prev" aria-label="Proyecto anterior">&#10094;</button>
+            <div id="gallery-grid" class="gallery-grid">
+                <!-- Repite cada proyecto como gallery-item -->
+                <article class="gallery-item fade-in">
+                    <div class="image-container">
+                        <img src="img/proyecto1.png" alt="Portafolio Personal" class="gallery-img" loading="lazy">
+                        <div class="overlay">
+                            <p>Diseño y desarrollo de un portafolio personal en HTML, CSS y JS.</p>
+                            <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
+                        </div>
+                    </div>
+                    <h3>Portafolio Personal</h3>
+                </article>
+                <!-- Agregar más proyectos aquí -->
             </div>
-            <h3>Portafolio Personal</h3>
-          </article>
-          <!-- Proyecto 2 -->
-          <article class="gallery-item fade-in">
-            <div class="image-container">
-              <img src="img/proyecto2.png" alt="Gestor de Tareas" class="gallery-img" loading="lazy">
-              <div class="overlay">
-                <p>Aplicación web para organización de tareas con almacenamiento local.</p>
-                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
-              </div>
-            </div>
-            <h3>Gestor de Tareas</h3>
-          </article>
-          <!-- Proyecto 3 -->
-          <article class="gallery-item fade-in">
-            <div class="image-container">
-              <img src="img/proyecto3.png" alt="Registro de Usuarios" class="gallery-img" loading="lazy">
-              <div class="overlay">
-                <p>Sistema de registro y login con validación de datos.</p>
-                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
-              </div>
-            </div>
-            <h3>Registro de Usuarios</h3>
-          </article>
-          <!-- Proyecto 4 -->
-          <article class="gallery-item fade-in">
-            <div class="image-container">
-              <img src="img/proyecto4.png" alt="Tienda Online" class="gallery-img" loading="lazy">
-              <div class="overlay">
-                <p>Desarrollo de una tienda online con carrito de compras y pasarela de pago.</p>
-                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
-              </div>
-            </div>
-            <h3>Tienda Online</h3>
-          </article>
-          <!-- Proyecto 5 -->
-          <article class="gallery-item fade-in">
-            <div class="image-container">
-              <img src="img/proyecto5.png" alt="Blog Personal" class="gallery-img" loading="lazy">
-              <div class="overlay">
-                <p>Blog personal con sistema de publicaciones y comentarios.</p>
-                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
-              </div>
-            </div>
-            <h3>Blog Personal</h3>
-          </article>
-          <!-- Proyecto 6 -->
-          <article class="gallery-item fade-in">
-            <div class="image-container">
-              <img src="img/proyecto6.png" alt="Dashboard Analítico" class="gallery-img" loading="lazy">
-              <div class="overlay">
-                <p>Dashboard interactivo con estadísticas en tiempo real.</p>
-                <a href="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/" target="_blank" class="btn gallery-btn">Ver detalle</a>
-              </div>
-            </div>
-            <h3>Dashboard Analítico</h3>
-          </article>
+            <button class="gallery-next" aria-label="Siguiente proyecto">&#10095;</button>
         </div>
-        <button class="gallery-next" aria-label="Siguiente proyecto">&#10095;</button>
-      </div>
     </section>
 
     <!-- SOBRE MÍ -->
     <section id="sobre-mi" aria-labelledby="titulo-sobre-mi">
-      <div class="about-img fade-in">
-        <img src="img/foto-perfil.jpg" alt="Foto de Carlos Di Piazza" loading="lazy">
-      </div>
-      <div class="about-text fade-in">
-        <h2 id="titulo-sobre-mi">Sobre mí</h2>
-        <p>Soy Carlos Di Piazza, apasionado por la tecnología y el desarrollo web. Actualmente estudio en el Instituto Profesional IACC, donde desarrollo habilidades en programación y diseño web.</p>
-        <h3>Habilidades</h3>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>React, Node.js</li>
-          <li>Python, PHP</li>
-          <li>SQL, MongoDB</li>
-        </ul>
-      </div>
-      <aside class="about-extra fade-in">
-        <h3>Contacto Rápido</h3>
-        <p>Email: <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
-        <p>Teléfono: <a href="tel:+56979095565">+56 9 7909 5565</a></p>
-        <a href="Carlos%20Di%20Piazza.pdf" target="_blank" class="btn-cv">📄 Descargar CV</a>
-      </aside>
+        <div class="about-img fade-in">
+            <img src="img/foto-perfil.jpg" alt="Foto de Carlos Di Piazza" loading="lazy">
+        </div>
+        <div class="about-text fade-in">
+            <h2 id="titulo-sobre-mi">Sobre mí</h2>
+            <p>Soy Carlos Di Piazza, apasionado por la tecnología y el desarrollo web. Actualmente estudio en el Instituto Profesional IACC, donde desarrollo habilidades en programación y diseño web.</p>
+            <h3>Habilidades</h3>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Node.js</li>
+                <li>Python, PHP</li>
+                <li>SQL, MongoDB</li>
+            </ul>
+        </div>
+        <aside class="about-extra fade-in">
+            <h3>Contacto Rápido</h3>
+            <p>Email: <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
+            <p>Teléfono: <a href="tel:+56979095565">+56 9 7909 5565</a></p>
+            <a href="Carlos%20Di%20Piazza.pdf" target="_blank" class="btn-cv">📄 Descargar CV</a>
+        </aside>
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="section contacto">
-      <h2>Contacto</h2>
-      <p class="intro">¿Quieres ponerte en contacto conmigo? Escríbeme y te responderé lo antes posible.</p>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p>📧 <strong>Email:</strong> <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
-          <p>🌐 <strong>GitHub:</strong> <a href="https://github.com/carlosdp521-hub" target="_blank">github.com/carlosdp521-hub</a></p>
-          <p>💼 <strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/carlosdipiazza</a></p>
+        <h2>Contacto</h2>
+        <p class="intro">¿Quieres ponerte en contacto conmigo? Escríbeme y te responderé lo antes posible.</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p>📧 <strong>Email:</strong> <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
+                <p>🌐 <strong>GitHub:</strong> <a href="https://github.com/carlosdp521-hub" target="_blank">github.com/carlosdp521-hub</a></p>
+                <p>💼 <strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/carlosdipiazza</a></p>
+            </div>
+            <form class="contact-form">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo" required>
+                <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
         </div>
-
-        <form class="contact-form">
-          <input type="text" name="nombre" placeholder="Tu nombre" required>
-          <input type="email" name="email" placeholder="Tu correo" required>
-          <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-          <button type="submit" class="btn">Enviar Mensaje</button>
-        </form>
-      </div>
     </section>
-  </main>
+</main>
 
-  <footer>
+<!-- FOOTER -->
+<footer>
     <p>© 2025 Carlos Di Piazza. Todos los derechos reservados.</p>
-  </footer>
+</footer>
 
-  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema">🌙</button>
+<!-- DARK MODE TOGGLE -->
+<button id="theme-toggle" class="theme-toggle-btn">🌓</button>
 
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
