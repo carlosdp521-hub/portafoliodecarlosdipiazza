@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portafolio - Carlos Di Piazza</title>
-<link rel="stylesheet" href="css/estilo.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar" role="navigation" aria-label="Menú principal">
   <a href="#inicio" class="nav-logo">Carlos Di Piazza</a>
-  <button class="nav-toggle">☰</button>
-  <ul class="nav-menu">
+  <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">☰</button>
+  <ul class="nav-menu" id="nav-menu">
     <li><a href="#inicio" class="nav-link">Inicio</a></li>
     <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
     <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
     <li><a href="#contacto" class="nav-link">Contacto</a></li>
   </ul>
-  <button id="theme-toggle">🌓</button>
+  <button id="theme-toggle" aria-label="Cambiar tema claro/oscuro" aria-pressed="false">🌓</button>
 </nav>
 
 <header id="inicio">
@@ -30,65 +30,73 @@
   </div>
 </header>
 
-<section id="proyectos">
-  <h2>Proyectos Destacados</h2>
-  <div class="gallery-container">
-    <button class="gallery-prev">&#10094;</button>
-    <div class="gallery-grid">
-      <div class="gallery-item fade-in">
-        <img src="img/proyecto1.png" alt="Proyecto 1">
-        <h3>Portafolio Personal</h3>
-        <p>HTML, CSS, JS</p>
-        <a href="#" target="_blank" class="btn gallery-btn">Ver Proyecto</a>
+<main>
+  <section id="proyectos" aria-label="Proyectos destacados">
+    <h2>Proyectos Destacados</h2>
+    <div class="gallery-container">
+      <button class="gallery-prev" aria-label="Proyecto anterior" type="button">&#10094;</button>
+      <div class="gallery-grid" role="list">
+        <article class="gallery-item fade-in" role="listitem" tabindex="0">
+          <img src="img/proyecto1.png" alt="Captura del Portafolio Personal" />
+          <h3>Portafolio Personal</h3>
+          <p>HTML, CSS, JS</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn gallery-btn">Ver Proyecto</a>
+        </article>
+        <article class="gallery-item fade-in" role="listitem" tabindex="0">
+          <img src="img/proyecto2.png" alt="Captura del Gestor de Tareas" />
+          <h3>Gestor de Tareas</h3>
+          <p>React, Node.js</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn gallery-btn">Ver Proyecto</a>
+        </article>
+        <article class="gallery-item fade-in" role="listitem" tabindex="0">
+          <img src="img/proyecto3.png" alt="Captura del Dashboard Analítico" />
+          <h3>Dashboard Analítico</h3>
+          <p>Python, Chart.js</p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn gallery-btn">Ver Proyecto</a>
+        </article>
       </div>
-      <div class="gallery-item fade-in">
-        <img src="img/proyecto2.png" alt="Proyecto 2">
-        <h3>Gestor de Tareas</h3>
-        <p>React, Node.js</p>
-        <a href="#" target="_blank" class="btn gallery-btn">Ver Proyecto</a>
-      </div>
-      <div class="gallery-item fade-in">
-        <img src="img/proyecto3.png" alt="Proyecto 3">
-        <h3>Dashboard Analítico</h3>
-        <p>Python, Chart.js</p>
-        <a href="#" target="_blank" class="btn gallery-btn">Ver Proyecto</a>
-      </div>
+      <button class="gallery-next" aria-label="Proyecto siguiente" type="button">&#10095;</button>
     </div>
-    <button class="gallery-next">&#10095;</button>
-  </div>
-</section>
+  </section>
 
-<section id="sobre-mi">
-  <img src="img/perfil.jpg" alt="Carlos Di Piazza" class="fade-in">
-  <div class="about-text fade-in">
-    <h2>Sobre mí</h2>
-    <p>Apasionado por la tecnología y el desarrollo web. Busco crear proyectos funcionales y atractivos visualmente.</p>
-    <h3>Habilidades</h3>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>React, Node.js</li>
-      <li>Python, PHP</li>
-      <li>SQL, MongoDB</li>
-    </ul>
-  </div>
-</section>
-
-<section id="contacto">
-  <h2>Contacto</h2>
-  <div class="contact-grid fade-in">
-    <div class="contact-info">
-      <p>📧 <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
-      <p>🌐 <a href="https://github.com/carlosdp521-hub" target="_blank">GitHub</a></p>
-      <p>💼 LinkedIn: <a href="#">linkedin.com/in/carlosdipiazza</a></p>
+  <section id="sobre-mi" aria-label="Sobre mí">
+    <img src="img/perfil.jpg" alt="Foto de Carlos Di Piazza" class="fade-in" />
+    <div class="about-text fade-in">
+      <h2>Sobre mí</h2>
+      <p>Apasionado por la tecnología y el desarrollo web. Busco crear proyectos funcionales y atractivos visualmente.</p>
+      <h3>Habilidades</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>React, Node.js</li>
+        <li>Python, PHP</li>
+        <li>SQL, MongoDB</li>
+      </ul>
     </div>
-    <form class="contact-form">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </div>
-</section>
+  </section>
+
+  <section id="contacto" aria-label="Contacto">
+    <h2>Contacto</h2>
+    <div class="contact-grid fade-in">
+      <address class="contact-info">
+        <p>📧 <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
+        <p>🌐 <a href="https://github.com/carlosdp521-hub" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        <p>💼 LinkedIn: <a href="#" target="_blank" rel="noopener noreferrer">linkedin.com/in/carlosdipiazza</a></p>
+      </address>
+      <form class="contact-form" novalidate>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo" required />
+        
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+        
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+</main>
 
 <footer>
   <p>© 2025 Carlos Di Piazza</p>
