@@ -14,11 +14,11 @@
 }
 
 body {
-    background-color: #111;
-    color: #e0e0e0;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* ========= NAVBAR ========= */
@@ -30,6 +30,8 @@ body {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space
 }
 
 .nav-container {
@@ -463,4 +465,5 @@ footer {
 }
 
 /* ... (resto de tu CSS) ... */
+
 
