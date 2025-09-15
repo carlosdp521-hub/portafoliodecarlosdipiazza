@@ -1,10 +1,10 @@
 /* ========= RESET Y VARIABLES ========= */
 :root {
-    --primary: #00d4ff;
-    --secondary: #ff00d4;
-    --card: #1c1c1c;
-    --radius: 12px;
-    --transition: 0.3s ease;
+  --background-color: #121212;
+  --text-color: #E0E0E0;
+  --link-color: #BB86FC;
+  --button-color: #03DAC6;
+  --accent-color: #0078ff;
 }
 
 * {
@@ -463,3 +463,4 @@ footer {
 }
 
 /* ... (resto de tu CSS) ... */
+
