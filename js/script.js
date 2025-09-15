@@ -69,3 +69,18 @@ fadeElements.forEach(el => {
   appearOnScroll.observe(el);
 });
 
+// Detectar preferencia del sistema
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Aplicar tema basado en la preferencia
+if (prefersDarkScheme) {
+  document.body.classList.add("dark-theme");
+} else {
+  document.body.classList.add("light-theme");
+}
+
+// Función para alternar entre temas
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+  document.body.classList.toggle("light-theme");
+}
