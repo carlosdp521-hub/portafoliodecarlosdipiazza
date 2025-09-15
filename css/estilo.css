@@ -163,17 +163,13 @@ header h2 {
 
 /* Galería */
 .gallery-container {
-  display: flex;
-  align-items: center;
   position: relative;
-  gap: 0.625rem;
   overflow: hidden;
   margin: 2rem 1rem;
   background: var(--gallery-bg);
   padding: var(--spacing);
   border-radius: var(--border-radius);
   box-shadow: 0 2px 6px var(--shadow);
-  transition: background var(--transition-duration) var(--transition-ease);
 }
 
 .gallery-grid {
@@ -440,3 +436,4 @@ body.dark-theme .contact-form textarea:focus {
 body.dark-theme footer {
   color: var(--text);
 }
+
