@@ -1,86 +1,31 @@
-document.querySelector(".contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
-    .then(() => {
-      alert("✅ Mensaje enviado con éxito!");
-      this.reset();
-    }, (error) => {
-      alert("❌ Error al enviar: " + JSON.stringify(error));
-    });
-});
-/* ==========================
-   NAVBAR TOGGLE (Responsive)
-========================== */
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
-
-if (navToggle) {
-  navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-  });
-}
-
-/* ==========================
-   CERRAR MENÚ AL HACER CLIC
-========================== */
-document.querySelectorAll(".nav-link").forEach(link =>
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("active");
-  })
-);
-
-/* ==========================
-   SCROLL SUAVE
-========================== */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    const targetId = this.getAttribute("href").substring(1);
-    const target = document.getElementById(targetId);
-
-    if (target) {
-      e.preventDefault();
-      window.scrollTo({
-        top: target.offsetTop - 60, // ajuste para navbar fija
-        behavior: "smooth"
-      });
-    }
-  });
-});
-
-/* ==========================
-   ANIMACIONES SCROLL (Fade-in)
-========================== */
-const fadeElements = document.querySelectorAll(".fade-in");
-
-const appearOnScroll = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
-
-fadeElements.forEach(el => {
-  appearOnScroll.observe(el);
-});
-
 // Detectar preferencia del sistema
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-// Aplicar tema basado en la preferencia
-if (prefersDarkScheme) {
-  document.body.classList.add("dark-theme");
-} else {
-  document.body.classList.add("light-theme");
+function applyTheme(theme) {
+  document.body.classList.remove("dark-theme", "light-theme");
+  document.body.classList.add(theme);
 }
 
-// Función para alternar entre temas
+// Aplicar según preferencia inicial
+applyTheme(prefersDarkScheme.matches ? "dark-theme" : "light-theme");
+
+// Función para alternar
 function toggleTheme() {
-  document.body.classList.toggle("dark-theme");
-  document.body.classList.toggle("light-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    applyTheme("light-theme");
+  } else {
+    applyTheme("dark-theme");
+  }
 }
+
+// Ejemplo: botón de alternar (agrega en navbar)
+const themeBtn = document.createElement("button");
+themeBtn.textContent = "🌙";
+themeBtn.className = "theme-toggle-btn";
+themeBtn.style.cssText = `
+position: fixed; bottom: 20px; right: 20px; 
+padding: 10px 15px; border: none; border-radius: 50%; 
+background: var(--btn-color); color:#121212; cursor:pointer; z-index:10000;
+`;
+document.body.appendChild(themeBtn);
+themeBtn.addEventListener("click", toggleTheme);
