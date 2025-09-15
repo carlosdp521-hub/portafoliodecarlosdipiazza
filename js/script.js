@@ -1,79 +1,37 @@
-// ====================== DARK MODE ======================
-const themeToggle = document.getElementById("theme-toggle");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-document.body.classList.add(prefersDark ? "dark-theme" : "light-theme");
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+navToggle?.addEventListener('click', ()=>navMenu.classList.toggle('active'));
 
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-  document.body.classList.toggle("light-theme");
+document.querySelectorAll('.fade-in').forEach(el=>{
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  },{threshold:0.2});
+  observer.observe(el);
 });
 
-// ====================== NAVBAR ======================
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
-if(navToggle) navToggle.addEventListener("click", () => navMenu.classList.toggle("active"));
-document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", () => navMenu.classList.remove("active")));
-
-// ====================== SCROLL SUAVE ======================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    const target = document.getElementById(this.getAttribute("href").substring(1));
-    if(target){
-      e.preventDefault();
-      window.scrollTo({ top: target.offsetTop - 60, behavior: "smooth" });
-    }
-  });
+document.getElementById('theme-toggle')?.addEventListener('click', ()=>{
+  document.body.classList.toggle('dark-theme');
 });
 
-// ====================== FADE-IN ======================
-const fadeElements = document.querySelectorAll(".fade-in");
-const observer = new IntersectionObserver((entries, obs)=>{
-  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible"); obs.unobserve(entry.target);}});
-},{threshold:0.2});
-fadeElements.forEach(el=>observer.observe(el));
-
-// ====================== EMAILJS ======================
-document.querySelector(".contact-form").addEventListener("submit", function(e){
+document.querySelector('.contact-form')?.addEventListener('submit', e=>{
   e.preventDefault();
-  emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
-    .then(()=>{alert("✅ Mensaje enviado!"); this.reset();}, (err)=>{alert("❌ Error: "+JSON.stringify(err));});
+  alert('✅ Mensaje enviado (simulado)');
+  e.target.reset();
 });
 
-// ====================== CARRUSEL CONTINUO CON HOVER Y TOUCH ======================
-const galleryGrid = document.getElementById("gallery-grid");
-const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
-const prevBtn = document.querySelector(".gallery-prev");
-const nextBtn = document.querySelector(".gallery-next");
+const galleryGrid = document.querySelector('.gallery-grid');
+const prevBtn = document.querySelector('.gallery-prev');
+const nextBtn = document.querySelector('.gallery-next');
+let index=0;
+const items = document.querySelectorAll('.gallery-item');
+const total = items.length;
 
-let itemWidth = galleryItems[0].offsetWidth + 20;
-galleryItems.forEach(item=>galleryGrid.appendChild(item.cloneNode(true)));
-let totalItems = galleryGrid.children.length;
-let posX = 0;
-let speed = 1, normalSpeed=1, slowSpeed=0.2;
-
-// Animación
-function animateGallery(){
-  posX += speed;
-  if(posX >= (totalItems/2)*itemWidth) posX=0;
-  galleryGrid.style.transform = `translateX(-${posX}px)`;
-  requestAnimationFrame(animateGallery);
+function showIndex(i){
+  galleryGrid.style.transform = `translateX(-${i*270}px)`;
 }
-requestAnimationFrame(animateGallery);
 
-// Botones
-prevBtn.addEventListener("click", ()=>{ posX -= itemWidth; if(posX<0) posX=((totalItems/2)-1)*itemWidth; });
-nextBtn.addEventListener("click", ()=>{ posX += itemWidth; if(posX>=(totalItems/2)*itemWidth) posX=0; });
-
-// Hover slowdown
-const galleryContainer = document.querySelector(".gallery-container");
-galleryContainer.addEventListener("mouseenter", ()=>speed=slowSpeed);
-galleryContainer.addEventListener("mouseleave", ()=>speed=normalSpeed);
-
-// Touch support
-let isDragging=false, startX=0, scrollStart=0;
-galleryGrid.addEventListener("touchstart",(e)=>{isDragging=true; startX=e.touches[0].clientX; scrollStart=posX;});
-galleryGrid.addEventListener("touchmove",(e)=>{if(!isDragging)return; const deltaX=startX - e.touches[0].clientX; posX=scrollStart + deltaX; if(posX<0) posX=0; if(posX>=(totalItems/2)*itemWidth) posX=0; galleryGrid.style.transform=`translateX(-${posX}px)`;});
-galleryGrid.addEventListener("touchend",()=>{isDragging=false;});
-
-// Ajuste responsive
-window.addEventListener("resize",()=>{ itemWidth=galleryItems[0].offsetWidth + 20; });
+nextBtn?.addEventListener('click', ()=>{index=(index+1)%total; showIndex(index);});
+prevBtn?.addEventListener('click', ()=>{index=(index-1+total)%total; showIndex(index);});
+setInterval(()=>{index=(index+1)%total; showIndex(index);},5000);
