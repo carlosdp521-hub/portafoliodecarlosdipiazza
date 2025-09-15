@@ -332,6 +332,74 @@ textarea {
     min-height: 120px;
 }
 
+.contacto {
+  background: #f5f5f5;
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+.contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.contacto .intro {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.contact-info a {
+  color: #0078ff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #005fcc;
+}
+
 /* ========= FOOTER ========= */
 footer {
     text-align: center;
@@ -343,6 +411,7 @@ footer {
 /* ========= RESPONSIVE ========= */
 
 /* Pantallas pequeñas */
+
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -381,7 +450,12 @@ footer {
     .header-content h2 {
         font-size: 1.5rem;
     }
+
+    .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Pantallas muy pequeñas
+
 
