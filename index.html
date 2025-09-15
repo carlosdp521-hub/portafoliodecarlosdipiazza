@@ -143,23 +143,27 @@
         </aside>
     </section>
 
-    <!-- FORMULARIO DE CONTACTO -->
-    <section id="contacto" data-aos="fade-up">
-        <h3>Contacto</h3>
-        <form id="form-contacto" action="https://formspree.io/f/xeozpjro" method="POST">
-            <input type="hidden" name="_captcha" value="false">
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section contacto">
+        <h2>Contacto</h2>
+        <p class="intro">¿Quieres ponerte en contacto conmigo? Escríbeme y te responderé lo antes posible.</p>
 
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
+        <div class="contact-grid">
+            <!-- Información de contacto -->
+            <div class="contact-info">
+                <p>📧 <strong>Email:</strong> <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
+                <p>🌐 <strong>GitHub:</strong> <a href="https://github.com/carlosdp521-hub" target="_blank">github.com/carlosdp521-hub</a></p>
+                <p>💼 <strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/carlosdipiazza</a></p>
+            </div>
 
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="email" required placeholder="correo@ejemplo.com">
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="message" required placeholder="Escribe tu mensaje aquí..."></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
+            <!-- Formulario de contacto -->
+            <form class="contact-form">
+                <input type="text" name="nombre" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo" required>
+                <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
     </section>
 </main>
 
@@ -171,6 +175,7 @@
 <script src="js/script.js"></script>
 </body>
 </html>
+
 
 
 
