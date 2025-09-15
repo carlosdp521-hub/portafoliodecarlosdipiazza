@@ -1,86 +1,79 @@
-// NAVBAR TOGGLE
-const navToggle = document.querySelector(".nav-toggle");
-const navMenu = document.querySelector(".nav-menu");
+// ====================== DARK MODE ======================
+const themeToggle = document.getElementById("theme-toggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+document.body.classList.add(prefersDark ? "dark-theme" : "light-theme");
 
-navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+  document.body.classList.toggle("light-theme");
 });
 
-document.querySelectorAll(".nav-link").forEach(link =>
-  link.addEventListener("click", () => navMenu.classList.remove("active"))
-);
+// ====================== NAVBAR ======================
+const navToggle = document.querySelector(".nav-toggle");
+const navMenu = document.querySelector(".nav-menu");
+if(navToggle) navToggle.addEventListener("click", () => navMenu.classList.toggle("active"));
+document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", () => navMenu.classList.remove("active")));
 
-// SCROLL SUAVE
+// ====================== SCROLL SUAVE ======================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
+  anchor.addEventListener("click", function(e) {
     const target = document.getElementById(this.getAttribute("href").substring(1));
-    if (target) {
+    if(target){
       e.preventDefault();
       window.scrollTo({ top: target.offsetTop - 60, behavior: "smooth" });
     }
   });
 });
 
-// FADE-IN
+// ====================== FADE-IN ======================
 const fadeElements = document.querySelectorAll(".fade-in");
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+const observer = new IntersectionObserver((entries, obs)=>{
+  entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible"); obs.unobserve(entry.target);}});
+},{threshold:0.2});
+fadeElements.forEach(el=>observer.observe(el));
 
-fadeElements.forEach(el => appearOnScroll.observe(el));
+// ====================== EMAILJS ======================
+document.querySelector(".contact-form").addEventListener("submit", function(e){
+  e.preventDefault();
+  emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
+    .then(()=>{alert("✅ Mensaje enviado!"); this.reset();}, (err)=>{alert("❌ Error: "+JSON.stringify(err));});
+});
 
-// GALERÍA DESLIZANTE
+// ====================== CARRUSEL CONTINUO CON HOVER Y TOUCH ======================
 const galleryGrid = document.getElementById("gallery-grid");
-const galleryItems = document.querySelectorAll(".gallery-item");
+const galleryItems = Array.from(document.querySelectorAll(".gallery-item"));
 const prevBtn = document.querySelector(".gallery-prev");
 const nextBtn = document.querySelector(".gallery-next");
 
-let scrollIndex = 0;
-const totalItems = galleryItems.length;
+let itemWidth = galleryItems[0].offsetWidth + 20;
+galleryItems.forEach(item=>galleryGrid.appendChild(item.cloneNode(true)));
+let totalItems = galleryGrid.children.length;
+let posX = 0;
+let speed = 1, normalSpeed=1, slowSpeed=0.2;
 
-function moveGallery(index) {
-  const itemWidth = galleryItems[0].offsetWidth + 20; 
-  galleryGrid.style.transform = `translateX(-${itemWidth * index}px)`;
+// Animación
+function animateGallery(){
+  posX += speed;
+  if(posX >= (totalItems/2)*itemWidth) posX=0;
+  galleryGrid.style.transform = `translateX(-${posX}px)`;
+  requestAnimationFrame(animateGallery);
 }
+requestAnimationFrame(animateGallery);
 
-prevBtn.addEventListener("click", () => {
-  scrollIndex = (scrollIndex - 1 + totalItems) % totalItems;
-  moveGallery(scrollIndex);
-});
-nextBtn.addEventListener("click", () => {
-  scrollIndex = (scrollIndex + 1) % totalItems;
-  moveGallery(scrollIndex);
-});
+// Botones
+prevBtn.addEventListener("click", ()=>{ posX -= itemWidth; if(posX<0) posX=((totalItems/2)-1)*itemWidth; });
+nextBtn.addEventListener("click", ()=>{ posX += itemWidth; if(posX>=(totalItems/2)*itemWidth) posX=0; });
 
-setInterval(() => {
-  scrollIndex = (scrollIndex + 1) % totalItems;
-  moveGallery(scrollIndex);
-}, 4000);
+// Hover slowdown
+const galleryContainer = document.querySelector(".gallery-container");
+galleryContainer.addEventListener("mouseenter", ()=>speed=slowSpeed);
+galleryContainer.addEventListener("mouseleave", ()=>speed=normalSpeed);
 
-// EMAILJS FORM
-document.querySelector(".contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  emailjs.sendForm("TU_SERVICE_ID", "TU_TEMPLATE_ID", this)
-    .then(() => {
-      alert("✅ Mensaje enviado con éxito!");
-      this.reset();
-    }, (error) => {
-      alert("❌ Error al enviar: " + JSON.stringify(error));
-    });
-});
+// Touch support
+let isDragging=false, startX=0, scrollStart=0;
+galleryGrid.addEventListener("touchstart",(e)=>{isDragging=true; startX=e.touches[0].clientX; scrollStart=posX;});
+galleryGrid.addEventListener("touchmove",(e)=>{if(!isDragging)return; const deltaX=startX - e.touches[0].clientX; posX=scrollStart + deltaX; if(posX<0) posX=0; if(posX>=(totalItems/2)*itemWidth) posX=0; galleryGrid.style.transform=`translateX(-${posX}px)`;});
+galleryGrid.addEventListener("touchend",()=>{isDragging=false;});
 
-// DARK MODE
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-});
-
-// Aplicar tema por defecto
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  document.body.classList.add("dark-theme");
-}
+// Ajuste responsive
+window.addEventListener("resize",()=>{ itemWidth=galleryItems[0].offsetWidth + 20; });
