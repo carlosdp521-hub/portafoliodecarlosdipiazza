@@ -314,3 +314,55 @@ form textarea:focus {
     padding: 0.5rem 0.8rem;
   }
 }
+
+/* =========================
+   🌞 Tema Claro
+   ========================= */
+body.light {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --muted: #444;
+  --accent: #3b82f6;
+  --accent-2: #06b6d4;
+  --glass: rgba(0, 0, 0, 0.05);
+  --glass-2: rgba(0, 0, 0, 0.02);
+  color: #111;
+  background: linear-gradient(180deg, #f0f1f5 0%, #e8eaef 100%);
+}
+
+body.light .navbar {
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light .btn {
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+}
+
+body.light form input,
+body.light form textarea {
+  background: rgba(0, 0, 0, 0.03);
+  color: #222;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light .badge:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: #000;
+}
+
+/* =========================
+   🌗 Transición entre temas
+   ========================= */
+body {
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+.navbar,
+.hero-card,
+.side-card,
+.project,
+form {
+  transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
+}
+
