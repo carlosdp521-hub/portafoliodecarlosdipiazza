@@ -1,6 +1,32 @@
-/* Animación de flotación para el botón del CV */
+/* ===========================
+   Reset y General
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #222;
+}
+
+/* ===========================
+   Botón CV Animado
+=========================== */
 .cv-button {
   position: relative;
+  display: inline-block;
+  background-color: #00d4ff;
+  color: #121212;
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
   animation: float 3s ease-in-out infinite;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
@@ -11,17 +37,6 @@
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* Keyframes de flotación */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-/* Efecto de brillo sutil al pasar el cursor */
 .cv-button::after {
   content: '';
   position: absolute;
@@ -38,14 +53,9 @@
   left: 125%;
 }
 
-/* ===========================
-   Reset básico
-=========================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 /* ===========================
@@ -67,13 +77,10 @@
   font-weight: 700;
   color: #222;
   text-decoration: none;
-  user-select: none;
   transition: color 0.3s ease;
 }
 
-.nav-logo:hover {
-  color: #0070f3;
-}
+.nav-logo:hover { color: #0070f3; }
 
 .nav-toggle {
   font-size: 1.5rem;
@@ -84,9 +91,7 @@
   display: none;
 }
 
-.nav-toggle:hover {
-  color: #0070f3;
-}
+.nav-toggle:hover { color: #0070f3; }
 
 .nav-menu {
   list-style: none;
@@ -125,11 +130,9 @@
   color: #fff;
 }
 
-/* Responsive Navbar */
+/* Navbar Responsive */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: inline-flex;
-  }
+  .nav-toggle { display: inline-flex; }
   
   .nav-menu {
     position: absolute;
@@ -145,13 +148,8 @@
     transition: max-height 0.3s ease;
   }
   
-  .nav-menu.open {
-    max-height: 500px;
-  }
-  
-  .nav-link {
-    padding: 0.75rem 1rem;
-  }
+  .nav-menu.open { max-height: 500px; }
+  .nav-link { padding: 0.75rem 1rem; }
 }
 
 /* ===========================
@@ -173,50 +171,9 @@
   z-index: 1;
 }
 
-#inicio h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-#inicio h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-
-#inicio p {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.8;
-  line-height: 1.6;
-}
-
-/* Botón CV */
-#cv {
-  margin: 30px 0 0 0;
-  text-align: center;
-}
-
-.cv-button {
-  background-color: #00d4ff;
-  color: #121212;
-  padding: 14px 30px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.cv-button:hover {
-  background-color: #009ecf;
-  transform: translateY(-3px);
-}
+#inicio h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+#inicio h2 { font-size: 1.8rem; font-weight: 400; margin-bottom: 1.5rem; opacity: 0.9; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+#inicio p { font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.8; }
 
 /* Botón general */
 .btn {
@@ -241,14 +198,12 @@
 }
 
 /* ===========================
-   Main
+   Main y Secciones
 =========================== */
 main {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
-  color: #222;
-  line-height: 1.6;
 }
 
 section h2 {
@@ -285,9 +240,7 @@ section h2 {
 }
 
 .gallery-prev:hover,
-.gallery-next:hover {
-  background-color: #005bb5;
-}
+.gallery-next:hover { background-color: #005bb5; }
 
 .gallery-grid {
   display: grid;
@@ -320,20 +273,10 @@ section h2 {
   margin-bottom: 1rem;
   object-fit: cover;
   height: 160px;
-  width: 100%;
 }
 
-.gallery-item h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: #0070f3;
-}
-
-.gallery-item p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #555;
-}
+.gallery-item h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #0070f3; }
+.gallery-item p { font-size: 1rem; margin-bottom: 1rem; color: #555; }
 
 .gallery-btn {
   background-color: #0070f3;
@@ -345,9 +288,7 @@ section h2 {
   transition: background-color 0.3s ease;
 }
 
-.gallery-btn:hover {
-  background-color: #005bb5;
-}
+.gallery-btn:hover { background-color: #005bb5; }
 
 /* ===========================
    Sobre mí
@@ -368,46 +309,18 @@ section h2 {
   object-fit: cover;
 }
 
-.about-text {
-  flex: 1;
-  min-width: 280px;
-}
+.about-text { flex: 1; min-width: 280px; }
 
-#sobre-mi h2 {
-  margin-bottom: 1rem;
-  color: #0070f3;
-}
-
-#sobre-mi p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-#sobre-mi h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
-  color: #333;
-}
-
-#sobre-mi ul {
-  list-style: disc inside;
-  color: #555;
-  font-size: 1rem;
-}
-
-#sobre-mi ul li {
-  margin-bottom: 0.4rem;
-}
+#sobre-mi h2 { margin-bottom: 1rem; color: #0070f3; }
+#sobre-mi p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #444; }
+#sobre-mi h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: #333; }
+#sobre-mi ul { list-style: disc inside; color: #555; font-size: 1rem; }
+#sobre-mi ul li { margin-bottom: 0.4rem; }
 
 /* ===========================
    Contacto
 =========================== */
-#contacto h2 {
-  margin-bottom: 2rem;
-  color: #0070f3;
-  text-align: center;
-}
+#contacto h2 { margin-bottom: 2rem; color: #0070f3; text-align: center; }
 
 .contact-grid {
   display: grid;
@@ -418,14 +331,9 @@ section h2 {
 }
 
 .contact-info {
-  font-style: normal;
   font-size: 1.1rem;
   color: #444;
   line-height: 1.6;
-}
-
-.contact-info p {
-  margin-bottom: 1rem;
 }
 
 .contact-info a {
@@ -433,21 +341,14 @@ section h2 {
   text-decoration: none;
 }
 
-.contact-info a:hover {
-  color: #005bb5;
-}
+.contact-info a:hover { color: #005bb5; }
 
 .contact-form {
   display: flex;
   flex-direction: column;
 }
 
-.contact-form label {
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-  color: #333;
-}
-
+.contact-form label { font-weight: 600; margin-bottom: 0.3rem; color: #333; }
 .contact-form input,
 .contact-form textarea {
   padding: 0.6rem 0.8rem;
@@ -461,7 +362,6 @@ section h2 {
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #0070f3;
-  outline: none;
   box-shadow: 0 0 5px rgba(0,112,243,0.5);
 }
 
@@ -476,9 +376,7 @@ section h2 {
   cursor: pointer;
 }
 
-.contact-form button.btn:hover {
-  background-color: #005bb5;
-}
+.contact-form button.btn:hover { background-color: #005bb5; }
 
 /* ===========================
    Footer
@@ -490,56 +388,23 @@ footer {
   padding: 2rem 1rem;
 }
 
-footer p {
-  margin: 0;
-  font-size: 1rem;
-  opacity: 0.8;
-}
+footer p { margin: 0; font-size: 1rem; opacity: 0.8; }
 
 /* ===========================
    Responsive
 =========================== */
 @media (max-width: 900px) {
-  #sobre-mi {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-form button.btn {
-    width: 100%;
-  }
+  #sobre-mi { flex-direction: column; text-align: center; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-form button.btn { width: 100%; }
 }
 
 @media (max-width: 480px) {
-  #inicio h1 {
-    font-size: 2rem;
-  }
-
-  #inicio h2 {
-    font-size: 1.2rem;
-  }
-
-  #inicio p {
-    font-size: 1rem;
-  }
-
+  #inicio h1 { font-size: 2rem; }
+  #inicio h2 { font-size: 1.2rem; }
+  #inicio p { font-size: 1rem; }
   .gallery-prev,
-  .gallery-next {
-    width: 2.8rem;
-    height: 2.8rem;
-    font-size: 1.5rem;
-  }
-
-  .gallery-item img {
-    height: 140px;
-  }
-
-  #sobre-mi img {
-    max-width: 100%;
-  }
+  .gallery-next { width: 2.8rem; height: 2.8rem; font-size: 1.5rem; }
+  .gallery-item img { height: 140px; }
+  #sobre-mi img { max-width: 100%; }
 }
-
