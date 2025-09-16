@@ -366,3 +366,41 @@ form {
   transition: background 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
 }
 
+/* ============ 🌗 Icono sol/luna animado ============ */
+#themeBtn .icon {
+  position: relative;
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+#themeBtn svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+  color: white;
+}
+
+#themeBtn .sun {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+#themeBtn .moon {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+body.light #themeBtn .sun {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+body.light #themeBtn .moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
