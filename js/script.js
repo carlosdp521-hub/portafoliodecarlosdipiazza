@@ -6,12 +6,14 @@ const navMenu = document.querySelector('.nav-menu');
 
 if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {
-    const isActive = navMenu.classList.toggle('active');
+    const isActive = navMenu.classList.toggle('active'); // Usar 'active' para coincidir con CSS
     navToggle.setAttribute('aria-expanded', isActive);
   });
 }
 
 // Animación fade-in con IntersectionObserver
+// Añadir la clase 'fade-in' a los elementos que quieres animar en tu HTML
+// Ejemplo: <section id="sobre-mi" class="fade-in">
 document.querySelectorAll('.fade-in').forEach(el => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -20,7 +22,7 @@ document.querySelectorAll('.fade-in').forEach(el => {
         observer.unobserve(entry.target); // Solo una vez
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.2 }); // El 20% del elemento debe ser visible
   observer.observe(el);
 });
 
@@ -31,10 +33,10 @@ const darkThemeClass = 'dark-theme';
 function setTheme(dark) {
   if (dark) {
     document.body.classList.add(darkThemeClass);
-    themeToggle.setAttribute('aria-pressed', 'true');
+    if (themeToggle) themeToggle.setAttribute('aria-pressed', 'true');
   } else {
     document.body.classList.remove(darkThemeClass);
-    themeToggle.setAttribute('aria-pressed', 'false');
+    if (themeToggle) themeToggle.setAttribute('aria-pressed', 'false');
   }
   localStorage.setItem('darkTheme', dark);
 }
@@ -76,28 +78,61 @@ const galleryGrid = document.querySelector('.gallery-grid');
 const prevBtn = document.querySelector('.gallery-prev');
 const nextBtn = document.querySelector('.gallery-next');
 const items = document.querySelectorAll('.gallery-item');
-const total = items.length;
-let index = 0;
-const itemWidth = 270; // Ajustar si cambia CSS
+const totalItems = items.length; // Renombrado para evitar conflicto con 'total' en showIndex
+let currentIndex = 0; // Renombrado para evitar conflicto con 'index' en showIndex
 
-function showIndex(i) {
-  // Limitar índice para no mostrar espacios vacíos
-  if (i < 0) i = total - 1;
-  if (i >= total) i = 0;
-  index = i;
-  galleryGrid.style.transform = `translateX(-${index * itemWidth}px)`;
+// Calcular el ancho de un item dinámicamente, incluyendo el gap
+function getItemWidth() {
+  if (items.length === 0) return 0;
+  const itemStyle = getComputedStyle(items[0]);
+  const itemWidth = items[0].offsetWidth;
+  const gap = parseFloat(itemStyle.marginRight) || parseFloat(getComputedStyle(galleryGrid).gap);
+  return itemWidth + gap;
 }
 
-prevBtn?.addEventListener('click', () => showIndex(index - 1));
-nextBtn?.addEventListener('click', () => showIndex(index + 1));
+function showIndex(i) {
+  if (!galleryGrid || items.length === 0) return;
+
+  // Limitar índice para no mostrar espacios vacíos
+  if (i < 0) {
+    currentIndex = totalItems - 1;
+  } else if (i >= totalItems) {
+    currentIndex = 0;
+  } else {
+    currentIndex = i;
+  }
+
+  const widthToScroll = getItemWidth();
+  galleryGrid.scrollTo({
+    left: currentIndex * widthToScroll,
+    behavior: 'smooth'
+  });
+}
+
+prevBtn?.addEventListener('click', () => showIndex(currentIndex - 1));
+nextBtn?.addEventListener('click', () => showIndex(currentIndex + 1));
 
 // Auto slide cada 5 segundos
-let autoSlide = setInterval(() => showIndex(index + 1), 5000);
+let autoSlide;
+function startAutoSlide() {
+  autoSlide = setInterval(() => showIndex(currentIndex + 1), 5000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlide);
+}
+
+// Iniciar auto slide al cargar
+startAutoSlide();
 
 // Pausar auto slide al interactuar
 [prevBtn, nextBtn, galleryGrid].forEach(el => {
-  el?.addEventListener('mouseenter', () => clearInterval(autoSlide));
-  el?.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => showIndex(index + 1), 5000);
-  });
+  el?.addEventListener('mouseenter', stopAutoSlide);
+  el?.addEventListener('mouseleave', startAutoSlide);
+});
+
+// Ajustar el carrusel si la ventana cambia de tamaño
+window.addEventListener('resize', () => {
+  // Recalcular la posición actual para evitar desalineaciones
+  showIndex(currentIndex);
 });
