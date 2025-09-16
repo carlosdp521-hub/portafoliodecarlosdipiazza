@@ -96,3 +96,89 @@ document.addEventListener("keydown", (e) => {
 
 // Ajustar carrusel si cambia el tamaño de la ventana
 window.addEventListener("resize", updateCarousel);
+
+/* =====================
+   Modo oscuro / claro
+===================== */
+const themeBtn = document.getElementById("themeBtn");
+const body = document.body;
+
+// Verificar preferencia guardada
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark");
+  themeBtn.setAttribute("aria-pressed", "true");
+}
+
+// Cambiar tema
+themeBtn.addEventListener("click", () => {
+  body.classList.toggle("dark");
+  const isDark = body.classList.contains("dark");
+  themeBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+});
+
+
+/* =====================
+   Carrusel de proyectos
+===================== */
+const track = document.getElementById("track");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+let index = 0;
+let autoplayInterval;
+
+// calcular el ancho del primer proyecto
+function getProjectWidth() {
+  const project = track.querySelector(".project");
+  return project ? project.offsetWidth + 24 : 300; // 24 = gap aproximado
+}
+
+function updateCarousel() {
+  const width = getProjectWidth();
+  track.style.transform = `translateX(${-index * width}px)`;
+}
+
+// Botón siguiente
+nextBtn.addEventListener("click", () => {
+  const projects = track.querySelectorAll(".project").length;
+  if (index < projects - 1) {
+    index++;
+  } else {
+    index = 0; // volver al inicio
+  }
+  updateCarousel();
+});
+
+// Botón anterior
+prevBtn.addEventListener("click", () => {
+  const projects = track.querySelectorAll(".project").length;
+  if (index > 0) {
+    index--;
+  } else {
+    index = projects - 1; // ir al último
+  }
+  updateCarousel();
+});
+
+// Autoplay
+function startAutoplay() {
+  autoplayInterval = setInterval(() => {
+    nextBtn.click();
+  }, 4000); // cada 4 segundos
+}
+
+function stopAutoplay() {
+  clearInterval(autoplayInterval);
+}
+
+// Iniciar autoplay
+startAutoplay();
+
+// Pausar cuando el mouse entra
+track.addEventListener("mouseenter", stopAutoplay);
+// Reanudar cuando el mouse sale
+track.addEventListener("mouseleave", startAutoplay);
+
+// Ajustar si cambia el tamaño de la ventana
+window.addEventListener("resize", updateCarousel);
