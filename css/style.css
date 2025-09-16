@@ -1,0 +1,390 @@
+/* ==========================
+   Variables CSS
+========================== */
+:root {
+  --bg: #0f172a;
+  --card: #0b1220;
+  --muted: #9aa5b1;
+  --accent: #3b82f6;
+  --glass: rgba(255,255,255,0.04);
+  --glass-2: rgba(255,255,255,0.02);
+}
+
+/* ==========================
+   Reset / Global
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+}
+
+body {
+  background: linear-gradient(180deg, #07132a 0%, #081226 40%, #071226 100%);
+  color: #e6eef6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 24px;
+}
+
+/* ==========================
+   Navbar
+========================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.nav-logo {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn {
+  background: linear-gradient(90deg, var(--accent), #06b6d4);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 24px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.hero-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
+  padding: 28px;
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 6px 0 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+p.lead {
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+/* Animated gradient text */
+.name-animated {
+  background: linear-gradient(90deg, #60a5fa, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: slideBg 6s linear infinite;
+}
+
+@keyframes slideBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==========================
+   Badges
+========================== */
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.badge {
+  background: var(--glass);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: var(--muted);
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform 0.35s cubic-bezier(.2,.9,.3,1);
+}
+
+.badge:hover {
+  transform: translateY(-6px);
+}
+
+/* Hero Buttons */
+.btn-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+/* ==========================
+   Side Card
+========================== */
+.side-card {
+  border-radius: 14px;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+
+.avatar {
+  width: 100%;
+  height: 220px;
+  border-radius: 10px;
+  background-image: url('../img/perfil.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 -24px 60px rgba(0,0,0,0.45);
+}
+
+.contact-list a {
+  display: block;
+  color: hsl(213, 14%, 70%);
+  text-decoration: none;
+  margin: 6px 0;
+}
+
+.education {
+  margin-top: 14px;
+}
+
+.edu-item {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ==========================
+   Proyectos
+========================== */
+.section {
+  margin-top: 34px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.project {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 60px rgba(2,6,23,0.6);
+}
+
+.proj-img {
+  height: 130px;
+  border-radius: 8px;
+  background: linear-gradient(135deg,#0ea5e9 0%,#7c3aed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.proj-meta {
+  margin-top: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: var(--glass-2);
+  color: var(--muted);
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+/* ==========================
+   Carousel
+========================== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(.2,.9,.3,1);
+}
+
+/* ==========================
+   Formulario de contacto
+========================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+
+form label {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+form input,
+form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border 0.3s, background 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.05);
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
+/* ==========================
+   Footer
+========================== */
+footer {
+  margin-top: 44px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ==========================
+   Animaciones
+========================== */
+.float {
+  animation: floatY 6s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* ==========================
+   Focus
+========================== */
+a:focus,
+button:focus {
+  outline: 3px solid rgba(99,102,241,0.18);
+  outline-offset: 3px;
+}
+
+/* ==========================
+   Tema oscuro / claro
+========================== */
+body.light {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --muted: #555;
+  --accent: #3b82f6;
+  --glass: rgba(0,0,0,0.04);
+  --glass-2: rgba(0,0,0,0.02);
+  color: #111;
+  background: linear-gradient(180deg,#f0f1f5 0%, #e8eaef 100%);
+}
+
+body.light form input,
+body.light form textarea {
+  background: rgba(0,0,0,0.04);
+  color: var(--muted);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; }
+  .side-card { order: 2; }
+}

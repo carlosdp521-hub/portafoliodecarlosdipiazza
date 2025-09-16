@@ -1,141 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portafolio - Carlos Di Piazza</title>
-  <link rel="stylesheet" href="css/estilo.css" /> <!-- Corregido: ruta directa a estilo.css -->
-  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
-  <link rel="icon" href="img/Logo.png" type="image/png"> <!-- Añadido: Favicon -->
+  
+  <!-- SEO Básico -->
+  <meta name="description" content="Portafolio de Carlos Di Piazza - Analista Programador y Técnico en Redes. Experiencia en instalación y mantención de redes, seguridad electrónica, CCTV, Ubiquiti, Huawei y desarrollo web.">
+  <meta name="keywords" content="Carlos Di Piazza, Analista Programador, Técnico en Redes, Portafolio, CCTV, Ubiquiti, Huawei, Programación, Desarrollo Web, Seguridad Electrónica">
+  <meta name="author" content="Carlos Di Piazza">
+  <link rel="canonical" href="https://carlosdp521-hub.github.io/portafolio-carlos/">
+
+  <!-- Redes sociales (Open Graph) -->
+  <meta property="og:title" content="Portafolio - Carlos Di Piazza">
+  <meta property="og:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
+  <meta property="og:image" content="img/perfil.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carlosdp521-hub.github.io/portafolio-carlos/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portafolio - Carlos Di Piazza">
+  <meta name="twitter:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
+  <meta name="twitter:image" content="img/perfil.jpg">
+
+  <!-- Fuentes y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/Logo.png" type="image/png">
+  <meta name="theme-color" content="#0f172a">
 </head>
 <body>
+  <div class="wrap">
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="Barra de navegación">
+      <a class="nav-logo" href="#inicio">Carlos Di Piazza</a>
+      <div class="nav-actions">
+        <a class="ghost" href="docs/CarlosDiPiazza.pdf" target="_blank" rel="noopener" aria-label="Descargar CV en PDF">📄 CV</a>
+        <button id="themeBtn" class="btn" aria-pressed="false" aria-label="Cambiar tema">🌓 Tema</button>
+      </div>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar" role="navigation" aria-label="Menú principal">
-    <a href="#inicio" class="nav-logo">Carlos Di Piazza</a>
-    <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">☰</button>
-    <ul class="nav-menu" id="nav-menu">
-      <li><a href="#inicio" class="nav-link">Inicio</a></li>
-      <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-      <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-      <li><a href="#contacto" class="nav-link">Contacto</a></li>
-    </ul>
-    <button id="theme-toggle" aria-label="Cambiar tema claro/oscuro" aria-pressed="false">🌓</button>
-  </nav>
+    <!-- Hero -->
+    <header id="inicio" class="hero" role="banner">
+      <div class="hero-card">
+        <h1 class="float"><span class="name-animated">Carlos Di Piazza</span></h1>
+        <h2>Analista Programador • Técnico en Redes</h2>
+        <p class="lead">Diseño e implemento soluciones de redes, seguridad electrónica y aplicaciones web. Familiarizado con CCTV, Ubiquiti, Huawei, y desarrollo con HTML/CSS/JS y Python.</p>
 
-  <!-- Header / Inicio -->
-  <header id="inicio">
-    <div class="header-content">
-      <h1>Carlos Di Piazza</h1>
-      <h2>Desarrollador Web | Programador</h2>
-      <p>Estudiante en IACC especializado en desarrollo web y soluciones creativas.</p>
-      <section id="cv">
-        <a href="Carlos Di Piazza.pdf" target="_blank" class="cv-button"> <!-- Corregido: ruta directa a Carlos Di Piazza.pdf -->
-          📄 Ver mi CV
-        </a>
-      </section>
-    </div>
-  </header>
-
-  <main>
-    <!-- Proyectos Destacados -->
-    <section id="proyectos" aria-label="Proyectos destacados">
-      <h2>Proyectos Destacados</h2>
-      <div class="gallery-container">
-        <button class="gallery-prev" aria-label="Proyecto anterior" type="button">&#10094;</button>
-        <div class="gallery-grid">
-          <article class="gallery-item" tabindex="0">
-            <img src="img/proyecto1.png" alt="Captura del Portafolio Personal" loading="lazy" /> <!-- Corregido: ruta directa a proyecto1.png -->
-            <h3>Portafolio Personal</h3>
-            <p>HTML, CSS, JS</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn">Ver Proyecto</a>
-          </article>
-          <article class="gallery-item" tabindex="0">
-            <img src="img/proyecto2.png" alt="Captura del Gestor de Tareas" loading="lazy" /> <!-- Corregido: ruta directa a proyecto2.png -->
-            <h3>Gestor de Tareas</h3>
-            <p>React, Node.js</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn">Ver Proyecto</a>
-          </article>
-          <article class="gallery-item" tabindex="0">
-            <img src="img/proyecto3.png" alt="Captura del Dashboard Analítico" loading="lazy" /> <!-- Corregido: ruta directa a proyecto3.png -->
-            <h3>Dashboard Analítico</h3>
-            <p>Python, Chart.js</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn">Ver Proyecto</a>
-          </article>
-          <!-- Añadir más proyectos si es necesario, siguiendo el mismo patrón -->
-          <article class="gallery-item" tabindex="0">
-            <img src="img/proyecto4.png" alt="Captura del Proyecto 4" loading="lazy" />
-            <h3>Proyecto 4</h3>
-            <p>Tecnología X, Tecnología Y</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn">Ver Proyecto</a>
-          </article>
-          <article class="gallery-item" tabindex="0">
-            <img src="img/proyecto5.png" alt="Captura del Proyecto 5" loading="lazy" />
-            <h3>Proyecto 5</h3>
-            <p>Tecnología A, Tecnología B</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn">Ver Proyecto</a>
-          </article>
-          <article class="gallery-item" tabindex="0">
-            <img src="img/proyecto6.png" alt="Captura del Proyecto 6" loading="lazy" />
-            <h3>Proyecto 6</h3>
-            <p>Tecnología C, Tecnología D</p>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="gallery-btn">Ver Proyecto</a>
-          </article>
+        <div class="badges">
+          <span class="badge">Gestión de Redes</span>
+          <span class="badge">Seguridad Electrónica</span>
+          <span class="badge">Programación</span>
         </div>
-        <button class="gallery-next" aria-label="Proyecto siguiente" type="button">&#10095;</button>
-      </div>
-    </section>
 
-    <!-- Sobre mí -->
-    <section id="sobre-mi" aria-label="Sobre mí">
-      <img src="img/perfil.jpg" alt="Foto de Carlos Di Piazza" /> <!-- Corregido: ruta directa a perfil.jpg -->
-      <div class="about-text">
+        <div class="btn-container">
+          <a class="btn" href="#proyectos" aria-label="Ver proyectos">Ver Proyectos</a>
+          <a class="ghost" href="#contacto" aria-label="Ir a contacto">Contacto</a>
+        </div>
+
+        <svg class="hero-wave" width="380" height="220" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decoración de onda azul">
+          <path d="M0 120 C150 200 350 0 600 120 L600 200 L0 200 Z" fill="#60a5fa"/>
+        </svg>
+      </div>
+
+      <!-- Side Card -->
+      <aside class="side-card">
+        <div class="avatar" role="img" aria-label="Foto de perfil de Carlos"></div>
+        <div class="contact-list">
+          <a href="mailto:carlosmdipiazzaf@gmail.com">📧 carlosmdipiazzaf@gmail.com</a>
+          <a href="tel:+56979095565">📱 +56 9 7909 5565</a>
+          <a href="https://github.com/carlosdp521-hub" target="_blank" rel="noopener">🐙 GitHub</a>
+          <a href="https://www.linkedin.com/in/carlosmatíasdipiazzafariña" target="_blank" rel="noopener">💼 LinkedIn</a>
+        </div>
+
+        <div class="education">
+          <strong>Educación</strong>
+          <div class="edu-item">Téc. Instalación y Mantención de Redes — AIEP (2017-2021)</div>
+          <div class="edu-item">Téc. Análisis y Programación — IACC (En curso)</div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Proyectos -->
+      <section id="proyectos" class="section">
+        <h2>Proyectos destacados</h2>
+        <div class="carousel" role="region" aria-label="Carrusel de proyectos">
+          <div id="track" class="carousel-track">
+            <!-- Proyecto 1 -->
+            <article class="project" aria-label="Proyecto CCTV y Control de Acceso" tabindex="0">
+              <div class="proj-img" role="img" aria-label="Imagen representativa de CCTV">CCTV • Control de Acceso</div>
+              <div class="proj-meta">
+                <h3>Instalación y configuración — CCTV y CCAA</h3>
+                <p>Rol: Técnico. Implementación en edificios corporativos; integración con sistemas biométricos y servidores de asistencia.</p>
+                <div class="tags">
+                  <span class="tag">Huawei</span>
+                  <span class="tag">CCTV</span>
+                  <span class="tag">Biometría</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project" aria-label="Proyecto Redes Ubiquiti" tabindex="0">
+              <div class="proj-img" role="img" aria-label="Imagen representativa de antenas Ubiquiti">Proyecto Ubiquiti</div>
+              <div class="proj-meta">
+                <h3>Redes municipales — Ubiquiti</h3>
+                <p>Configuración de antenas y acceso para integraciones en parques y espacios públicos.</p>
+                <div class="tags">
+                  <span class="tag">Ubiquiti</span>
+                  <span class="tag">Instalación</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project" aria-label="Proyecto Dashboard Analítico" tabindex="0">
+              <div class="proj-img" role="img" aria-label="Dashboard de datos">Dashboard Analítico</div>
+              <div class="proj-meta">
+                <h3>Dashboard — Análisis y visualización</h3>
+                <p>Desarrollado con Python y Chart.js. Entregó reportes de desempeño y métricas técnicas para toma de decisiones.</p>
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Chart.js</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Proyecto 4 -->
+            <article class="project" aria-label="Proyecto Documentación Técnica" tabindex="0">
+              <div class="proj-img" role="img" aria-label="Documentación técnica">Documentación Técnica</div>
+              <div class="proj-meta">
+                <h3>Documentación y reportes</h3>
+                <p>Encargado de documentar estado y funcionamiento de equipos en proyectos para clientes.</p>
+                <div class="tags">
+                  <span class="tag">Reporting</span>
+                  <span class="tag">Soporte</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="prev" class="ghost" aria-label="Proyecto anterior">◀</button>
+          <button id="next" class="ghost" aria-label="Proyecto siguiente">▶</button>
+        </div>
+      </section>
+
+      <!-- Sobre mí -->
+      <section id="sobre-mi" class="section">
         <h2>Sobre mí</h2>
-        <p>Apasionado por la tecnología y el desarrollo web. Busco crear proyectos funcionales y atractivos visualmente.</p>
-        <h3>Habilidades</h3>
-        <ul>
-          <li>HTML, CSS, JavaScript</li>
-          <li>React, Node.js</li>
-          <li>Python, PHP</li>
-          <li>SQL, MongoDB</li>
-        </ul>
-      </div>
-    </section>
+        <p>Técnico en Instalación y Mantención de Redes con experiencia en sistemas de seguridad electrónica, redes y programación. Me especializo en la integración de hardware y software para soluciones seguras y confiables. Proactivo, orientado al detalle y con ganas de aprender y colaborar en equipos multidisciplinarios.</p>
+      </section>
 
-    <!-- Contacto -->
-    <section id="contacto" aria-label="Contacto">
-      <h2>Contacto</h2>
-      <div class="contact-grid">
-        <address class="contact-info">
-          <p>📧 <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></p>
-          <p>🌐 <a href="https://github.com/carlosdp521-hub" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-          <p>💼 <a href="https://www.linkedin.com/in/carlosmatíasdipiazzafariña" target="_blank">LinkedIn</a></p>
-        </address>
-        <form class="contact-form" novalidate>
+      <!-- Contacto -->
+      <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <form onsubmit="event.preventDefault();alert('Gracias — mensaje simulado');" aria-label="Formulario de contacto">
           <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          <input id="nombre" name="nombre" aria-label="nombre" placeholder="Tu nombre" required>
 
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" placeholder="Tu correo" required />
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" aria-label="email" placeholder="Tu correo" required>
 
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+          <textarea id="mensaje" name="mensaje" aria-label="mensaje" placeholder="Mensaje" rows="5"></textarea>
 
-          <button type="submit" class="btn">Enviar</button>
+          <button class="btn" type="submit">Enviar</button>
         </form>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Carlos Di Piazza</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Carlos Di Piazza — Diseñado con animaciones sencillas, SEO básico y accesibilidad</p>
+    </footer>
+  </div>
 
-  <script src="js/script.js"></script> <!-- Corregido: ruta directa a script.js -->
+  <script src="js/script.js"></script>
 </body>
-
 </html>
-
-
-
