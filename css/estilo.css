@@ -584,18 +584,27 @@ footer p {
   opacity: 0.8;
 }
 
+/* Sección del CV */
+#cv {
+    margin: 50px 0;
+    text-align: center;
+}
+
+/* Botón de CV */
 .cv-button {
     background-color: #00d4ff;
     color: #121212;
-    padding: 12px 25px;
-    border-radius: 8px;
+    padding: 14px 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .cv-button:hover {
     background-color: #009ecf;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
+
