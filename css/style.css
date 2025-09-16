@@ -1,6 +1,4 @@
-/* ==========================
-   Variables CSS
-========================== */
+/* Variables CSS */
 :root {
   --bg: #0f172a;
   --card: #0b1220;
@@ -8,11 +6,10 @@
   --accent: #3b82f6;
   --glass: rgba(255,255,255,0.04);
   --glass-2: rgba(255,255,255,0.02);
+  --gap: 16px; /* variable para gap */
 }
 
-/* ==========================
-   Reset / Global
-========================== */
+/* Reset / Global */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,9 +33,7 @@ body {
   padding: 24px;
 }
 
-/* ==========================
-   Navbar
-========================== */
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -88,9 +83,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
-/* ==========================
-   Hero Section
-========================== */
+/* Hero Section */
 .hero {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -103,6 +96,7 @@ body {
   background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent);
   padding: 28px;
   border-radius: 18px;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   box-shadow: 0 10px 30px rgba(2,6,23,0.6);
   position: relative;
@@ -140,12 +134,10 @@ p.lead {
   100% { background-position: 0% 50%; }
 }
 
-/* ==========================
-   Badges
-========================== */
+/* Badges */
 .badges {
   display: flex;
-  gap: 10px;
+  gap: var(--gap);
   margin-top: 10px;
 }
 
@@ -171,9 +163,7 @@ p.lead {
   margin-top: 18px;
 }
 
-/* ==========================
-   Side Card
-========================== */
+/* Side Card */
 .side-card {
   border-radius: 14px;
   padding: 18px;
@@ -208,9 +198,7 @@ p.lead {
   margin-top: 6px;
 }
 
-/* ==========================
-   Proyectos
-========================== */
+/* Proyectos */
 .section {
   margin-top: 34px;
 }
@@ -218,7 +206,7 @@ p.lead {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  gap: var(--gap);
 }
 
 .project {
@@ -267,13 +255,12 @@ p.lead {
   border: 1px solid rgba(255,255,255,0.02);
 }
 
-/* ==========================
-   Carousel
-========================== */
+/* Carousel */
 .carousel {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  max-width: 100%;
 }
 
 .carousel-track {
@@ -281,9 +268,7 @@ p.lead {
   transition: transform 0.6s cubic-bezier(.2,.9,.3,1);
 }
 
-/* ==========================
-   Formulario de contacto
-========================== */
+/* Formulario de contacto */
 form {
   display: flex;
   flex-direction: column;
@@ -328,9 +313,7 @@ form button {
   margin-top: 8px;
 }
 
-/* ==========================
-   Footer
-========================== */
+/* Footer */
 footer {
   margin-top: 44px;
   text-align: center;
@@ -338,9 +321,7 @@ footer {
   font-size: 14px;
 }
 
-/* ==========================
-   Animaciones
-========================== */
+/* Animaciones */
 .float {
   animation: floatY 6s ease-in-out infinite;
 }
@@ -351,18 +332,14 @@ footer {
   100% { transform: translateY(0); }
 }
 
-/* ==========================
-   Focus
-========================== */
+/* Focus */
 a:focus,
 button:focus {
   outline: 3px solid rgba(99,102,241,0.18);
   outline-offset: 3px;
 }
 
-/* ==========================
-   Tema oscuro / claro
-========================== */
+/* Tema oscuro / claro */
 body.light {
   --bg: #f8f9fa;
   --card: #ffffff;
@@ -381,10 +358,82 @@ body.light form textarea {
   border: 1px solid rgba(0,0,0,0.06);
 }
 
-/* ==========================
-   Responsive
-========================== */
-@media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; }
-  .side-card { order: 2; }
+/* Responsive */
+
+/* Tablets */
+@media (max-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .side-card {
+    order: 2;
+  }
+
+  .avatar {
+    height: 200px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .wrap {
+    margin: 16px 12px;
+    padding: 16px 12px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hero-card {
+    padding: 20px;
+  }
+
+  .side-card {
+    order: 2;
+    padding: 16px;
+  }
+
+  .avatar {
+    height: 180px;
+  }
+
+  .btn, .ghost {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .project {
+    padding: 12px;
+  }
+
+  .proj-img {
+    height: 100px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desactivar hover en pantallas táctiles */
+@media (hover: none) {
+  .btn:hover,
+  .ghost:hover,
+  .badge:hover,
+  .project:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
