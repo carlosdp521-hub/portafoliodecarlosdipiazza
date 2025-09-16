@@ -1,26 +1,27 @@
-/* estilo.css */
-
-/* Reset básico */
+/* ===========================
+   Reset básico
+=========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar general */
+/* ===========================
+   Navbar
+=========================== */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff; /* color claro */
+  background-color: #ffffff;
   border-bottom: 1px solid #ddd;
   padding: 0.5rem 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: relative;
   z-index: 1000;
 }
 
-/* Logo */
 .nav-logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -30,40 +31,29 @@
   transition: color 0.3s ease;
 }
 
-.nav-logo:hover,
-.nav-logo:focus {
+.nav-logo:hover {
   color: #0070f3;
-  outline: none;
 }
 
-/* Botón toggle menú (hamburguesa) */
 .nav-toggle {
   font-size: 1.5rem;
   background: none;
   border: none;
   cursor: pointer;
   color: #222;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.25rem 0.5rem;
-  transition: color 0.3s ease;
+  display: none;
 }
 
-.nav-toggle:hover,
-.nav-toggle:focus {
+.nav-toggle:hover {
   color: #0070f3;
-  outline: none;
 }
 
-/* Menú de navegación */
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
-/* Enlaces del menú */
 .nav-link {
   text-decoration: none;
   color: #222;
@@ -72,17 +62,13 @@
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover {
   background-color: #0070f3;
   color: #fff;
-  outline: none;
 }
 
-/* Botón de cambio de tema */
 #theme-toggle {
   font-size: 1.25rem;
   background: none;
@@ -92,18 +78,19 @@
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  user-select: none;
 }
 
-#theme-toggle:hover,
-#theme-toggle:focus {
+#theme-toggle:hover {
   background-color: #0070f3;
   color: #fff;
-  outline: none;
 }
 
-/* Responsive: ocultar menú y mostrar botón hamburguesa en pantallas pequeñas */
+/* Responsive Navbar */
 @media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+  
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -113,37 +100,23 @@
     width: 200px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
   }
-
-  /* Cuando el menú está abierto */
+  
   .nav-menu.open {
-    max-height: 500px; /* suficiente para mostrar todos los enlaces */
+    max-height: 500px;
   }
-
+  
   .nav-link {
     padding: 0.75rem 1rem;
   }
-
-  .nav-toggle {
-    display: inline-flex;
-  }
 }
 
-/* En pantallas grandes, ocultar botón hamburguesa */
-@media (min-width: 769px) {
-  .nav-toggle {
-    display: none;
-  }
-}
-
-
-/* estilo.css */
-
-/* Header - Sección Inicio */
+/* ===========================
+   Header / Inicio
+=========================== */
 #inicio {
   min-height: 100vh;
   display: flex;
@@ -153,7 +126,6 @@
   color: white;
   text-align: center;
   padding: 2rem 1rem;
-  position: relative;
 }
 
 .header-content {
@@ -165,7 +137,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 #inicio h2 {
@@ -173,7 +145,7 @@
   font-weight: 400;
   margin-bottom: 1.5rem;
   opacity: 0.9;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 #inicio p {
@@ -181,12 +153,32 @@
   margin-bottom: 2.5rem;
   opacity: 0.8;
   line-height: 1.6;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-/* Botón */
+/* Botón CV */
+#cv {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+.cv-button {
+  background-color: #00d4ff;
+  color: #121212;
+  padding: 14px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.cv-button:hover {
+  background-color: #009ecf;
+  transform: translateY(-3px);
+}
+
+/* Botón general */
 .btn {
   display: inline-block;
   background-color: #fff;
@@ -197,7 +189,7 @@
   border-radius: 50px;
   transition: all 0.3s ease;
   border: 2px solid transparent;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .btn:hover {
@@ -205,59 +197,20 @@
   color: #fff;
   border-color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
-.btn:active {
-  transform: translateY(0);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  #inicio h1 {
-    font-size: 2.5rem;
-  }
-  
-  #inicio h2 {
-    font-size: 1.4rem;
-  }
-  
-  #inicio p {
-    font-size: 1.1rem;
-  }
-  
-  .btn {
-    padding: 0.8rem 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #inicio h1 {
-    font-size: 2rem;
-  }
-  
-  #inicio h2 {
-    font-size: 1.2rem;
-  }
-  
-  #inicio p {
-    font-size: 1rem;
-  }
-}
-
-/* estilo.css */
-
-/* General */
+/* ===========================
+   Main
+=========================== */
 main {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #222;
   line-height: 1.6;
 }
 
-/* Section Titles */
 section h2 {
   font-size: 2rem;
   font-weight: 700;
@@ -267,9 +220,8 @@ section h2 {
 }
 
 /* ===========================
-   Proyectos Destacados
-   =========================== */
-
+   Proyectos / Galería
+=========================== */
 .gallery-container {
   position: relative;
   display: flex;
@@ -289,16 +241,12 @@ section h2 {
   height: 3.5rem;
   border-radius: 50%;
   cursor: pointer;
-  user-select: none;
   transition: background-color 0.3s ease;
 }
 
 .gallery-prev:hover,
-.gallery-next:hover,
-.gallery-prev:focus,
-.gallery-next:focus {
+.gallery-next:hover {
   background-color: #005bb5;
-  outline: none;
 }
 
 .gallery-grid {
@@ -309,7 +257,6 @@ section h2 {
   max-width: 900px;
 }
 
-/* Individual project card */
 .gallery-item {
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -320,14 +267,11 @@ section h2 {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: default;
 }
 
-.gallery-item:focus,
 .gallery-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  outline: none;
 }
 
 .gallery-item img {
@@ -351,7 +295,6 @@ section h2 {
   color: #555;
 }
 
-/* Button inside gallery */
 .gallery-btn {
   background-color: #0070f3;
   color: white;
@@ -360,19 +303,15 @@ section h2 {
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  user-select: none;
 }
 
-.gallery-btn:hover,
-.gallery-btn:focus {
+.gallery-btn:hover {
   background-color: #005bb5;
-  outline: none;
 }
 
 /* ===========================
    Sobre mí
-   =========================== */
-
+=========================== */
 #sobre-mi {
   display: flex;
   align-items: center;
@@ -387,7 +326,6 @@ section h2 {
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   object-fit: cover;
-  flex-shrink: 0;
 }
 
 .about-text {
@@ -424,8 +362,7 @@ section h2 {
 
 /* ===========================
    Contacto
-   =========================== */
-
+=========================== */
 #contacto h2 {
   margin-bottom: 2rem;
   color: #0070f3;
@@ -438,8 +375,6 @@ section h2 {
   gap: 3rem;
   max-width: 900px;
   margin: 0 auto 4rem auto;
-  align-items: start;
-  flex-wrap: wrap;
 }
 
 .contact-info {
@@ -456,16 +391,12 @@ section h2 {
 .contact-info a {
   color: #0070f3;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
-.contact-info a:hover,
-.contact-info a:focus {
+.contact-info a:hover {
   color: #005bb5;
-  outline: none;
 }
 
-/* Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -485,7 +416,6 @@ section h2 {
   border-radius: 6px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
-  resize: vertical;
 }
 
 .contact-form input:focus,
@@ -504,35 +434,31 @@ section h2 {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  user-select: none;
 }
 
-.contact-form button.btn:hover,
-.contact-form button.btn:focus {
+.contact-form button.btn:hover {
   background-color: #005bb5;
-  outline: none;
 }
 
 /* ===========================
-   Animaciones Fade-in
-   =========================== */
-
-.fade-in {
-  opacity: 0;
-  animation: fadeInAnimation 1s ease forwards;
+   Footer
+=========================== */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-@keyframes fadeInAnimation {
-  to {
-    opacity: 1;
-  }
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
 }
 
 /* ===========================
    Responsive
-   =========================== */
-
+=========================== */
 @media (max-width: 900px) {
   #sobre-mi {
     flex-direction: column;
@@ -549,6 +475,18 @@ section h2 {
 }
 
 @media (max-width: 480px) {
+  #inicio h1 {
+    font-size: 2rem;
+  }
+
+  #inicio h2 {
+    font-size: 1.2rem;
+  }
+
+  #inicio p {
+    font-size: 1rem;
+  }
+
   .gallery-prev,
   .gallery-next {
     width: 2.8rem;
@@ -563,47 +501,4 @@ section h2 {
   #sobre-mi img {
     max-width: 100%;
   }
-}
-
-
-/* estilo.css continuacion */
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-footer p {
-  margin: 0;
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-/* Sección del CV */
-#cv {
-    margin: 50px 0;
-    text-align: center;
-}
-
-/* Botón de CV */
-.cv-button {
-    background-color: #00d4ff;
-    color: #121212;
-    padding: 14px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.cv-button:hover {
-    background-color: #009ecf;
-    transform: translateY(-3px);
 }
