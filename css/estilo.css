@@ -11,6 +11,78 @@
 body {
   line-height: 1.6;
   color: #222;
+  background-color: #f4f4f4; /* Color de fondo por defecto */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para el tema oscuro */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-theme .navbar {
+  background-color: #2a2a2a;
+  border-bottom-color: #444;
+}
+
+body.dark-theme .nav-logo,
+body.dark-theme .nav-toggle,
+body.dark-theme #theme-toggle {
+  color: #e0e0e0;
+}
+
+body.dark-theme .nav-link {
+  color: #e0e0e0;
+}
+
+body.dark-theme .nav-link:hover {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+body.dark-theme .nav-menu {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+body.dark-theme section h2,
+body.dark-theme .gallery-item h3,
+body.dark-theme #sobre-mi h2,
+body.dark-theme #sobre-mi h3,
+body.dark-theme #contacto h2 {
+  color: #00d4ff; /* Un color que contraste bien en oscuro */
+}
+
+body.dark-theme .gallery-item {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .gallery-item:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-theme .gallery-item p {
+  color: #bbb;
+}
+
+body.dark-theme .contact-info,
+body.dark-theme .contact-form label {
+  color: #e0e0e0;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+body.dark-theme .contact-form input:focus,
+body.dark-theme .contact-form textarea:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 5px rgba(0,212,255,0.5);
 }
 
 /* ===========================
@@ -133,7 +205,7 @@ body {
 /* Navbar Responsive */
 @media (max-width: 768px) {
   .nav-toggle { display: inline-flex; }
-  
+
   .nav-menu {
     position: absolute;
     top: 100%;
@@ -145,11 +217,19 @@ body {
     border-radius: 4px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease-in-out; /* Transición más suave */
   }
-  
-  .nav-menu.open { max-height: 500px; }
-  .nav-link { padding: 0.75rem 1rem; }
+
+  .nav-menu.active { /* Corregido: usar 'active' en lugar de 'open' para coincidir con JS */
+    max-height: 500px; /* Suficiente para mostrar todos los elementos */
+    padding: 1rem 0; /* Añadir padding para que los enlaces no estén pegados */
+  }
+
+  .nav-menu.active .nav-link {
+    padding: 0.75rem 1rem;
+    width: 100%; /* Asegurar que los enlaces ocupen todo el ancho */
+    text-align: left;
+  }
 }
 
 /* ===========================
@@ -237,17 +317,20 @@ section h2 {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  flex-shrink: 0; /* Evita que los botones se encojan */
 }
 
 .gallery-prev:hover,
 .gallery-next:hover { background-color: #005bb5; }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  display: flex; /* Cambiado a flex para el carrusel */
+  overflow-x: hidden; /* Oculta el scroll horizontal */
+  scroll-behavior: smooth; /* Desplazamiento suave */
   width: 100%;
   max-width: 900px;
+  gap: 1.5rem; /* Espacio entre elementos */
+  padding: 1rem 0; /* Añadir padding para que no se peguen a los bordes */
 }
 
 .gallery-item {
@@ -260,6 +343,8 @@ section h2 {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0; /* Evita que los elementos se encojan */
+  width: 280px; /* Ancho fijo para cada elemento del carrusel */
 }
 
 .gallery-item:hover {
@@ -273,6 +358,7 @@ section h2 {
   margin-bottom: 1rem;
   object-fit: cover;
   height: 160px;
+  width: 100%; /* Asegurar que la imagen ocupe el ancho del item */
 }
 
 .gallery-item h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: #0070f3; }
@@ -299,6 +385,7 @@ section h2 {
   gap: 2rem;
   margin-bottom: 4rem;
   flex-wrap: wrap;
+  justify-content: center; /* Centrar elementos en pantallas pequeñas */
 }
 
 #sobre-mi img {
@@ -314,7 +401,7 @@ section h2 {
 #sobre-mi h2 { margin-bottom: 1rem; color: #0070f3; }
 #sobre-mi p { margin-bottom: 1.5rem; font-size: 1.1rem; color: #444; }
 #sobre-mi h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: #333; }
-#sobre-mi ul { list-style: disc inside; color: #555; font-size: 1rem; }
+#sobre-mi ul { list-style: disc inside; color: #555; font-size: 1rem; padding-left: 1.2rem; /* Ajustar indentación */ }
 #sobre-mi ul li { margin-bottom: 0.4rem; }
 
 /* ===========================
@@ -396,7 +483,7 @@ footer p { margin: 0; font-size: 1rem; opacity: 0.8; }
 @media (max-width: 900px) {
   #sobre-mi { flex-direction: column; text-align: center; }
   .contact-grid { grid-template-columns: 1fr; }
-  .contact-form button.btn { width: 100%; }
+  .contact-form button.btn { width: 100%; align-self: center; /* Centrar botón en móvil */ }
 }
 
 @media (max-width: 480px) {
@@ -405,6 +492,7 @@ footer p { margin: 0; font-size: 1rem; opacity: 0.8; }
   #inicio p { font-size: 1rem; }
   .gallery-prev,
   .gallery-next { width: 2.8rem; height: 2.8rem; font-size: 1.5rem; }
+  .gallery-item { width: 250px; /* Ajustar ancho del item en móvil */ }
   .gallery-item img { height: 140px; }
   #sobre-mi img { max-width: 100%; }
 }
