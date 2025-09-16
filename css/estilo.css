@@ -583,3 +583,19 @@ footer p {
   font-size: 1rem;
   opacity: 0.8;
 }
+
+.cv-button {
+    background-color: #00d4ff;
+    color: #121212;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #009ecf;
+    transform: translateY(-2px);
+}
