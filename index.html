@@ -1,50 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portafolio - Carlos Di Piazza</title>
-  
-  <!-- SEO Básico -->
-  <meta name="description" content="Portafolio de Carlos Di Piazza - Analista Programador y Técnico en Redes. Experiencia en instalación y mantención de redes, seguridad electrónica, CCTV, Ubiquiti, Huawei y desarrollo web.">
-  <meta name="keywords" content="Carlos Di Piazza, Analista Programador, Técnico en Redes, Portafolio, CCTV, Ubiquiti, Huawei, Programación, Desarrollo Web, Seguridad Electrónica">
+
+  <!-- SEO -->
+  <meta name="description" content="Portafolio de Carlos Di Piazza - Analista Programador y Técnico en Redes. Experiencia en redes, seguridad electrónica y desarrollo web.">
   <meta name="author" content="Carlos Di Piazza">
-  <link rel="canonical" href="https://carlosdp521-hub.github.io/portafolio-carlos/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Portafolio - Carlos Di Piazza">
   <meta property="og:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
   <meta property="og:image" content="img/perfil.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://carlosdp521-hub.github.io/portafolio-carlos/">
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Portafolio - Carlos Di Piazza">
   <meta name="twitter:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
   <meta name="twitter:image" content="img/perfil.jpg">
 
-  <!-- Fuentes y estilos -->
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="img/Logo.png" type="image/png">
-  <meta name="theme-color" content="#0f172a">
 </head>
 <body>
   <div class="wrap">
+
     <!-- Navbar -->
     <nav class="navbar" aria-label="Barra de navegación principal">
       <a class="nav-logo" href="#inicio">Carlos Di Piazza</a>
       <div class="nav-actions">
-        <a class="ghost" href="docs/CarlosDiPiazza.pdf" target="_blank" rel="noopener noreferrer" aria-label="Descargar CV en PDF">📄 CV</a>
+        <a class="ghost" href="docs/CarlosDiPiazza.pdf" target="_blank" rel="noopener noreferrer">📄 CV</a>
         <button id="themeBtn" class="btn" aria-pressed="false" aria-label="Cambiar tema">🌓 Tema</button>
       </div>
     </nav>
 
     <!-- Hero -->
-    <header id="inicio" class="hero" role="banner">
+    <header id="inicio" class="hero">
       <div class="hero-card">
-        <h1 class="float"><span class="name-animated">Carlos Di Piazza</span></h1>
+        <h1 class="name-animated">Carlos Di Piazza</h1>
         <h2>Analista Programador • Técnico en Redes</h2>
         <p class="lead">Diseño e implemento soluciones de redes, seguridad electrónica y aplicaciones web. Familiarizado con CCTV, Ubiquiti, Huawei, y desarrollo con HTML, CSS, JS y Python.</p>
 
@@ -59,12 +56,11 @@
           <a class="ghost" href="#contacto">Contacto</a>
         </div>
 
-        <svg class="hero-wave" width="380" height="220" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decoración de onda azul">
+        <svg class="hero-wave" width="380" height="220" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 120 C150 200 350 0 600 120 L600 200 L0 200 Z" fill="#60a5fa"/>
         </svg>
       </div>
 
-      <!-- Side Card -->
       <aside class="side-card">
         <img src="img/perfil.jpg" alt="Foto de perfil de Carlos Di Piazza" class="avatar">
         <address class="contact-list">
@@ -83,67 +79,44 @@
     </header>
 
     <!-- Main -->
-    <main role="main">
+    <main>
+
       <!-- Proyectos -->
       <section id="proyectos" class="section">
         <h2>Proyectos destacados</h2>
-        <div class="carousel" role="region" aria-label="Carrusel de proyectos">
+        <div class="carousel" role="region">
           <div id="track" class="carousel-track">
             <!-- Proyecto 1 -->
-            <article class="project" aria-labelledby="proj1-title" tabindex="0">
-              <img src="img/cctv.jpg" alt="Instalación y configuración de CCTV y control de acceso" class="proj-img">
+            <article class="project" tabindex="0">
+              <img src="img/cctv.png" alt="Instalación y configuración de CCTV y control de acceso" class="proj-img">
               <div class="proj-meta">
-                <h3 id="proj1-title">Instalación y configuración — CCTV y CCAA</h3>
-                <p>Rol: Técnico. Implementación en edificios corporativos; integración con sistemas biométricos y servidores de asistencia.</p>
-                <div class="tags">
-                  <span class="tag">Huawei</span>
-                  <span class="tag">CCTV</span>
-                  <span class="tag">Biometría</span>
-                </div>
+                <h3>CCTV y Control de Acceso</h3>
+                <p>Implementación en edificios corporativos; integración con sistemas biométricos y servidores de asistencia.</p>
+                <div class="tags"><span class="tag">Huawei</span><span class="tag">CCTV</span><span class="tag">Biometría</span></div>
               </div>
             </article>
 
             <!-- Proyecto 2 -->
-            <article class="project" aria-labelledby="proj2-title" tabindex="0">
-              <img src="img/ubiquiti.jpg" alt="Configuración de redes Ubiquiti en espacios públicos" class="proj-img">
+            <article class="project" tabindex="0">
+              <img src="img/ubiquiti.png" alt="Configuración de redes Ubiquiti en espacios públicos" class="proj-img">
               <div class="proj-meta">
-                <h3 id="proj2-title">Redes municipales — Ubiquiti</h3>
+                <h3>Redes municipales — Ubiquiti</h3>
                 <p>Configuración de antenas y acceso para integraciones en parques y espacios públicos.</p>
-                <div class="tags">
-                  <span class="tag">Ubiquiti</span>
-                  <span class="tag">Instalación</span>
-                </div>
+                <div class="tags"><span class="tag">Ubiquiti</span><span class="tag">Instalación</span></div>
               </div>
             </article>
 
             <!-- Proyecto 3 -->
-            <article class="project" aria-labelledby="proj3-title" tabindex="0">
-              <img src="img/dashboard.jpg" alt="Dashboard analítico de métricas técnicas" class="proj-img">
+            <article class="project" tabindex="0">
+              <img src="img/dashboard.png" alt="Dashboard analítico de métricas técnicas" class="proj-img">
               <div class="proj-meta">
-                <h3 id="proj3-title">Dashboard — Análisis y visualización</h3>
-                <p>Desarrollado con Python y Chart.js. Entregó reportes de desempeño y métricas técnicas para toma de decisiones.</p>
-                <div class="tags">
-                  <span class="tag">Python</span>
-                  <span class="tag">Chart.js</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- Proyecto 4 -->
-            <article class="project" aria-labelledby="proj4-title" tabindex="0">
-              <img src="img/documentacion.jpg" alt="Documentación técnica de proyectos" class="proj-img">
-              <div class="proj-meta">
-                <h3 id="proj4-title">Documentación y reportes</h3>
-                <p>Encargado de documentar estado y funcionamiento de equipos en proyectos para clientes.</p>
-                <div class="tags">
-                  <span class="tag">Reporting</span>
-                  <span class="tag">Soporte</span>
-                </div>
+                <h3>Dashboard — Análisis y visualización</h3>
+                <p>Desarrollado con Python y Chart.js. Entregó reportes de desempeño y métricas técnicas.</p>
+                <div class="tags"><span class="tag">Python</span><span class="tag">Chart.js</span></div>
               </div>
             </article>
           </div>
         </div>
-
         <div class="controls">
           <button id="prev" class="ghost" aria-label="Proyecto anterior">◀</button>
           <button id="next" class="ghost" aria-label="Proyecto siguiente">▶</button>
@@ -153,47 +126,34 @@
       <!-- Sobre mí -->
       <section id="sobre-mi" class="section">
         <h2>Sobre mí</h2>
-        <p>Soy Técnico en Instalación y Mantención de Redes con experiencia en sistemas de seguridad electrónica, redes y programación. Me especializo en la integración de hardware y software para soluciones seguras y confiables. Proactivo, orientado al detalle y con ganas de aprender y colaborar en equipos multidisciplinarios.</p>
+        <p>Soy Técnico en Instalación y Mantención de Redes con experiencia en sistemas de seguridad electrónica, redes y programación. Me especializo en la integración de hardware y software para soluciones seguras y confiables.</p>
       </section>
 
       <!-- Contacto -->
       <section id="contacto" class="section">
         <h2>Contacto</h2>
-        <form onsubmit="event.preventDefault();alert('Gracias — mensaje simulado');" aria-label="Formulario de contacto">
+        <form onsubmit="event.preventDefault();alert('Gracias, mensaje simulado');">
           <label for="nombre">Nombre</label>
-          <input id="nombre" name="nombre" placeholder="Tu nombre" required aria-required="true">
+          <input id="nombre" name="nombre" required>
 
-          <label for="correo">Correo electrónico</label>
-          <input id="correo" name="correo" type="email" placeholder="Tu correo" required aria-required="true">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" required>
 
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required aria-required="true"></textarea>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
           <button class="btn" type="submit">Enviar</button>
         </form>
       </section>
+
     </main>
 
     <!-- Footer -->
     <footer>
-      <p>© 2025 Carlos Di Piazza — Diseñado con animaciones sencillas, SEO básico y accesibilidad</p>
+      <p>© 2025 Carlos Di Piazza — Portafolio con SEO, accesibilidad y modo oscuro</p>
     </footer>
   </div>
 
-  <script src="js/script.js"></script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Carlos Di Piazza",
-  "jobTitle": "Analista Programador y Técnico en Redes",
-  "url": "https://carlosdp521-hub.github.io/portafolio-carlos/",
-  "sameAs": [
-    "https://github.com/carlosdp521-hub",
-    "https://www.linkedin.com/in/carlosmatíasdipiazzafariña"
-  ]
-}
-</script>
-
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>

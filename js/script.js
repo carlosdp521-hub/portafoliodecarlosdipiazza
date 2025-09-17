@@ -1,184 +1,154 @@
 /* =====================
-   Modo oscuro / claro
+   Gestor de Tema (Claro / Oscuro)
 ===================== */
-const themeBtn = document.getElementById("themeBtn");
-const body = document.body;
+class ThemeManager {
+  constructor(button) {
+    this.button = button;
+    this.body = document.body;
+    this.init();
+  }
 
-// Verificar preferencia guardada
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
-  themeBtn.setAttribute("aria-pressed", "true");
+  init() {
+    if (localStorage.getItem("theme") === "dark") {
+      this.body.classList.add("dark");
+      this.button.setAttribute("aria-pressed", "true");
+    }
+    this.button.addEventListener("click", () => this.toggle());
+  }
+
+  toggle() {
+    this.body.classList.toggle("dark");
+    const isDark = this.body.classList.contains("dark");
+    this.button.setAttribute("aria-pressed", isDark ? "true" : "false");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }
 }
-
-// Cambiar tema
-themeBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  const isDark = body.classList.contains("dark");
-  themeBtn.setAttribute("aria-pressed", String(isDark));
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-});
-
 
 /* =====================
-   Carrusel de proyectos
+   Carrusel con Swipe
 ===================== */
-const track = document.getElementById("track");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
+class Carousel {
+  constructor(trackId, prevId, nextId, autoplayMs = 4000) {
+    this.track = document.getElementById(trackId);
+    this.prevBtn = document.getElementById(prevId);
+    this.nextBtn = document.getElementById(nextId);
+    this.index = 0;
+    this.autoplayMs = autoplayMs;
+    this.autoplayInterval = null;
 
-let index = 0;
-let autoplay;
+    // swipe
+    this.startX = 0;
+    this.currentX = 0;
+    this.isDragging = false;
 
-// Calcular el ancho del primer proyecto
-function getProjectWidth() {
-  const project = track.querySelector(".project");
-  return project ? project.offsetWidth + 24 : 300; // 24 = gap aproximado
-}
-
-// Actualizar desplazamiento del carrusel
-function updateCarousel() {
-  const width = getProjectWidth();
-  track.style.transform = `translateX(${-index * width}px)`;
-}
-
-// Avanzar a siguiente proyecto
-function nextProject() {
-  const projects = track.querySelectorAll(".project").length;
-  index = (index + 1) % projects;
-  updateCarousel();
-}
-
-// Retroceder al proyecto anterior
-function prevProject() {
-  const projects = track.querySelectorAll(".project").length;
-  index = (index - 1 + projects) % projects;
-  updateCarousel();
-}
-
-// Eventos de botones
-nextBtn.addEventListener("click", () => {
-  nextProject();
-  resetAutoplay();
-});
-prevBtn.addEventListener("click", () => {
-  prevProject();
-  resetAutoplay();
-});
-
-// ==================== AUTOPLAY ====================
-function startAutoplay() {
-  autoplay = setInterval(nextProject, 7000); // cada 7s
-}
-function stopAutoplay() {
-  clearInterval(autoplay);
-}
-function resetAutoplay() {
-  stopAutoplay();
-  startAutoplay();
-}
-startAutoplay();
-
-// Pausar autoplay si el usuario pasa el mouse sobre el carrusel
-track.addEventListener("mouseenter", stopAutoplay);
-track.addEventListener("mouseleave", startAutoplay);
-
-// ==================== NAVEGACIÓN CON TECLADO ====================
-document.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowRight") {
-    nextProject();
-    resetAutoplay();
+    this.initEvents();
+    this.startAutoplay();
+    window.addEventListener("resize", () => this.update());
   }
-  if (e.key === "ArrowLeft") {
-    prevProject();
-    resetAutoplay();
-  }
-});
 
-// Ajustar carrusel si cambia el tamaño de la ventana
-window.addEventListener("resize", updateCarousel);
+  getProjectWidth() {
+    const project = this.track.querySelector(".project");
+    if (!project) return 300;
+    const style = window.getComputedStyle(project);
+    const gap = parseInt(style.marginRight) || 24;
+    return project.offsetWidth + gap;
+  }
+
+  update() {
+    const width = this.getProjectWidth();
+    this.track.style.transition = "transform 0.3s ease";
+    this.track.style.transform = `translateX(${-this.index * width}px)`;
+  }
+
+  next() {
+    const total = this.track.querySelectorAll(".project").length;
+    this.index = (this.index + 1) % total;
+    this.update();
+  }
+
+  prev() {
+    const total = this.track.querySelectorAll(".project").length;
+    this.index = (this.index - 1 + total) % total;
+    this.update();
+  }
+
+  startAutoplay() {
+    this.autoplayInterval = setInterval(() => this.next(), this.autoplayMs);
+  }
+
+  stopAutoplay() {
+    clearInterval(this.autoplayInterval);
+  }
+
+  resetAutoplay() {
+    this.stopAutoplay();
+    this.startAutoplay();
+  }
+
+  // Swipe / Drag
+  onDragStart(clientX) {
+    this.isDragging = true;
+    this.startX = clientX;
+    this.currentX = clientX;
+    this.track.style.transition = "none";
+  }
+
+  onDragMove(clientX) {
+    if (!this.isDragging) return;
+    this.currentX = clientX;
+    const delta = this.currentX - this.startX;
+    const width = this.getProjectWidth();
+    const offset = -this.index * width + delta;
+    this.track.style.transform = `translateX(${offset}px)`;
+  }
+
+  onDragEnd() {
+    if (!this.isDragging) return;
+    this.isDragging = false;
+    const delta = this.currentX - this.startX;
+    const threshold = 50;
+    if (delta > threshold) {
+      this.prev();
+    } else if (delta < -threshold) {
+      this.next();
+    } else {
+      this.update();
+    }
+    this.resetAutoplay();
+  }
+
+  initEvents() {
+    // Botones
+    this.nextBtn.addEventListener("click", () => { this.next(); this.resetAutoplay(); });
+    this.prevBtn.addEventListener("click", () => { this.prev(); this.resetAutoplay(); });
+
+    // Pausa autoplay
+    this.track.addEventListener("mouseenter", () => this.stopAutoplay());
+    this.track.addEventListener("mouseleave", () => this.startAutoplay());
+
+    // Teclado
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") { this.next(); this.resetAutoplay(); }
+      if (e.key === "ArrowLeft") { this.prev(); this.resetAutoplay(); }
+    });
+
+    // Touch
+    this.track.addEventListener("touchstart", e => this.onDragStart(e.touches[0].clientX));
+    this.track.addEventListener("touchmove", e => this.onDragMove(e.touches[0].clientX));
+    this.track.addEventListener("touchend", () => this.onDragEnd());
+
+    // Mouse drag
+    this.track.addEventListener("mousedown", e => this.onDragStart(e.clientX));
+    this.track.addEventListener("mousemove", e => this.onDragMove(e.clientX));
+    this.track.addEventListener("mouseup", () => this.onDragEnd());
+    this.track.addEventListener("mouseleave", () => this.onDragEnd());
+  }
+}
 
 /* =====================
-   Modo oscuro / claro
+   Inicialización
 ===================== */
-const themeBtn = document.getElementById("themeBtn");
-const body = document.body;
-
-// Verificar preferencia guardada
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark");
-  themeBtn.setAttribute("aria-pressed", "true");
-}
-
-// Cambiar tema
-themeBtn.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  const isDark = body.classList.contains("dark");
-  themeBtn.setAttribute("aria-pressed", isDark ? "true" : "false");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+document.addEventListener("DOMContentLoaded", () => {
+  new ThemeManager(document.getElementById("themeBtn"));
+  new Carousel("track", "prev", "next", 4000);
 });
-
-
-/* =====================
-   Carrusel de proyectos
-===================== */
-const track = document.getElementById("track");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
-
-let index = 0;
-let autoplayInterval;
-
-// calcular el ancho del primer proyecto
-function getProjectWidth() {
-  const project = track.querySelector(".project");
-  return project ? project.offsetWidth + 24 : 300; // 24 = gap aproximado
-}
-
-function updateCarousel() {
-  const width = getProjectWidth();
-  track.style.transform = `translateX(${-index * width}px)`;
-}
-
-// Botón siguiente
-nextBtn.addEventListener("click", () => {
-  const projects = track.querySelectorAll(".project").length;
-  if (index < projects - 1) {
-    index++;
-  } else {
-    index = 0; // volver al inicio
-  }
-  updateCarousel();
-});
-
-// Botón anterior
-prevBtn.addEventListener("click", () => {
-  const projects = track.querySelectorAll(".project").length;
-  if (index > 0) {
-    index--;
-  } else {
-    index = projects - 1; // ir al último
-  }
-  updateCarousel();
-});
-
-// Autoplay
-function startAutoplay() {
-  autoplayInterval = setInterval(() => {
-    nextBtn.click();
-  }, 4000); // cada 4 segundos
-}
-
-function stopAutoplay() {
-  clearInterval(autoplayInterval);
-}
-
-// Iniciar autoplay
-startAutoplay();
-
-// Pausar cuando el mouse entra
-track.addEventListener("mouseenter", stopAutoplay);
-// Reanudar cuando el mouse sale
-track.addEventListener("mouseleave", startAutoplay);
-
-// Ajustar si cambia el tamaño de la ventana
-window.addEventListener("resize", updateCarousel);
