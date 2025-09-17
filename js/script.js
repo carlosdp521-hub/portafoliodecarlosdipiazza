@@ -146,9 +146,22 @@ class Carousel {
 }
 
 /* =====================
+   Navbar móvil
+===================== */
+function initMenu() {
+  const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("navMenu");
+  toggle.addEventListener("click", () => {
+    const expanded = menu.classList.toggle("show");
+    toggle.setAttribute("aria-expanded", expanded);
+  });
+}
+
+/* =====================
    Inicialización
 ===================== */
 document.addEventListener("DOMContentLoaded", () => {
   new ThemeManager(document.getElementById("themeBtn"));
   new Carousel("track", "prev", "next", 4000);
+  initMenu();
 });

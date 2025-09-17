@@ -96,9 +96,20 @@ a:hover { text-decoration: underline; }
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  position: relative;
 }
 .nav-logo { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
 .nav-actions { display: flex; gap: 0.8rem; }
+
+/* Hamburguesa móvil */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--primary);
+}
 
 /* Hero */
 .hero {
@@ -113,10 +124,10 @@ a:hover { text-decoration: underline; }
 .hero-card h2 { font-weight: 400; margin-bottom: 1rem; }
 .hero-card .lead { margin-bottom: 1.2rem; font-size: 1rem; color: var(--text); }
 
-.badges { display: flex; gap: 0.6rem; margin-bottom: 1.2rem; }
+.badges { display: flex; gap: 0.6rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
 .badge { background: var(--secondary); color: #fff; padding: 0.4rem 0.8rem; border-radius: 6px; font-size: 0.85rem; }
 
-.btn-container { display: flex; gap: 0.8rem; margin-bottom: 1.2rem; }
+.btn-container { display: flex; gap: 0.8rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
 
 .hero-wave { margin-top: 1.5rem; width: 100%; max-width: 400px; }
 
@@ -134,6 +145,7 @@ a:hover { text-decoration: underline; }
   margin: 0 auto 1rem;
   border-radius: 50%;
   border: 3px solid var(--primary);
+  object-fit: cover;
 }
 .contact-list { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
 .education { font-size: 0.9rem; }
@@ -149,11 +161,12 @@ a:hover { text-decoration: underline; }
 .carousel-track {
   display: flex;
   gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  will-change: transform;
+  cursor: grab;
   transition: transform 0.4s ease;
 }
+.carousel-track:active { cursor: grabbing; }
+
 .project {
   min-width: 270px;
   max-width: 100%;
@@ -176,7 +189,7 @@ a:hover { text-decoration: underline; }
 .controls { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
 
 /* Formulario */
-form { display: flex; flex-direction: column; gap: 0.8rem; max-width: 500px; }
+form { display: flex; flex-direction: column; gap: 0.8rem; max-width: 500px; width: 100%; }
 input, textarea {
   padding: 0.6rem;
   border-radius: 6px;
@@ -185,6 +198,7 @@ input, textarea {
   color: var(--text);
   font-size: 1rem;
   transition: border 0.3s;
+  width: 100%;
 }
 input:focus, textarea:focus { outline: none; border: 1px solid var(--primary); box-shadow: 0 0 4px var(--primary); }
 
@@ -195,24 +209,34 @@ footer { text-align: center; padding: 1.5rem 0; font-size: 0.9rem; border-top: 1
 .name-animated { display: inline-block; animation: float 3s ease-in-out infinite; }
 @keyframes float { 0%,100%{ transform: translate3d(0,0,0);} 50%{ transform: translate3d(0,-6px,0);} }
 
-/* Responsive */
-@media(max-width:768px){
+/* =====================
+   Responsive
+===================== */
+@media(max-width: 768px){
   .hero { flex-direction: column; }
   .side-card { order:-1; margin-bottom:1.5rem; }
-  .carousel-track { gap:1rem; }
-}
-@media(max-width:480px){
-  .btn, .ghost { width:100%; text-align:center; }
-  .project { min-width:90%; max-width:100%; }
+
+  /* Navbar colapsable */
+  .hamburger { display: block; }
+  .nav-actions {
+    display: none;
+    flex-direction: column;
+    background: var(--card-bg);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 200px;
+    z-index: 100;
+  }
+  .nav-actions.show { display: flex; }
 }
 
-.carousel-track {
-  display: flex;
-  gap: 1.5rem;
-  overflow: hidden; /* evitamos scroll nativo */
-  will-change: transform;
-  cursor: grab;
-}
-.carousel-track:active {
-  cursor: grabbing;
+@media(max-width: 480px){
+  .btn, .ghost { width:100%; text-align:center; }
+  .project { min-width:90%; max-width:100%; }
+  .hero-card h1 { font-size: 2rem; }
+  .hero-card h2 { font-size: 1.2rem; }
 }
