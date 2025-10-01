@@ -136,16 +136,21 @@
       <!-- Contacto -->
       <section id="contacto" class="section">
         <h2>Contacto</h2>
-        <form action="guardar_contacto.php" method="post">
+        <form action="https://formsubmit.co/carlosmdipiazzaf@gmai.com" method="POST" autocomplete="off">
+          
           <label for="nombre">Nombre</label>
-          <input id="nombre" name="nombre" required>
-          
+          <input id="nombre" name="name" type="text" maxlength="100" required>
+
           <label for="correo">Correo</label>
-          <input id="correo" name="correo" type="email" required>
-          
+          <input id="correo" name="email" type="email" maxlength="100" required>
+
           <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-          
+          <textarea id="mensaje" name="message" rows="5" maxlength="500" required></textarea>
+
+      <!-- Opciones extra -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/">
+
           <button class="btn" type="submit">Enviar</button>
         </form>
       </section>

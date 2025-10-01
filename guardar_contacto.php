@@ -1,44 +1,48 @@
 <?php
-// Configuración de la base de datos
-$host = "localhost";      // Servidor
-$user = "root";           // Usuario (por defecto en XAMPP)
-$pass = "";               // Contraseña (vacía por defecto)
-$db   = "portafolio";     // Nombre de la base de datos
+// ============================
+// guardar_contacto.php
+// Este archivo recibe los datos del formulario de index.html
+// y los guarda en la base de datos de forma segura.
+// ============================
 
-// Crear conexión
+// ⚠️ Ajusta estas credenciales según tu servidor
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "portafolio";
+
+// 1. Conectar a la base de datos
 $conn = new mysqli($host, $user, $pass, $db);
 
-// Verificar conexión
+// 2. Verificar la conexión
 if ($conn->connect_error) {
-    die("❌ Error de conexión: " . $conn->connect_error);
+    die("Error de conexión: " . $conn->connect_error);
 }
 
-// Verificar que los datos vengan del formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// 3. Validar que los datos existen antes de procesar
+if (!empty($_POST['nombre']) && !empty($_POST['correo']) && !empty($_POST['mensaje'])) {
+    // Sanitizar entradas (elimina espacios y caracteres innecesarios)
     $nombre  = trim($_POST['nombre']);
     $correo  = trim($_POST['correo']);
     $mensaje = trim($_POST['mensaje']);
 
-    if (!empty($nombre) && !empty($correo) && !empty($mensaje)) {
-        // Usar consulta preparada para mayor seguridad
-        $stmt = $conn->prepare("INSERT INTO contactos (nombre, correo, mensaje) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $nombre, $correo, $mensaje);
+    // 4. Preparar consulta para evitar inyección SQL
+    $stmt = $conn->prepare("INSERT INTO contactos (nombre, correo, mensaje) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $nombre, $correo, $mensaje);
 
-        if ($stmt->execute()) {
-            // Redirigir a la lista de contactos después de guardar
-            header("Location: listar_contactos.php?success=1");
-            exit();
-        } else {
-            echo "❌ Error al guardar: " . $stmt->error;
-        }
-
-        $stmt->close();
+    if ($stmt->execute()) {
+        echo "<p>✅ Gracias $nombre, tu mensaje fue enviado correctamente.</p>";
+        echo "<a href='index.html'>Volver al inicio</a>";
     } else {
-        echo "⚠️ Todos los campos son obligatorios.";
+        echo "<p>❌ Error al guardar: " . $stmt->error . "</p>";
     }
+
+    $stmt->close();
 } else {
-    echo "⚠️ Acceso no permitido.";
+    echo "<p>⚠️ Por favor completa todos los campos.</p>";
 }
 
+// 5. Cerrar conexión
 $conn->close();
 ?>
+
