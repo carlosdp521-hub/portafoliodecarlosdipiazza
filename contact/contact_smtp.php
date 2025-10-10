@@ -63,3 +63,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(['status' => 'error', 'message' => 'Error al enviar: ' . $mail->ErrorInfo]);
     }
 }
+// ... (código anterior)
+
+    try {
+        // ... (Configuración SMTP y envío)
+        $mail->send();
+
+        // 1. Redirección al éxito
+        header('Location: ../contacto.html?status=success'); 
+        exit;
+    } catch (Exception $e) {
+        // 2. Redirección al error
+        header('Location: ../contacto.html?status=error');
+        exit;
+    }
+// ... (código restante)
