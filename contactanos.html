@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portafolio - Carlos Di Piazza</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Portafolio de Carlos Di Piazza - Analista Programador y Técnico en Redes. Experiencia en redes, seguridad electrónica y desarrollo web.">
+    <meta name="author" content="Carlos Di Piazza">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portafolio - Carlos Di Piazza">
+    <meta property="og:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
+    <meta property="og:image" content="img/perfil.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portafolio - Carlos Di Piazza">
+    <meta name="twitter:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
+    <meta name="twitter:image" content="img/perfil.jpg">
+
+    <!-- Fonts & Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/Logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="contacto.html" class="active">Correo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contacto">
+        <section>
+            <h2>Envíame un mensaje</h2>
+            <form id="contact-form" action="https://formsubmit.co/carlosmdipiazzaf@gmail.com" method="POST">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Carlos Di Piazza | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
