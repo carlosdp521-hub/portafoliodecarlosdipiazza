@@ -43,27 +43,25 @@
 
     <main class="contacto">
         <section>
-            <h2>Envíame un mensaje</h2>
-            <form id="contact-form" action="https://formsubmit.co/822cfb318693be2d3bb1f8d2c3e95492" method="POST">
-                <div class="campo">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
+            <h2>Contáctanos</h2>
+            
+            <form action="https://formsubmit.co/carlosmdipiazzaf@gmail.com" method="POST">
+                <!-- Campos ocultos opcionales -->
+                <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/index.html">
+                <input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
+                <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. ¡Te responderemos pronto!">
 
-                <div class="campo">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                <!-- Campos visibles para el usuario -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-                <div class="campo">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                </div>
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" required>
 
-                <button type="submit" class="btn">Enviar</button>
-                <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/">
-                <input type="hidden" name="_captche" value="false">
-                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
