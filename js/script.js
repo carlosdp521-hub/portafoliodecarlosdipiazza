@@ -1,5 +1,5 @@
 /* =====================
-   Gestor de Tema (Claro / Oscuro)
+      Gestor de Tema (Claro / Oscuro)
 ===================== */
 class ThemeManager {
   constructor(button) {
@@ -25,7 +25,7 @@ class ThemeManager {
 }
 
 /* =====================
-   Carrusel con Swipe
+      Carrusel con Swipe
 ===================== */
 class Carousel {
   constructor(trackId, prevId, nextId, autoplayMs = 4000) {
@@ -146,7 +146,7 @@ class Carousel {
 }
 
 /* =====================
-   Navbar móvil
+      Navbar móvil
 ===================== */
 function initMenu() {
   const toggle = document.getElementById("menuToggle");
@@ -158,7 +158,7 @@ function initMenu() {
 }
 
 /* =====================
-   Inicialización
+      Inicialización
 ===================== */
 document.addEventListener("DOMContentLoaded", () => {
   new ThemeManager(document.getElementById("themeBtn"));

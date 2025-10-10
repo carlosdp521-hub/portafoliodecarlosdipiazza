@@ -3,72 +3,78 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portafolio - Carlos Di Piazza</title>
+    <title>Contacto - Carlos Di Piazza</title>
 
     <!-- SEO -->
-    <meta name="description" content="Portafolio de Carlos Di Piazza - Analista Programador y Técnico en Redes. Experiencia en redes, seguridad electrónica y desarrollo web.">
+    <meta name="description" content="Contáctame para proyectos de redes, seguridad electrónica y desarrollo web.">
     <meta name="author" content="Carlos Di Piazza">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Portafolio - Carlos Di Piazza">
-    <meta property="og:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
-    <meta property="og:image" content="img/perfil.jpg">
+    <meta property="og:title" content="Contacto - Carlos Di Piazza">
+    <meta property="og:description" content="Envíame un mensaje o consulta sobre proyectos tecnológicos.">
+    <meta property="og:image" content="assets/img/perfil.jpg">
     <meta property="og:type" content="website">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Portafolio - Carlos Di Piazza">
-    <meta name="twitter:description" content="Explora mis proyectos de redes, seguridad electrónica y desarrollo web.">
-    <meta name="twitter:image" content="img/perfil.jpg">
+    <meta name="twitter:title" content="Contacto - Carlos Di Piazza">
+    <meta name="twitter:description" content="Comunícate conmigo para colaborar o solicitar información.">
+    <meta name="twitter:image" content="assets/img/perfil.jpg">
 
     <!-- Fonts & Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contacto.css">
     <link rel="icon" href="img/Logo.png" type="image/png">
 </head>
 <body>
-    <header>
-        <h1>Contacto</h1>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="habilidades.html">Habilidades</a></li>
-                <li><a href="contactanos.html" class="active">Correo</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="wrap">
 
-    <main class="contacto">
-        <section>
-            <h2>Contáctanos</h2>
-            
-            <form action="https://formsubmit.co/carlosmdipiazzaf@gmail.com" method="POST">
-                <!-- Campos ocultos opcionales -->
-                <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/gracias.html">
-                <input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
-                <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. ¡Te responderemos pronto!">
+    <!-- Navbar -->
+    <nav class="navbar" aria-label="Barra de navegación principal">
+        <a class="nav-logo" href="index.html">Carlos Di Piazza</a>
+        <button id="menuToggle" class="hamburger" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <div class="nav-actions" id="navMenu">
+            <a class="ghost" href="assets/cv/CarlosDiPiazza.pdf" target="_blank" rel="noopener noreferrer">📄 CV</a>
+            <a class="ghost" href="index.html">Inicio</a>
+            <a class="ghost" href="sobre-mi.html">Sobre mí</a>
+            <a class="ghost" href="proyectos.html">Proyectos</a>
+            <a class="ghost" href="habilidades.html">Habilidades</a>
+            <button id="themeBtn" class="btn" aria-pressed="false" aria-label="Cambiar tema">🌓 Tema</button>
+        </div>
+    </nav>
 
-                <!-- Campos visibles para el usuario -->
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+    <!-- Sección de contacto -->
+    <main class="section">
+        <h2>Contáctame</h2>
+        <p>¿Tienes una consulta, propuesta o deseas colaborar en un proyecto? <br><br> Completa el siguiente formulario y te responderé lo antes posible. <br><br> </p>
 
-                <label for="email">Correo:</label>
-                <input type="email" id="email" name="email" required>
+        <form action="https://formsubmit.co/carlosmdipiazzaf@gmail.com" method="POST">
+            <!-- Campos ocultos -->
+            <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/gracias.html">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio web">
+            <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. Te responderé pronto.">
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+            <!-- Campos visibles -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Enviar mensaje</button>
+        </form>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Carlos Di Piazza | Todos los derechos reservados</p>
+        <p>© 2025 Carlos Di Piazza — Portafolio con SEO, accesibilidad y modo oscuro</p>
     </footer>
+</div>
+
+<script src="js/script.js" type="module"></script>
+
 </body>
 </html>
