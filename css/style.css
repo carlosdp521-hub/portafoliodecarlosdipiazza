@@ -213,7 +213,7 @@ footer { text-align: center; padding: 1.5rem 0; font-size: 0.9rem; border-top: 1
    Responsive
 ===================== */
 @media(max-width: 768px){
-  .hero { flex-direction: column; }
+  .hero { flex-direction: column-reverse; }
   .side-card { order:-1; margin-bottom:1.5rem; }
 
   /* Navbar colapsable */
@@ -240,3 +240,4 @@ footer { text-align: center; padding: 1.5rem 0; font-size: 0.9rem; border-top: 1
   .hero-card h1 { font-size: 2rem; }
   .hero-card h2 { font-size: 1.2rem; }
 }
+
