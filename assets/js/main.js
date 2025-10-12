@@ -1,64 +1,81 @@
-// Main JS: toggles, simple scroll reveal, small helpers
-document.addEventListener('DOMContentLoaded', function(){
-  // Year in footer
-  const yearEls = document.querySelectorAll('#year, #year2, #year3, #year4, #year5');
-  yearEls.forEach(e => { if(e) e.textContent = new Date().getFullYear(); });
+document.addEventListener('DOMContentLoaded', () => {
 
-  // Mobile nav
-  const nav = document.getElementById('main-nav');
-  const toggle = document.getElementById('navToggle');
-  if(toggle){
-    toggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      toggle.classList.toggle('open');
-      // simple inline styles for mobile reveal
-      if(nav.classList.contains('open')){
-        nav.style.display = 'flex';
-        nav.style.flexDirection = 'column';
-        nav.style.gap = '8px';
-        nav.style.padding = '1rem';
-      } else {
-        nav.style.display = '';
-      }
-    });
+  // === Footer dinámico ===
+  const yearSpans = document.querySelectorAll('#year, #year2, #year3, #year4, #year5');
+  const currentYear = new Date().getFullYear();
+  yearSpans.forEach(el => el.textContent = currentYear);
+
+  // === Mobile nav toggle ===
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('main-nav');
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
   }
 
-  // Scroll reveal — lightweight
-  const reveals = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+  // === Smooth scroll para anclas internas ===
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // === Scroll reveal genérico ===
+  const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .skill, .tools-grid li, .project');
   const revealOnScroll = () => {
-    const offset = window.innerHeight * 0.9;
-    reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach((el, index) => {
       const rect = el.getBoundingClientRect();
-      if(rect.top < offset){
-        el.classList.add('revealed');
+      if (rect.top < windowHeight - 100 && !el.classList.contains('revealed')) {
+        setTimeout(() => {
+          el.classList.add('revealed');
+          // Animación de barras de habilidad
+          if (el.classList.contains('skill')) {
+            const bar = el.querySelector('.skill-bar div');
+            if (bar) {
+              const width = bar.getAttribute('style').match(/width:\s*(\d+%)/);
+              if (width) bar.style.width = width[1];
+            }
+          }
+        }, index * 100);
       }
     });
   };
-  revealOnScroll();
   window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 
-  // Smooth link scrolling for in-page anchors
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', function(e){
-      const id = this.getAttribute('href'); if(id.length>1){
-        e.preventDefault();
-        const target = document.querySelector(id);
-        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
-      }
+  // === Carrusel de proyectos ===
+  const track = document.getElementById('track');
+  const next = document.getElementById('next');
+  const prev = document.getElementById('prev');
+  if (track && next && prev) {
+    next.addEventListener('click', () => track.scrollBy({ left: 350, behavior: 'smooth' }));
+    prev.addEventListener('click', () => track.scrollBy({ left: -350, behavior: 'smooth' }));
+  }
+
+  // === Tilt 3D solo en no-touch devices ===
+  const projects = document.querySelectorAll('.project');
+  if (!('ontouchstart' in window)) {
+    projects.forEach(project => {
+      project.addEventListener('mousemove', (e) => {
+        const rect = project.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        const dx = (x - cx) / cx;
+        const dy = (y - cy) / cy;
+        const rotateX = dy * 10;
+        const rotateY = dx * 10;
+        project.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
+      });
+      project.addEventListener('mouseleave', () => {
+        project.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0)';
+      });
     });
-  });
+  }
+
 });
-
-document.getElementById('year2').textContent = new Date().getFullYear();
-
-  const track = document.getElementById("track");
-  const next = document.getElementById("next");
-  const prev = document.getElementById("prev");
-
-  next.addEventListener("click", () => {
-    track.scrollBy({ left: 350, behavior: "smooth" });
-  });
-
-  prev.addEventListener("click", () => {
-    track.scrollBy({ left: -350, behavior: "smooth" });
-  });
