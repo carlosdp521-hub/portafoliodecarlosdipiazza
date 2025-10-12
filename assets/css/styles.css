@@ -24,11 +24,12 @@ body{
   min-height:100vh;
 }
 
+
 /* Contenedor */
 .container{max-width:var(--container);margin:0 auto;padding:2rem}
 
 /* HEADER */
-.site-header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(7,10,20,0.6), rgba(7,10,20,0.35));border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(7,10,20,0.6), rgba(7,10,20,0.35));border-bottom:1px solid rgba(255,255,255,0.03)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
 .logo{font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--text)}
 .logo-accent{color:var(--accent)}
@@ -98,6 +99,304 @@ body{
 .reveal-right{transform:translateX(30px)}
 .reveal-left{transform:translateX(-30px)}
 .revealed{opacity:1;transform:translateX(0) translateY(0)}
+
+/* ==== SECCIÓN SOBRE MÍ ==== */
+.section {
+  padding: 4rem 2rem;
+  background-color: #121212;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ==== TÍTULOS ==== */
+.section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* ==== GRID DE CONTENIDO ==== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ==== TEXTO IZQUIERDO ==== */
+.about-text {
+  color: #e6e6e6;
+}
+
+.about-text h3 {
+  margin-top: 1.5rem;
+  color: #00bcd4;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.metodologia ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+/* ==== COLUMNA DERECHA ==== */
+.about-side {
+  text-align: center;
+}
+
+.profile-photo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-border {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #00bcd4;
+  border-radius: 50%;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==== TARJETA DERECHA ==== */
+.card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+}
+
+.card h4 {
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+/* ==== BOTÓN ==== */
+.btn-primary {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #00bcd4;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+}
+
+/* ==== REVEAL-UP (si JS no funciona) ==== */
+.reveal-up {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo,
+  .profile-border {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ==== SECCIÓN PROYECTOS ==== */
+body {
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+main.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+main.section h2 {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+main.section p {
+  color: #cccccc;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* ==== CARRUSEL ==== */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  scroll-behavior: smooth;
+  transition: transform 0.5s ease;
+}
+
+.project {
+  flex: 0 0 320px;
+  background: #1e1e1e;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.project:hover,
+.project:focus {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
+}
+
+.proj-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #00bcd4;
+}
+
+.proj-meta {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.proj-meta h3 {
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.proj-meta p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* ==== ETIQUETAS DE TECNOLOGÍA ==== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background-color: #00bcd4;
+  color: #0f0f0f;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.3rem 0.8rem;
+  transition: background 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #03e9f4;
+}
+
+/* ==== CONTROLES DEL CARRUSEL ==== */
+.controls {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.controls button {
+  background-color: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #00bcd4;
+  color: #0f0f0f;
+  transform: scale(1.1);
+}
+
+/* ==== ANIMACIÓN DE APARICIÓN ==== */
+.project {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .project {
+    flex: 0 0 85%;
+  }
+  main.section h2 {
+    font-size: 2rem;
+  }
+  .controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  #proyectos h1 {
+    font-size: 2rem;
+  }
+  .project-img {
+    height: 180px;
+  }
+}
 
 /* Responsive */
 /* === 1️⃣ Escritorio (1024px o más) === */
@@ -192,5 +491,278 @@ body{
 
   .hero-card {
     order: 2;
+  }
+}
+
+/* ==== SECCIÓN PROYECTOS ==== */
+body {
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+/* === CONTENIDO PRINCIPAL === */
+main.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+main.section h2 {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+main.section p {
+  color: #cccccc;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+/* === CARRUSEL === */
+#track {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+#track::-webkit-scrollbar {
+  display: none;
+}
+
+.project {
+  flex: 0 0 320px;
+  background: #1b1b1b;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+.project:hover,
+.project:focus {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
+}
+
+.proj-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid #00bcd4;
+}
+
+.proj-meta {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.proj-meta h3 {
+  color: #00bcd4;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.proj-meta p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* === ETIQUETAS === */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background-color: #00bcd4;
+  color: #0f0f0f;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.3rem 0.8rem;
+  transition: background 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #03e9f4;
+}
+
+/* === CONTROLES DEL CARRUSEL === */
+.controls {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.controls button {
+  background-color: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #00bcd4;
+  color: #0f0f0f;
+  transform: scale(1.1);
+}
+
+/* === ANIMACIÓN === */
+.project {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .project {
+    flex: 0 0 85%;
+  }
+  main.section h2 {
+    font-size: 2rem;
+  }
+  .controls button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+/* === FORMULARIO DE CONTACTO === */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.contact-grid h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color, #00bcd4);
+}
+
+.contact-grid p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.contact-grid a {
+  color: var(--accent-color, #00bcd4);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-grid a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* === FORMULARIO === */
+form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeUp 1.2s ease;
+}
+
+label {
+  font-weight: 600;
+  color: #eee;
+  margin-bottom: 0.2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-color, #00bcd4);
+  background: #111;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* === BOTÓN === */
+.btn {
+  background: var(--accent-color, #00bcd4);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.4rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  background: #00acc1;
+  transform: scale(1.03);
+}
+
+/* === ANIMACIÓN === */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 800px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  form {
+    padding: 1.5rem;
   }
 }

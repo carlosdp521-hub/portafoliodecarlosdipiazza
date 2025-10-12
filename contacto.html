@@ -26,15 +26,31 @@
         <div>
           <h1>Contacto</h1>
           <p>Déjame un mensaje y te responderé.</p>
-          <p><strong>Email:</strong> hola@tucorreo.com</p>
-          <p><strong>LinkedIn:</strong> /in/tuusuario</p>
+          <p><strong>Email:</strong><a href="mailto:carlosmdipiazzaf@gmail.com">📧 carlosmdipiazzaf@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/carlosmatíasdipiazzafariña" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></p>
+          <p><strong>Telefono:</strong><a href="tel:+56979095565">📱 +56 9 7909 5565</a></p>
+          <p><strong>GitHub:</strong><a href="https://github.com/carlosdp521-hub" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></p>
+          
+          
         </div>
 
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Formulario simulado — reemplaza la acción con tu backend o servicio (Formspree, Netlify Forms, etc.)')">
-          <label>Nombre <input required type="text" name="nombre"></label>
-          <label>Email <input required type="email" name="email"></label>
-          <label>Mensaje <textarea required name="mensaje" rows="6"></textarea></label>
-          <button class="btn-primary" type="submit">Enviar</button>
+        <form action="https://formsubmit.co/carlosmdipiazzaf@gmail.com" method="POST">
+            <!-- Campos ocultos -->
+            <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/gracias.html">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio web">
+            <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. Te responderé pronto.">
+
+            <!-- Campos visibles -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Enviar mensaje</button>
         </form>
       </div>
     </section>
