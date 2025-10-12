@@ -48,3 +48,17 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 });
+
+document.getElementById('year2').textContent = new Date().getFullYear();
+
+  const track = document.getElementById("track");
+  const next = document.getElementById("next");
+  const prev = document.getElementById("prev");
+
+  next.addEventListener("click", () => {
+    track.scrollBy({ left: 350, behavior: "smooth" });
+  });
+
+  prev.addEventListener("click", () => {
+    track.scrollBy({ left: -350, behavior: "smooth" });
+  });
