@@ -113,21 +113,6 @@
   <footer class="site-footer">
     <div class="container"><p>© <span id="year3"></span> Carlos Di Piazza</p></div>
   </footer>
-
-  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
-  <script>
-  const track = document.getElementById("track");
-  const next = document.getElementById("next");
-  const prev = document.getElementById("prev");
-
-  next.addEventListener("click", () => {
-    track.scrollBy({ left: 350, behavior: "smooth" });
-  });
-
-  prev.addEventListener("click", () => {
-    track.scrollBy({ left: -350, behavior: "smooth" });
-  });
-  </script>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

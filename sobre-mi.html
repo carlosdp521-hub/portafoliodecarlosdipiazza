@@ -8,18 +8,22 @@
 </head>
 <body>
   <!-- ===== ENCABEZADO ===== -->
-  <header class="site-header">
+<header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
-      <nav class="main-nav">
+    <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
+    <nav class="main-nav" id="main-nav">
         <a href="index.html">Inicio</a>
-        <a href="sobre-mi.html" aria-current="page">Sobre mí</a>
+        <a href="sobre-mi.html">Sobre mí</a>
         <a href="proyectos.html">Proyectos</a>
         <a href="habilidades.html">Habilidades</a>
         <a href="contacto.html" class="btn-outline">Contacto</a>
-      </nav>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+    </button>
     </div>
-  </header>
+</header>
 
   <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <main>
@@ -73,9 +77,7 @@
       <p>© <span id="year2"></span> Carlos Di Piazza</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year2').textContent = new Date().getFullYear();
-  </script>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
