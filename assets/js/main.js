@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainNav = document.getElementById('main-nav');
   if (navToggle && mainNav) {
     navToggle.addEventListener('click', () => mainNav.classList.toggle('open'));
+    
   }
 
   // === Smooth scroll para anclas internas ===

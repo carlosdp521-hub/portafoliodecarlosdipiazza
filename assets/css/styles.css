@@ -437,12 +437,35 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main-nav { display: none; }
-  .nav-toggle { display: block; }
-  .profile-photo, .profile-border { width: 100px; height: 100px; }
-  .project { flex: 0 0 85%; }
-  main.section h2 { font-size: 2rem; }
-  .controls button { width: 40px; height: 40px; font-size: 1.2rem; }
+    .main-nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(10, 15, 25, 0.95);
+    width: 100%;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .main-nav.open {
+    display: flex;
+    animation: fadeDown 0.3s ease;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (min-width: 1024px) {
