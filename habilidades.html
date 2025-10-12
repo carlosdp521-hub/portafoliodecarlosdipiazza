@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Habilidades — Carlos Di Piazza</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="habilidades.html" aria-current="page">Habilidades</a>
+        <a href="contacto.html" class="btn-outline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="reveal-up">Habilidades técnicas</h1>
+        <div class="skills-list reveal-up">
+          <div class="skill">
+            <div class="skill-head"><span>HTML & CSS</span><span>90%</span></div>
+            <div class="skill-bar"><div style="width:90%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>JavaScript</span><span>70%</span></div>
+            <div class="skill-bar"><div style="width:70%"></div></div>
+          </div>
+          <div class="skill">
+            <div class="skill-head"><span>Git</span><span>60%</span></div>
+            <div class="skill-bar"><div style="width:60%"></div></div>
+          </div>
+        </div>
+
+        <h2 class="section-title reveal-up">Herramientas</h2>
+        <ul class="tools-grid reveal-up">
+          <li>VSCode</li>
+          <li>PSeInt</li>
+          <li>Figma (básico)</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© <span id="year4"></span> Carlos Di Piazza</p></div></footer>
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+</body>
+</html>

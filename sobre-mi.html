@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sobre mí — Carlos Di Piazza</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html" aria-current="page">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="contacto.html" class="btn-outline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="reveal-up">Sobre mí</h1>
+        <div class="about-grid reveal-up">
+          <div class="about-text">
+            <p>Soy estudiante del Instituto Profesional IACC, con interés en construir herramientas didácticas y proyectos frontend que comuniquen ideas con claridad. Tengo experiencia en resolver tareas de programación, diagramación y control de inventarios académicos.</p>
+
+            <h3>Metodología</h3>
+            <ul>
+              <li>Aprendizaje práctico con ejercicios y proyectos.</li>
+              <li>Documentación clara y entregables listos para evaluación (Turnitin friendly).</li>
+              <li>Enfoque en diseño accesible y responsivo.</li>
+            </ul>
+          </div>
+
+          <aside class="about-side">
+            <div class="card">
+              <h4>Detalle</h4>
+              <p><strong>Ubicación:</strong> Santiago, Chile</p>
+              <p><strong>Disponibilidad:</strong> Freelance / proyectos académicos</p>
+              <a href="contacto.html" class="btn-primary">Contactarme</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© <span id="year2"></span> Carlos Di Piazza</p></div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+</body>
+</html>

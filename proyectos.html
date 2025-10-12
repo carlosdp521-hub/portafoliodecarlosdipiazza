@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyectos — Carlos Di Piazza</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="proyectos.html" aria-current="page">Proyectos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="contacto.html" class="btn-outline">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="reveal-up">Proyectos destacados</h1>
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="project-card reveal-up">
+            <img src="assets/img/proyecto1.png" alt="Proyecto 1 preview">
+            <div class="project-body">
+              <h3>Gestión de embarcaciones</h3>
+              <p>Aplicación en pseudocódigo y diagramas de flujo para administrar embarcaciones y su tripulación (actividad para Magallanes S.A.).</p>
+              <div class="project-meta">
+                <a href="#" class="link">Ver código</a>
+                <a href="#" class="link">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="project-card reveal-up">
+            <img src="assets/img/proyecto2.png" alt="Proyecto 2 preview">
+            <div class="project-body">
+              <h3>Control de inventarios</h3>
+              <p>Sistema de control de inventarios y reportes básicos para e-commerce (práctica Semana 8).</p>
+              <div class="project-meta">
+                <a href="#" class="link">Ver código</a>
+                <a href="#" class="link">Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>© <span id="year3"></span> Carlos Di Piazza</p></div>
+  </footer>
+
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>
