@@ -1,84 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sobre mí — Carlos Di Piazza</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/styles2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Portafolio V3.0 | Carlos Di Piazza</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Ícono del sitio -->
+  <link rel="stylesheet" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Fuente principal -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Iconos y estilos -->
+  <link rel="stylesheet" href="assets/css/fontello.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
 <body>
-  <!-- ===== ENCABEZADO ===== -->
-<header class="site-header">
-    <div class="container header-inner">
-    <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
-    <nav class="main-nav" id="main-nav">
-        <a href="index.html">Inicio</a>
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="contenedor">
+      <img src="assets/img/favicon.png" alt="Logo personal de Carlos Di Piazza">
+      <h1 class="icon-home">Mi Portafolio Web<span>Carlos Di Piazza</span></h1>
+
+      <!-- Menú responsive -->
+      <input type="checkbox" id="menu-bar">
+      <label class="icon-menu" for="menu-bar"></label>
+
+      <nav class="menu">
+        <a href="index.html" class="active">Inicio</a>
         <a href="sobre-mi.html">Sobre mí</a>
-        <a href="proyectos.html">Proyectos</a>
         <a href="habilidades.html">Habilidades</a>
-        <a href="contacto.html" class="btn-outline">Contacto</a>
-    </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-    </button>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <!-- =========================================================
+      SECCIÓN SOBRE MÍ / EXPERIENCIA LABORAL
+      ========================================================= -->
   <main>
-    <section class="section">
-      <div class="container">
-        <h1 class="reveal-up">Sobre mí</h1>
+    <section id="sobre-mi" class="seccion">
+      <div class="contenedor">
+        <h2>Experiencia Laboral</h2>
 
-        <div class="about-grid reveal-up">
-          <!-- ===== COLUMNA IZQUIERDA ===== -->
-          <div class="about-text">
-            <p>Soy estudiante del Instituto Profesional IACC, con interés en construir herramientas didácticas y proyectos frontend que comuniquen ideas con claridad. Tengo experiencia en resolver tareas de programación, diagramación y control de inventarios académicos.</p>
-
-            <div class="carta-presentacion">
-              <h3>💼 Carta de Presentación</h3>
-              <p>Busco oportunidades que me permitan crecer profesionalmente y aportar valor mediante soluciones eficientes e innovadoras. Tengo habilidades en desarrollo web, administración de redes y resolución de problemas técnicos. Mi objetivo es consolidar una carrera en el ámbito tecnológico, combinando mis conocimientos de redes con el desarrollo de software moderno.</p>
-              <p>Soy un profesional comprometido con el aprendizaje continuo y la mejora personal, orientado al trabajo colaborativo y los resultados.</p>
-            </div>
-
-            <div class="metodologia">
-              <h3>🧩 Metodología</h3>
-              <ul>
-                <li>Aprendizaje práctico con ejercicios y proyectos.</li>
-                <li>Documentación clara y entregables listos para evaluación (Turnitin friendly).</li>
-                <li>Enfoque en diseño accesible y responsivo.</li>
-              </ul>
-            </div>
+        <div class="experiencia">
+          <div class="card-experiencia">
+            <h3>Ayudante Técnico – ClickSolutions</h3>
+            <span class="fecha">Agosto 2022 - Enero 2025</span>
+            <p>
+              Responsable de la configuración de sistemas de control de acceso (CCAA), CCTV y detección de incendios en edificios de Las Condes, Vitacura, Providencia y Lo Barnechea.
+              Desarrollé mini proyectos de instalación de sistemas de seguridad en CCTV, CCAA y detección de incendios.
+              Participé en la configuración de antenas Ubiquiti, cámaras y equipos Huawei para proyectos municipales en Vitacura.
+              Encargado de documentar y reportar el funcionamiento de equipos.
+              Realicé instalación, mantención y configuración de equipos Huawei.
+            </p>
           </div>
 
-          <!-- ===== COLUMNA DERECHA ===== -->
-          <aside class="about-side"><br><br>
-            <div class="profile-photo-wrapper">
-              <div class="profile-border"></div>
-              <img class="profile-photo" src="assets/img/perfil.jpg" alt="Foto de Carlos Di Piazza">
-            </div>
+          <div class="card-experiencia">
+            <h3>Ayudante Técnico – Inge Smart</h3>
+            <span class="fecha">Abril 2018 - Junio 2018</span>
+            <p>
+              Participación en proyectos de instalación y configuración de redes en edificios corporativos y municipales.
+              Colaboración en la implementación de sistemas de seguridad electrónica (CCTV, detección de incendios y biometría).
+              Apoyo en capacitaciones internas sobre uso de sistemas tecnológicos.
+              Actualización mediante cursos en redes, telecomunicaciones y ciberseguridad.
+              Voluntariado en proyectos de alfabetización digital y soporte en entornos educativos.
+            </p>
+          </div>
 
-            <div class="card">
-              <h4>📍 Detalle</h4>
-              <p><strong>Ubicación:</strong> Santiago, Chile</p>
-              <p><strong>Disponibilidad:</strong> Freelance / proyectos académicos</p>
-              <a href="contacto.html" class="btn-primary">Contactarme</a>
-            </div>
-          </aside>
+          <div class="card-experiencia">
+            <h3>Práctica Profesional – Inge Smart</h3>
+            <span class="fecha">Enero 2018 - Marzo 2018</span>
+            <p>
+              Mantenimiento de la base de datos del registro de asistencia.
+              Verificación de funcionalidad biométrica en distintas regiones.
+              Solución de fallos comunes en sistemas de asistencia y configuración de switches.
+              Resolución de problemas con equipos biométricos y diagnóstico de conexión al servidor.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- ===== PIE DE PÁGINA ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year2"></span> Carlos Di Piazza</p>
+  <footer class="footer">
+    <p>© <span id="year"></span> Carlos Di Piazza — Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a> |
+      <a href="sobre-mi.html">Sobre mí</a> |
+      <a href="proyectos.html">Proyectos</a> |
+      <a href="contacto.html">Contacto</a>
     </div>
   </footer>
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  <script>
+  // Mostrar el año actual automáticamente
+  document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/JS/main.js"></script>
 </body>
 </html>

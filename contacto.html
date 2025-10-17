@@ -1,72 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contacto — Carlos Di Piazza</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/styles2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Portafolio V3.0 | Carlos Di Piazza</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Ícono del sitio -->
+  <link rel="stylesheet" type="image/png" href="assets/img/favicon.png">
+
+  <!-- Fuente principal -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Iconos y estilos -->
+  <link rel="stylesheet" href="assets/css/fontello.css">
+  <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
 <body>
-<header class="site-header">
-    <div class="container header-inner">
-    <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
-    <nav class="main-nav" id="main-nav">
-        <a href="index.html">Inicio</a>
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="contenedor">
+      <img src="assets/img/favicon.png" alt="Logo personal de Carlos Di Piazza">
+      <h1 class="icon-home">Mi Portafolio Web<span>Carlos Di Piazza</span></h1>
+
+      <!-- Menú responsive -->
+      <input type="checkbox" id="menu-bar">
+      <label class="icon-menu" for="menu-bar"></label>
+
+      <nav class="menu">
+        <a href="index.html" class="active">Inicio</a>
         <a href="sobre-mi.html">Sobre mí</a>
-        <a href="proyectos.html">Proyectos</a>
         <a href="habilidades.html">Habilidades</a>
-        <a href="contacto.html" class="btn-outline">Contacto</a>
-    </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-    </button>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-  <main>
-    <section class="section">
-      <div class="container contact-grid reveal-up">
-        <div>
-          <h1>Contacto</h1>
-          <p>Déjame un mensaje y te responderé.</p>
-          <p><strong>Email:</strong><a href="mailto:carlosmdipiazzaf@gmail.com">📧 carlosmdipiazzaf@gmail.com</a></p>
-          <p><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/carlosmatíasdipiazzafariña" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a></p>
-          <p><strong>Telefono:</strong><a href="tel:+56979095565">📱 +56 9 7909 5565</a></p>
-          <p><strong>GitHub:</strong><a href="https://github.com/carlosdp521-hub" target="_blank" rel="noopener noreferrer">🐙 GitHub</a></p>
-          
-          
-        </div>
+  <main class="contacto-grid">
+    <!-- Información de contacto -->
+    <section class="info-contacto">
+      <h2>Información de contacto</h2>
+      <ul>
+        <li><i class="fa-solid fa-envelope"></i> carlosmdipiazzaf@gmail.com</li>
+        <li><i class="fa-brands fa-whatsapp"></i> +56 9 7909 5565</li>
+        <li><i class="fa-solid fa-location-dot"></i> Santiago, Chile</li>
+      </ul>
 
-        <form action="https://formsubmit.co/carlosmdipiazzaf@gmail.com" method="POST">
-            <!-- Campos ocultos -->
-            <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/gracias.html">
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio web">
-            <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. Te responderé pronto.">
-
-            <!-- Campos visibles -->
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-            <button type="submit" class="btn">Enviar mensaje</button>
-        </form>
+      <div class="iconos-redes">
+        <a href="mailto:carlosmdipiazzaf@gmail.com" target="_blank" aria-label="Correo electrónico"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/56979095565" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="tel:+56979095565" target="_blank" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://github.com/carlosdp521-hub" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year2"></span> Carlos Di Piazza</p>
+    <!-- Formulario de contacto -->
+    <section class="formulario-contacto">
+      <h2>Envíame un mensaje</h2>
+      <form action="https://formsubmit.co/carlosmdipiazzaf@gmail.com" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo electrónico" required>
+        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+        
+        <!-- Configuración de FormSubmit -->
+        <input type="hidden" name="_next" value="https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/gracias.html">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio web">
+        <input type="hidden" name="_autoresponse" value="¡Gracias por contactarme! Te responderé pronto.">
+      </form>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <p>© <span id="year"></span> Carlos Di Piazza — Todos los derechos reservados.</p>
+    <div class="footer-links">
+      <a href="index.html">Inicio</a> |
+      <a href="sobre-mi.html">Sobre mí</a> |
+      <a href="proyectos.html">Proyectos</a> |
+      <a href="contacto.html">Contacto</a>
     </div>
   </footer>
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+  <script>
+  // Mostrar el año actual automáticamente
+  document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/JS/main.js"></script>
 </body>
 </html>

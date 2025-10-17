@@ -1,66 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Habilidades — Carlos Di Piazza</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/styles2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Portafolio V3.0 | Carlos Di Piazza</title>
+
+    <!-- Ícono del sitio -->
+    <link rel="stylesheet" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Fuente principal -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Iconos y estilos -->
+    <link rel="stylesheet" href="assets/css/fontello.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
 <body>
-<header class="site-header">
-    <div class="container header-inner">
-    <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
-    <nav class="main-nav" id="main-nav">
-        <a href="index.html">Inicio</a>
-        <a href="sobre-mi.html">Sobre mí</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a href="contacto.html" class="btn-outline">Contacto</a>
-    </nav>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="contenedor">
+            <img src="assets/img/favicon.png" alt="Logo personal de Carlos Di Piazza">
+            <h1 class="icon-home">Mi Portafolio Web<span>Carlos Di Piazza</span></h1>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-    </button>
-    </div>
-</header>
+            <!-- Menú responsive -->
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
 
-  <main>
-    <section class="section">
-      <div class="container">
-        <h1 class="reveal-up">Habilidades técnicas</h1>
-        <div class="skills-list reveal-up">
-          <div class="skill">
-            <div class="skill-head"><span>HTML & CSS</span><span>95.4%</span></div>
-            <div class="skill-bar"><div style="width:95.4%"></div></div>
-          </div>
-          <div class="skill">
-            <div class="skill-head"><span>JavaScript</span><span>5%</span></div>
-            <div class="skill-bar"><div style="width:5%"></div></div>
-          </div>
-          <div class="skill">
-            <div class="skill-head"><span>PHP</span><span>60%</span></div>
-            <div class="skill-bar"><div style="width:60%"></div></div>
-          </div>
+            <nav class="menu">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="sobre-mi.html">Sobre mí</a>
+                <a href="habilidades.html">Habilidades</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
         </div>
+    </header>
 
-        <h2 class="section-title reveal-up">Herramientas</h2>
-        <ul class="tools-grid reveal-up">
-          <li>VSCode</li>
-          <li>PSeInt</li>
-          <li>Figma (básico)</li>
-          <li>GitHub</li>
-        </ul>
-      </div>
-    </section>
-  </main>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- =========================================================
+        SECCIÓN HABILIDADES
+        ========================================================= -->
+        <section id="habilidades" class="seccion">
+            <div class="contenedor">
+                <h2>Habilidades</h2>
+                <div class="habilidades-grid">
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year2"></span> Carlos Di Piazza</p>
-    </div>
-  </footer>
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/main.js"></script>
+                    <div class="card-habilidad">
+                        <h3>Desarrollo Web</h3>
+                        <p>Creación de sitios web en HTML5, CSS3, JavaScript y jQuery con enfoque en diseño responsivo y experiencia de usuario moderna.</p>
+                    </div>
+                
+                    <div class="card-habilidad">
+                        <h3>Administración de Redes</h3>
+                        <p>Configuración y mantención de redes LAN/WAN, VLAN, routers, switches y antenas Ubiquiti. Experiencia en topologías seguras y eficientes.</p>
+                    </div>
+
+                    <div class="card-habilidad">
+                        <h3>Seguridad Informática</h3>
+                        <p>Implementación de medidas de ciberseguridad, control de accesos, CCTV y detección de incendios. Diagnóstico y resolución de fallos técnicos.</p>
+                    </div>
+
+                    <div class="card-habilidad">
+                        <h3>Gestión Técnica</h3>
+                        <p>Documentación de procesos, generación de informes técnicos y soporte al cliente en entornos corporativos y municipales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Carlos Di Piazza — Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="index.html">Inicio</a> |
+            <a href="sobre-mi.html">Sobre mí</a> |
+            <a href="proyectos.html">Proyectos</a> |
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </footer>
+
+    <script>
+    // Mostrar el año actual automáticamente
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/JS/main.js"></script>
 </body>
 </html>

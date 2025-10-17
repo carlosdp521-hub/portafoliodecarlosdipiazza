@@ -1,120 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Proyectos — Carlos Di Piazza</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/styles2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Portafolio V3.0 | Carlos Di Piazza</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Ícono del sitio -->
+    <link rel="stylesheet" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Fuente principal -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Iconos y estilos -->
+    <link rel="stylesheet" href="assets/css/fontello.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
 <body>
-<header class="site-header">
-    <div class="container header-inner">
-    <a class="logo" href="index.html">Carlos <span class="logo-accent">Di Piazza</span></a>
-    <nav class="main-nav" id="main-nav">
-        <a href="index.html">Inicio</a>
-        <a href="sobre-mi.html">Sobre mí</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a href="contacto.html" class="btn-outline">Contacto</a>
-    </nav>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="contenedor">
+            <img src="assets/img/favicon.png" alt="Logo personal de Carlos Di Piazza">
+            <h1 class="icon-home">Mi Portafolio Web<span>Carlos Di Piazza</span></h1>
 
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-    </button>
-    </div>
-</header>
+            <!-- Menú responsive -->
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
 
-  <main class="section">
-    <h2>Proyectos destacados</h2>
-    <p>A continuación encontrarás una selección de mis trabajos más representativos en el área de redes, seguridad y desarrollo web.</p>
+            <nav class="menu">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="sobre-mi.html">Sobre mí</a>
+                <a href="habilidades.html">Habilidades</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-<div id="track" class="carousel-track">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- =========================================================
+        SECCIÓN PROYECTOS
+        ========================================================= -->
+        <section id="proyectos" class="seccion">
+            <div class="contenedor">
+                <h2>Proyectos Destacados</h2>
+                <div class="proyectos-grid">
 
-  <!-- Proyecto 1 -->
-  <article class="project" tabindex="0">
-    <img src="assets/img/proyecto1.png" alt="Sistema de gestión de asistencia" class="proj-img">
-    <div class="proj-meta">
-      <h3>Sistema de Gestión</h3>
-      <p>Aplicación web en PHP y MySQL para gestionar usuarios y reportes de asistencia en proyectos de seguridad electrónica.</p>
-      <div class="tags">
-        <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span>
-      </div>
-    </div>
-  </article>
+                    <div class="card-proyecto">
+                        <img src="assets/img/proyecto1.png" alt="Proyecto CCTV municipal">
+                        <div class="info">
+                            <h3>Implementación CCTV Municipal</h3>
+                            <p>Instalación y configuración de cámaras de seguridad IP y servidores NVR en el municipio de Vitacura. Proyecto enfocado en vigilancia inteligente.</p>
+                        </div>
+                    </div>
 
-  <!-- Proyecto 2 -->
-  <article class="project" tabindex="0">
-    <img src="assets/img/proyecto2.png" alt="Portafolio web personal" class="proj-img">
-    <div class="proj-meta">
-      <h3>Portafolio Web</h3>
-      <p>Portafolio personal creado con HTML5, CSS3, JavaScript y animaciones modernas para presentar habilidades y experiencias.</p>
-      <div class="tags">
-        <span class="tag">HTML 5</span><span class="tag">CSS 3</span><span class="tag">JavaScript</span>
-      </div>
-    </div>
-  </article>
+                    <div class="card-proyecto">
+                        <img src="assets/img/proyecto3.png" alt="Sistema de control de acceso">
+                        <div class="info">
+                            <h3>Sistema de Control de Acceso</h3>
+                            <p>Desarrollo e integración de sistemas CCAA y biometría para edificios corporativos de Las Condes, con informes automáticos y soporte remoto.</p>
+                        </div>
+                    </div>
 
-  <!-- Proyecto 3 -->
-  <article class="project" tabindex="0">
-    <img src="assets/img/proyecto3.png" alt="Aplicación Flask con base de datos" class="proj-img">
-    <div class="proj-meta">
-      <h3>Aplicación con Python Flask</h3>
-      <p>API desarrollada con Flask que gestiona formularios de contacto y base de datos SQLite con interfaz responsive.</p>
-      <div class="tags">
-        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span>
-      </div>
-    </div>
-  </article>
-
-  <!-- Proyecto 4 -->
-  <article class="project" tabindex="0">
-    <img src="assets/img/proyecto4.png" alt="Sistema de inventarios" class="proj-img">
-    <div class="proj-meta">
-      <h3>Sistema de Control de Inventarios</h3>
-      <p>Aplicación en pseudocódigo y DFD para gestionar inventarios de una empresa de comercio electrónico, con control de stock automatizado.</p>
-      <div class="tags">
-        <span class="tag">PSeInt</span><span class="tag">DFD</span><span class="tag">Algoritmos</span>
-      </div>
-    </div>
-  </article>
-
-  <!-- Proyecto 5 -->
-  <article class="project" tabindex="0">
-    <img src="assets/img/proyecto5.png" alt="Gestión de embarcaciones" class="proj-img">
-    <div class="proj-meta">
-      <h3>Gestión de Embarcaciones</h3>
-      <p>Programa que calcula sueldos de capitanes y analiza datos de pasajeros mediante estructuras cíclicas y condicionales.</p>
-      <div class="tags">
-        <span class="tag">PSeInt</span><span class="tag">DFD</span><span class="tag">Lógica</span>
-      </div>
-    </div>
-  </article>
-
-  <!-- Proyecto 6 -->
-  <article class="project" tabindex="0">
-    <img src="assets/img/proyecto6.png" alt="Sistema de drones de entrega" class="proj-img">
-    <div class="proj-meta">
-      <h3>Sistema de Control de Drones</h3>
-      <p>Simulación lógica para coordinar drones de reparto, aplicando estructuras algorítmicas, decisiones múltiples y razonamiento lógico.</p>
-      <div class="tags">
-        <span class="tag">PSeInt</span><span class="tag">Programación</span><span class="tag">Simulación</span>
-      </div>
-    </div>
-  </article>
-
-</div>
-
-    <div class="controls">
-      <button id="prev" class="ghost" aria-label="Proyecto anterior">◀</button>
-      <button id="next" class="ghost" aria-label="Proyecto siguiente">▶</button>
-    </div>
-
-  </main>
-  <footer class="site-footer">
-    <div class="container"><p>© <span id="year3"></span> Carlos Di Piazza</p></div>
-  </footer>
-  <script src="assets/js/jquery-3.7.1.min.js"></script>
-  <script src="assets/js/main.js"></script>
+                    <div class="card-proyecto">
+                        <img src="assets/img/proyecto2.png" alt="Página web profesional">
+                        <div class="info">
+                            <h3>Portafolio Web Personal</h3>
+                            <p>Diseño y desarrollo de este portafolio profesional en HTML, CSS y JavaScript. Incluye animaciones, diseño adaptativo y navegación optimizada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© <span id="year"></span> Carlos Di Piazza — Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="index.html">Inicio</a> |
+            <a href="sobre-mi.html">Sobre mí</a> |
+            <a href="proyectos.html">Proyectos</a> |
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </footer>
+    <script>
+    // Mostrar el año actual automáticamente
+    document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/JS/main.js"></script>
 </body>
 </html>
