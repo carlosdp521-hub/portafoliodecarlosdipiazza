@@ -268,7 +268,7 @@ header h1 span {
   }
 
   #menu-bar:checked ~ .menu {
-    max-height: 300px;
+    max-height: 400px;
   }
 
   #banner .contenedor {
@@ -296,3 +296,4 @@ header h1 span {
     font-size: 13px;
   }
 }
+
