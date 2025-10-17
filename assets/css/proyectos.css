@@ -1,0 +1,135 @@
+/* =========================================================
+    SECCIÓN PROYECTOS
+    ========================================================= */
+#proyectos {
+    background: var(--dark-bg);
+    color: var(--text-light);
+    padding: 80px 10%;
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+#proyectos h2 {
+    color: var(--primary-color);
+    font-size: 36px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* === GRID DE PROYECTOS === */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* === TARJETAS DE PROYECTO === */
+.card-proyecto {
+    background: var(--light-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.card-proyecto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.card-proyecto .info {
+    padding: 25px;
+}
+
+.card-proyecto h3 {
+    color: var(--secondary-color);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card-proyecto p {
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.card-proyecto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================================
+    ANIMACIONES
+    ========================================================= */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+    RESPONSIVE DESIGN
+    ========================================================= */
+
+/* 📱 Móviles (hasta 767px) */
+@media (max-width: 767px) {
+    #proyectos {
+        padding: 60px 20px;
+    }
+
+    #proyectos h2 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-proyecto img {
+        height: 200px;
+    }
+
+    .card-proyecto h3 {
+        font-size: 20px;
+    }
+
+    .card-proyecto p {
+        font-size: 15px;
+    }
+}
+
+/* 💻 Tablets (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    #proyectos h2 {
+        font-size: 32px;
+    }
+
+    .card-proyecto img {
+        height: 210px;
+    }
+}
+
+/* 🖥️ Monitores grandes (desde 1024px) */
+@media (min-width: 1024px) {
+    .proyectos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #proyectos h2 {
+        font-size: 36px;
+    }
+}

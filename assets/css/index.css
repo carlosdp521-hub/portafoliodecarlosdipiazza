@@ -1,0 +1,298 @@
+/* =========================================================
+   VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================================= */
+:root {
+  --primary-color: #2563eb;      /* Azul principal */
+  --secondary-color: #14b8a6;    /* Cian moderno */
+  --dark-bg: #0b1120;            /* Fondo general */
+  --light-bg: #1e293b;           /* Fondo secciones */
+  --text-light: #f8fafc;
+  --text-gray: #94a3b8;
+  --transition: 0.3s ease;
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   HEADER PRINCIPAL
+   ========================================================= */
+header {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: fadeIn 1s ease;
+}
+
+header h1 {
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  display: block;
+  font-size: 14px;
+  color: #e0f2fe;
+  font-weight: normal;
+}
+
+/* =========================================================
+   MENÚ DE NAVEGACIÓN
+   ========================================================= */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.menu a:hover,
+.menu a.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--dark-bg);
+}
+
+/* Icono menú responsive */
+#menu-bar {
+  display: none;
+}
+
+.icon-menu {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* =========================================================
+   BANNER PRINCIPAL
+   ========================================================= */
+#banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  animation: fadeIn 1.2s ease;
+}
+
+#banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(60%);
+}
+
+#banner .contenedor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text-light);
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeUp 1.3s ease;
+}
+
+#banner h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: var(--accent-color, #38bdf8);
+}
+
+#banner p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #f1f5f9;
+}
+
+/* Botón del banner */
+.btn-info {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-info:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: #111827;
+  color: var(--text-gray);
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+.footer-links a {
+  color: var(--accent-color, #38bdf8);
+  text-decoration: none;
+  margin: 0 6px;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* 🖥️ Monitores grandes */
+@media (min-width: 1200px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  #banner h2 {
+    font-size: 42px;
+  }
+
+  #banner p {
+    font-size: 18px;
+  }
+}
+
+/* 💻 Tablets (768px a 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  header .contenedor {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  #banner h2 {
+    font-size: 32px;
+  }
+
+  #banner p {
+    font-size: 16px;
+  }
+}
+
+/* 📱 Celulares (<=767px) */
+@media (max-width: 767px) {
+  header .contenedor {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .icon-menu {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--light-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .menu a {
+    padding: 15px 0;
+    border-bottom: 1px solid #334155;
+  }
+
+  #menu-bar:checked ~ .menu {
+    max-height: 300px;
+  }
+
+  #banner .contenedor {
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+    padding: 40px 15px;
+  }
+
+  #banner h2 {
+    font-size: 26px;
+  }
+
+  #banner p {
+    font-size: 15px;
+  }
+
+  .btn-info {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+
+  .footer {
+    font-size: 13px;
+  }
+}
