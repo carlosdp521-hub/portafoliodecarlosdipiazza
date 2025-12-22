@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Di Piazza | CV Web</title>
+    <title>Carlos Di Piazza | Portafolio Profesional</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -13,77 +13,112 @@
 </head>
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="hero">
-    <div class="hero-content">
-        <img src="contenidos/img/perfil.jpg" alt="Carlos Di Piazza">
-        <h1>Carlos Di Piazza</h1>
-        <h2>Analista Programador | Técnico en Redes</h2>
-        <p>
-            Especialista en redes, seguridad electrónica y desarrollo de aplicaciones web.
-            Experiencia integrando hardware y software para soluciones tecnológicas eficientes.
-        </p>
+    <img src="assets/img/perfil.jpg" alt="Carlos Di Piazza">
+    <h1>Carlos Di Piazza</h1>
+    <p class="subtitle">Analista Programador | Técnico en Redes</p>
+    <p class="location">📍 Santiago de Chile</p>
 
-        <div class="hero-buttons">
-            <a href="https://github.com/carlosdp521-hub" target="_blank">GitHub</a>
-            <a href="mailto:carlosmdipiazzaf@gmail.com">Contacto</a>
-            <a href="certificados&logros.html">Certificados & Logros</a>
-        </div>
+    <div class="hero-buttons">
+        <a href="https://github.com/carlosdp521-hub" target="_blank">GitHub</a>
+        <a href="mailto:carlosmdipiazzaf@gmail.com">Contacto</a>
+        <a href="contenidos/CV/CarlosDiPiazza.pdf">CV</a>
+        <a href="certificados&logros.html">Certificados & Logros</a>
     </div>
 </header>
 
+<!-- ================= NAV ================= -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#certificados">Logros</a></li>
+        <li><a href="#educacion">Educación</a></li>
+    </ul>
+</nav>
+
+<!-- ================= MAIN ================= -->
 <main>
 
-<section class="card">
-    <h3>💼 Perfil Profesional</h3>
+<section id="perfil" class="card">
+    <h2>👤 Perfil Profesional</h2>
     <p>
-        Analista Programador y Técnico en Instalación y Mantención de Redes, con experiencia en
-        redes, telecomunicaciones, CCTV y desarrollo web. Orientado a la resolución de problemas,
+        Analista Programador y Técnico en Redes con experiencia en instalación,
+        configuración y mantención de sistemas computacionales, redes,
+        telecomunicaciones y CCTV. Orientado a soluciones tecnológicas eficientes,
         trabajo colaborativo y mejora continua.
     </p>
 </section>
 
-<section class="card">
-    <h3>🛠️ Habilidades Técnicas</h3>
+<section id="habilidades" class="card">
+    <h2>🛠️ Habilidades Técnicas</h2>
     <ul class="skills">
         <li>HTML5 / CSS3 / JavaScript</li>
-        <li>Python (estructuras y lógica)</li>
-        <li>Redes TCP/IP, Ubiquiti, Huawei</li>
+        <li>Python (lógica y estructuras)</li>
+        <li>Redes TCP/IP</li>
+        <li>Ubiquiti / Huawei</li>
         <li>CCTV y Control de Acceso</li>
         <li>Git y GitHub</li>
-        <li>PSeInt, Diagramas de Flujo</li>
+        <li>PSeInt y Diagramas de Flujo</li>
     </ul>
 </section>
 
-<section class="card">
-    <h3>📂 Proyectos Destacados</h3>
+<section id="proyectos" class="card">
+    <h2>📂 Proyectos Destacados</h2>
 
-    <div class="project">
-        <h4>Portafolio Web Profesional</h4>
-        <p>
-            Desarrollo de sitio web personal usando HTML5, CSS3 y JavaScript para mostrar
-            proyectos académicos y técnicos.
-        </p>
-    </div>
+    <article class="project">
 
-    <div class="project">
-        <h4>Sistema de Control de Vuelos (Python)</h4>
-        <p>
-            Implementación de estructura de datos tipo árbol binario para la gestión de vuelos,
-            utilizando Python y Tkinter.
-        </p>
-    </div>
+    </article>
 
-    <div class="project">
-        <h4>Instalación de Redes y CCTV</h4>
+    <article class="project">
+        
+    </article>
+
+    <article class="project">
+        <h3>Sistema de Gestión de Reservas</h3>
         <p>
-            Configuración de redes cableadas e inalámbricas y sistemas de videovigilancia
-            para entornos corporativos.
+            Aplicación desarrollada en Python utilizando Programación Orientada a
+            Objetos para gestionar reservas de clientes.
         </p>
+        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/Proyectos/Gestion-reservas" target="_blank">🔗 Ver en GitHub</a>
+        <a href="Proyectos/Gestion-reservas/frontend/index.html" target="_blank">🔗 Ver en el navegador</a>
+    </article>
+</section>
+
+<section id="certificados" class="card">
+    <h2>🏅 Logros</h2>
+
+    <div class="cert-grid">
+        <div class="cert">
+            <img src="contenidos/img/Hacker etico.png" alt="Insignia Digital">
+            <p>Hacker ético</p>
+            <p>Emitido: 11 ene 2025</p>
+        </div>
+
+        <div class="cert">
+            <img src="contenidos/img/Dispositivos-moviles.png" alt="Insignia Digital">
+            <p>Dispositivos móviles</p>
+            <p>Emitido: 11 ene 2025</p>
+        </div>
+
+        <div class="cert">
+            <img src="contenidos/img/PC-portatiles.png" alt="Insignia Digital">
+            <p>PC portátiles</p>
+            <p>Emitido: 11 ene 2025</p>
+        </div>
+
+        <div class="cert">
+            <img src="contenidos/img/Equipos-personales.png" alt="Insignia Digital">
+            <p>Equipos personales</p>
+            <p>Emitido: 11 ene 2025</p>
+        </div>
     </div>
 </section>
 
-<section class="card">
-    <h3>🎓 Formación Académica</h3>
+<section id="educacion" class="card">
+    <h2>🎓 Formación Académica</h2>
     <ul>
         <li>
             <strong>Técnico en Instalación y Mantención de Redes</strong><br>
@@ -96,19 +131,11 @@
     </ul>
 </section>
 
-<section class="card">
-    <h3>🌐 Contacto</h3>
-    <p>
-        📍 Santiago de Chile<br>
-        📞 +56 9 7909 5565<br>
-        📧 carlosmdipiazzaf@gmail.com
-    </p>
-</section>
-
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer>
-    <p>© 2025 Carlos Di Piazza — CV Web Profesional</p>
+    <p>© 2025 Carlos Di Piazza — Portafolio Profesional</p>
 </footer>
 
 <script src="contenidos/js/script.js"></script>
