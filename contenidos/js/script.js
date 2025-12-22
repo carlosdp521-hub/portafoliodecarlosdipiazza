@@ -1,24 +1,18 @@
-/* ===== MODO OSCURO ===== */
-const darkBtn = document.getElementById("darkToggle");
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
 
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-}
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+            }
+        });
+    }, { threshold: 0.2 });
 
-darkBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem(
-        "theme",
-        document.body.classList.contains("dark") ? "dark" : "light"
-    );
-});
-
-/* ===== MENÚ MÓVIL ===== */
-const menuBtn = document.getElementById("menuToggle");
-const navMenu = document.querySelector("nav ul");
-
-menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
+    cards.forEach(card => {
+        card.style.opacity = "0";
+        observer.observe(card);
+    });
 });
 
 /* ===== FILTRO INSIGNIAS ===== */
@@ -38,5 +32,3 @@ filterButtons.forEach(btn => {
     });
 });
 /* ===== FIN FILTRO INSIGNIAS ===== */
-
-/* ===== FIN SCRIPT ===== */
