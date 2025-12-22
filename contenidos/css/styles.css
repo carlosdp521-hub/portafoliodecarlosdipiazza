@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #2c3e50;
+    transition: .3s;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark section,
+body.dark .badge-card {
+    background: #1e1e1e;
+}
+
+/* ===== NAV ===== */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1f3c88;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: auto;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-toggle,
+.dark-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ===== HEADER ===== */
+header {
+    margin-top: 60px;
+    padding: 60px 20px;
+    background: linear-gradient(135deg,#1f3c88,#3a6ea5);
+    color: white;
+    text-align: center;
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,.1);
+}
+
+#insignias {
+    grid-column: span 2;
+}
+
+/* ===== BADGES ===== */
+.badge-category {
+    margin: 30px 0 15px;
+    border-left: 6px solid #1f3c88;
+    padding-left: 10px;
+}
+
+.badges-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+.badge-card {
+    background: #f9fafc;
+    padding: 18px;
+    text-align: center;
+    border-radius: 12px;
+    transition: transform .3s;
+}
+
+.badge-card:hover {
+    transform: translateY(-5px);
+}
+
+.badge-card img {
+    width: 110px;
+    margin-bottom: 12px;
+}
+
+.badge-card.small img {
+    width: 80px;
+}
+
+/* ===== FILTER ===== */
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    margin: 4px;
+    padding: 7px 14px;
+    background: #1f3c88;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 40px;
+    background: #1f3c88;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #insignias {
+        grid-column: span 1;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #1f3c88;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+}
+/* ===== DARK MODE BUTTON ACTIVE ===== */
+.dark-btn.active {
+    color: #f1c40f;
+}
