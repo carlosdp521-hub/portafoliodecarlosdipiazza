@@ -6,16 +6,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
         <h1>Sistema de Gestión de Reservas</h1>
 
         <input id="nombre" placeholder="Nombre">
-        <input id="fecha" placeholder="Fecha">
+        
+        <input type="date" id="fecha">
+        
+        <input type="time" id="hora">
+        
         <input id="servicio" placeholder="Servicio">
-        <button onclick="crearReserva()">Crear Reserva</button>
-
+        
+        <button type="button" onclick="crearReserva()">Crear Reserva</button>
+        
         <h2>Reservas</h2>
+        
         <ul id="lista"></ul>
+    
     </div>
 
     <script src="script.js"></script>

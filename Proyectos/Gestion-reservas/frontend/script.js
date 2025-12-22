@@ -26,3 +26,24 @@ function cargarReservas() {
 }
 
 cargarReservas();
+formulario.onsubmit = e => {
+    e.preventDefault();
+    crearReserva();
+    formulario.reset();
+};
+
+const inputHora = document.getElementById("hora");
+
+function crearReserva() {
+    fetch(API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            nombre: inputNombre.value,
+            fecha: inputFecha.value,
+            hora: inputHora.value,
+            servicio: inputServicio.value
+        })
+    })
+    .then(() => cargarReservas());
+}
