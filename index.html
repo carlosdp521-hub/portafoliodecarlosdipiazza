@@ -3,169 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Di Piazza | Portafolio Profesional</title>
+    <meta name="description" content="Portafolio profesional de Carlos Di Piazza. Proyectos, certificados y habilidades en programación y tecnología.">
+    <meta name="author" content="Carlos Di Piazza">
 
-    <!-- Google Fonts -->
+    <title>Inicio | CarlosDP521 Hub</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="contenidos/css/style.css">
+
+    <!-- Fuente Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="contenidos/css/styles.css">
 </head>
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="hero">
-    <img src="contenidos/img/perfil.jpeg" alt="Carlos Di Piazza">
-    <h1>Carlos Di Piazza</h1>
-    <p class="subtitle">Analista Programador | Técnico en Redes</p>
-    <p class="location">📍 Santiago de Chile</p>
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <h1>Carlos M. Di Piazza F.</h1>
+        <p>Portafolio Profesional | Programación & Tecnología</p>
+    
+        <!-- NAVEGACIÓN -->
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html" class="activo">Proyectos</a></li>
+                <li><a href="certificados-y-logros.html">Certificados</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="hero-buttons">
-        <a href="https://github.com/carlosdp521-hub" target="_blank">GitHub</a>
-        <a href="mailto:carlosmdipiazzaf@gmail.com">Contacto</a>
-        <a href="contenidos/CV/CarlosDiPiazza.pdf" target="_blank">CV</a>
-        <a href="certificados&logros.html">Certificados & Logros</a>
-    </div>
-</header>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
 
-<!-- ================= NAV ================= -->
-<nav class="navbar">
-    <ul>
-        <li><a href="#perfil">Perfil</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#certificados">Logros</a></li>
-        <li><a href="#educacion">Educación</a></li>
-    </ul>
-</nav>
+        <section class="card">
+            <h2>👋 Bienvenido</h2>
+            <p>
+                Soy <strong>Carlos Di Piazza</strong>, estudiante y entusiasta del desarrollo de software,
+                enfocado en programación, lógica computacional y desarrollo web.
+            </p>
+            <p>
+                Este portafolio reúne mis proyectos académicos, certificaciones y habilidades
+                adquiridas durante mi formación.
+            </p>
+        </section>
 
-<!-- ================= MAIN ================= -->
-<main>
+        <section class="card">
+            <h2>🚀 Objetivo Profesional</h2>
+            <p>
+                Desarrollarme como programador, aplicando buenas prácticas, pensamiento lógico
+                y soluciones tecnológicas eficientes en entornos reales.
+            </p>
+        </section>
 
-<section id="perfil" class="card">
-    <h2>👤 Perfil Profesional</h2>
-    <p>
-        Analista Programador y Técnico en Redes con experiencia en instalación,
-        configuración y mantención de sistemas computacionales, redes,
-        telecomunicaciones y CCTV. Orientado a soluciones tecnológicas eficientes,
-        trabajo colaborativo y mejora continua.
-    </p>
-</section>
+        <section class="card acciones">
+            <a href="proyectos.html" class="btn">Ver Proyectos</a>
+            <a href="certificados-y-logros.html" class="btn secundario">Certificados</a>
+        </section>
 
-<section id="habilidades" class="card">
-    <h2>🛠️ Habilidades Técnicas</h2>
-    <ul class="skills">
-        <li>HTML5 / CSS3 / JavaScript</li>
-        <li>Python (lógica y estructuras)</li>
-        <li>Redes TCP/IP</li>
-        <li>Ubiquiti / Huawei</li>
-        <li>CCTV y Control de Acceso</li>
-        <li>Git y GitHub</li>
-        <li>PSeInt y Diagramas de Flujo</li>
-    </ul>
-</section>
+    </main>
 
-<section id="proyectos" class="card">
-    <h2>📂 Proyectos Destacados</h2>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2025 Carlos Di Piazza | Portafolio Académico</p>
+    </footer>
 
-    <article class="project">
-        <h3>Proyecto de logins</h3>
-        <p>
-            Descripción del proyecto de logins realizado en HTML, CSS y JavaScript.
-            Incluye validaciones de usuario y contraseña, así como diseño responsivo.
-        </p>
-        <button onclick="window.location.href='login/login.html'" class="btn">Ir al login 1</button>
-        <button onclick="window.location.href='login2/login.html'" class="btn-2">Ir al login 2</button>
-    </article>
-
-    <article class="project">
-        <h3>Sistema de Inventario en Python</h3>
-        <p>
-            Aplicación desarrollada en Python que permite gestionar productos mediante
-            un menú en consola. El sistema incluye validaciones, persistencia de datos
-            en JSON y puede ser convertido a archivo ejecutable (.exe).
-        </p>
-        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/Proyectos/Inventario" target="_blank">🔗 Ver en GitHub</a> <br>
-        <a href="Proyectos/Inventario/Inventario.rar" target="_blank">🔗 Descargar Programa</a> <br>
-        <a href="Proyectos/Inventario/README.md" target="_blank">🔗 Leer Informe</a> <br>
-    </article>
-
-    <article class="project">
-        <h3>Juego: Adivina el Número</h3>
-        <p>
-            Aplicación de consola desarrollada en Python, orientada al aprendizaje de lógica de programación, 
-            donde el sistema genera un número aleatorio y el usuario debe adivinarlo. 
-            El programa proporciona pistas dinámicas en función de la entrada del usuario, 
-            aplicando estructuras condicionales para la toma de decisiones.
-        </p>
-        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/Proyectos/juego-adivina-el-numero-main" target="_blank">🔗 Ver en GitHub</a> <br>
-        <a href="Proyectos/juego-adivina-el-numero-main/Juego.rar" target="_blank">🔗 Descargar Juego</a> <br>
-        <a href="Proyectos/juego-adivina-el-numero-main/README.md" target="_blank">🔗 Leer Informe</a> <br>
-    </article>
-
-    <article class="project">
-        <h3>Sistema de Gestión de Reservas</h3>
-        <p>
-            Aplicación desarrollada en Python utilizando Programación Orientada a
-            Objetos para gestionar reservas de clientes.
-        </p>
-        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/Proyectos/Gestion-reservas" target="_blank">🔗 Ver en GitHub</a> <br>
-        <a href="Proyectos/Gestion-reservas/frontend/index.html" target="_blank">🔗 Ver Ejemplo</a> <br>
-        <a href="Proyectos/juego-adivina-el-numero-main/README.md" target="_blank">🔗 Leer Informe</a> <br>
-    </article>
-</section>
-
-<section id="certificados" class="card">
-    <h2>🏅 Logros</h2>
-
-    <div class="cert-grid">
-        <div class="cert">
-            <img src="contenidos/img/Hacker etico.png" alt="Insignia Digital">
-            <p>Hacker ético</p>
-            <p>Emitido: 11 ene 2025</p>
-        </div>
-
-        <div class="cert">
-            <img src="contenidos/img/Dispositivos-moviles.png" alt="Insignia Digital">
-            <p>Dispositivos móviles</p>
-            <p>Emitido: 11 ene 2025</p>
-        </div>
-
-        <div class="cert">
-            <img src="contenidos/img/PC-portatiles.png" alt="Insignia Digital">
-            <p>PC portátiles</p>
-            <p>Emitido: 11 ene 2025</p>
-        </div>
-
-        <div class="cert">
-            <img src="contenidos/img/Equipos-personales.png" alt="Insignia Digital">
-            <p>Equipos personales</p>
-            <p>Emitido: 11 ene 2025</p>
-        </div>
-    </div>
-</section>
-
-<section id="educacion" class="card">
-    <h2>🎓 Formación Académica</h2>
-    <ul>
-        <li>
-            <strong>Técnico en Instalación y Mantención de Redes</strong><br>
-            AIEP (2017 – 2021)
-        </li>
-        <li>
-            <strong>Técnico en Análisis y Programación</strong><br>
-            Instituto Profesional IACC (En curso)
-        </li>
-    </ul>
-</section>
-
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>© 2025 Carlos Di Piazza — Portafolio Profesional</p>
-</footer>
-
-<script src="contenidos/js/script.js"></script>
 </body>
 </html>

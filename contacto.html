@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Carlos Di Piazza</title>
+    <link rel="stylesheet" href="contenidos/css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Contacto</h1>
+    <p>Forma parte de mi red profesional</p>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="certificados-y-logros.html" class="activo">Certificados</a></li>
+            <li><a href="habilidades.html">Habilidades</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="contact-container">
+    
+    <form id="contactForm" class="contact-form">
+        <label>Nombre</label>
+        <input type="text" id="nombre" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Mensaje</label>
+        <textarea id="mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="msg">
+        <!-- Mensaje de confirmación se mostrará aquí -->
+    </p>
+
+</main>
+
+<footer class="footer">
+    <p>© 2025 Carlos Di Piazza</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("msg").textContent =
+    "Mensaje enviado correctamente (simulación).";
+});
+</script>
+
+</body>
+</html>
