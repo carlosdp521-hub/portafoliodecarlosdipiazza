@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Portafolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+if (localStorage.getItem("login") !== "true") {
+    window.location.href = "../login/login.html";
+}
+</script>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <h1>Carlos Di Piazza</h1>
+    <p>Portafolio Web | Programación & Tecnología</p>
+    <button onclick="logout()">Cerrar sesión</button>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+    <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+    </ul>
+</nav>
+
+<!-- MAIN -->
+<main class="main">
+
+    <!-- SOBRE MÍ -->
+    <section class="section" id="sobre-mi">
+        <h2>Sobre mí</h2>
+
+        <article>
+            <h3>Perfil Profesional</h3>
+            <p>
+                Analista Programador y Técnico en Instalación y Mantención de Redes, con formación en análisis y programación
+                computacional. Cuento con experiencia en sistemas computacionales, redes, telecomunicaciones y seguridad
+                electrónica, orientado a la resolución de problemas tecnológicos y al trabajo en equipo.
+            </p>
+        </article>
+
+        <article>
+            <h3>Resumen Profesional</h3>
+            <p>
+                Persona responsable, proactiva y con disposición para aprender en entornos laborales dinámicos.
+                Experiencia en instalación, configuración y mantención de sistemas, así como en documentación técnica
+                y soporte a usuarios.
+            </p>
+        </article>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="section" id="experiencia">
+        <h2>Experiencia Laboral</h2>
+
+        <article>
+            <h3>Ayudante Técnico – ClickSolutions</h3>
+            <p><strong>Agosto 2022 – Enero 2025</strong></p>
+            <p>
+                Responsable de la configuración e instalación de sistemas de control de acceso (CCAA), CCTV y detección
+                de incendios en edificios corporativos de Las Condes, Vitacura, Providencia y Lo Barnechea.
+            </p>
+        </article>
+
+        <article>
+            <h3>Ayudante Técnico – Inge Smart</h3>
+            <p><strong>Abril 2018 – Junio 2018</strong></p>
+            <p>
+                Participación en proyectos de instalación de antenas Ubiquiti, cámaras y equipos Huawei para parques y
+                comunas de la Municipalidad de Vitacura. Documentación y reporte del funcionamiento de los equipos.
+            </p>
+        </article>
+
+        <article>
+            <h3>Práctica Profesional – Inge Smart</h3>
+            <p><strong>Enero 2018 – Marzo 2018</strong></p>
+            <p>
+                Instalación, mantención y configuración de equipos tecnológicos, resolución de fallos comunes y soporte
+                en sistemas biométricos de asistencia.
+            </p>
+        </article>
+    </section>
+
+    <!-- EDUCACIÓN -->
+    <section class="section" id="educacion">
+        <h2>Educación y Formación</h2>
+
+        <article>
+            <h3>Analista Programador</h3>
+            <p>Instituto Profesional IACC – <em>Actualmente en curso</em></p>
+        </article>
+
+        <article>
+            <h3>Técnico en Instalación y Mantención de Redes</h3>
+            <p>AIEP – 2017 a 2021 (Título obtenido)</p>
+        </article>
+
+        <article>
+            <h3>Técnico en Análisis y Programación Computacional</h3>
+            <p>Liceo Polivalente Libertador General José de San Martín – 2010 a 2013</p>
+        </article>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section" id="habilidades">
+        <h2>Habilidades</h2>
+
+        <article>
+            <h3>Habilidades Técnicas</h3>
+            <p>
+                Gestión de redes y telecomunicaciones, seguridad electrónica (CCTV, CCAA, detección de incendios),
+                sistemas operativos, hardware, programación y bases de datos.
+            </p>
+        </article>
+
+        <article>
+            <h3>Habilidades Blandas</h3>
+            <p>
+                Trabajo en equipo, proactividad, responsabilidad, comunicación efectiva y adaptación a nuevos desafíos.
+            </p>
+        </article>
+
+        <article>
+            <h3>Otras Actividades</h3>
+            <p>
+                Participación en proyectos tecnológicos, capacitaciones internas, soporte a usuarios y voluntariado
+                en alfabetización digital.
+            </p>
+        </article>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="contacto">
+    <p>© 2025 Carlos Di Piazza | Portafolio Académico</p>
+</footer>
+
+<script>
+function logout() {
+    localStorage.removeItem("login");
+    window.location.href = "../login/login.html";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Portafolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="scene">
+    <div class="card" id="card">
+
+        <form class="login-form" id="loginForm">
+            <h2>Acceso</h2>
+
+            <div class="input-group">
+                <input type="text" id="user" required>
+                <label>Usuario</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="pass" required>
+                <label>Contraseña</label>
+            </div>
+
+            <button type="submit">Ingresar</button><br><br>
+            <button type="button" onclick="window.location.href='../../../'">Regresar</button>
+
+            <div class="loader" id="loader"></div>
+            <p class="msg" id="msg"></p>
+        </form>
+
+    </div>
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>
