@@ -1,89 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | Carlos Di Piazza</title>
-    <link rel="stylesheet" href="contenidos/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habilidades | Carlos Di Piazza</title>
+
+  <link rel="stylesheet" href="contenidos/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<header class="header">
-    <h1>Mis Habilidades</h1>
-    <p>Conocimientos técnicos y competencias desarrolladas durante mi formación</p>
-    <nav class="nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="certificados-y-logros.html">Certificados</a></li>
-            <li><a href="habilidades.html" class="activo">Habilidades</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo"><span>AP</span>Carlos Di Piazza</div>
+  <i class="fas fa-bars hamburger"></i>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="certificados-y-logros.html">Certificados</a></li>
+    <li><a href="habilidades.html" class="active">Habilidades</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 
-<main class="projects-container">
-    <!-- Hard Skills -->
-    <section class="skill-section">
-        <h2>Habilidades Técnicas</h2>
+<!-- CONTENIDO -->
+<section>
+  <h2>Habilidades Técnicas</h2>
 
-        <div class="skill-card">
-            <span class="label">HTML5 / CSS3 / JavaScript</span>
-            <div class="bar"><div class="bar-fill" data-level="90%"></div></div>
-        </div>
+  <div class="projects">
 
-        <div class="skill-card">
-            <span class="label">Python (lógica y estructuras)</span>
-            <div class="bar"><div class="bar-fill" data-level="85%"></div></div>
-        </div>
+    <div class="card skill">
+      <h3>HTML5 / CSS3 / JavaScript</h3>
+      <div class="skill-bar">
+        <span data-level="90%"></span>
+      </div>
+    </div>
 
-        <div class="skill-card">
-            <span class="label">Redes TCP/IP</span>
-            <div class="bar"><div class="bar-fill" data-level="80%"></div></div>
-        </div>
+    <div class="card skill">
+      <h3>Python (lógica y estructuras)</h3>
+      <div class="skill-bar">
+        <span data-level="85%"></span>
+      </div>
+    </div>
 
-        <div class="skill-card">
-            <span class="label">Git y GitHub</span>
-            <div class="bar"><div class="bar-fill" data-level="85%"></div></div>
-        </div>
-    </section>
-    <!-- Soft Skills -->
-    <section class="skill-section">
-        <h2>Competencias Blandas</h2>
+    <div class="card skill">
+      <h3>Redes TCP/IP</h3>
+      <div class="skill-bar">
+        <span data-level="80%"></span>
+      </div>
+    </div>
 
-        <div class="skill-card">
-            <span class="label">Trabajo en equipo</span>
-            <div class="bar"><div class="bar-fill" data-level="90%"></div></div>
-        </div>
+    <div class="card skill">
+      <h3>Git y GitHub</h3>
+      <div class="skill-bar">
+        <span data-level="85%"></span>
+      </div>
+    </div>
 
-        <div class="skill-card">
-            <span class="label">Resolución de Problemas</span>
-            <div class="bar"><div class="bar-fill" data-level="85%"></div></div>
-        </div>
+  </div>
+</section>
 
-        <div class="skill-card">
-            <span class="label">Organización y Documentación</span>
-            <div class="bar"><div class="bar-fill" data-level="85%"></div></div>
-        </div>
-    </section>
-</main>
+<section>
+  <h2>Competencias Blandas</h2>
+
+  <div class="projects">
+
+    <div class="card skill">
+      <h3>Trabajo en Equipo</h3>
+      <div class="skill-bar">
+        <span data-level="90%"></span>
+      </div>
+    </div>
+
+    <div class="card skill">
+      <h3>Resolución de Problemas</h3>
+      <div class="skill-bar">
+        <span data-level="85%"></span>
+      </div>
+    </div>
+
+    <div class="card skill">
+      <h3>Organización y Documentación</h3>
+      <div class="skill-bar">
+        <span data-level="85%"></span>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <footer class="footer">
-    <p>© 2025 Carlos Di Piazza</p>
+  <p>© 2025 Carlos Di Piazza | Portafolio Profesional</p>
 </footer>
-<script>
-  // Animar barras cuando se vean en pantalla
-    const fills = document.querySelectorAll('.bar-fill');
 
-    function animateBars() {
-        fills.forEach(el => {
-            const level = el.getAttribute('data-level');
-            el.style.width = level;
-        });
-    }
-
-  // Esperar que cargue la página
-    window.addEventListener('load', animateBars);
-</script>
+<script src="contenidos/js/main.js"></script>
 </body>
 </html>

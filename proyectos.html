@@ -1,117 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | Carlos Di Piazza</title>
-    <link rel="stylesheet" href="contenidos/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos | Carlos Di Piazza</title>
+
+  <link rel="stylesheet" href="contenidos/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<header class="header">
-    <h1>Mis Proyectos</h1>
-    <p>Explora algunos de mis trabajos y desarrollos</p>
-    <nav class="nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html" class="activo">Proyectos</a></li>
-            <li><a href="certificados-y-logros.html">Certificados</a></li>
-            <li><a href="habilidades.html">Habilidades</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo"><span>AP</span>Carlos Di Piazza</div>
+  <i class="fas fa-bars hamburger"></i>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="proyectos.html" class="active">Proyectos</a></li>
+    <li><a href="certificados-y-logros.html">Certificados</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 
-<main class="projects-container">
+<!-- CONTENIDO -->
+<section>
+  <h2>Proyectos Destacados</h2>
 
-    <article class="project">
-        <h3>Proyecto de logins</h3>
-        <p>
-            Descripción del proyecto de logins realizado en HTML, CSS y JavaScript.
-            Incluye validaciones de usuario y contraseña, así como diseño responsivo.
-        </p>
-        <button onclick="window.location.href='contenidos/proyectos/login/login.html'" class="btn">Ir al login 1</button><br><br>
-        <button onclick="window.location.href='contenidos/Proyectos/login2/login.html'" class="btn-2">Ir al login 2</button><br><br>
+  <div class="projects">
+
+    <!-- LOGIN -->
+    <article class="card">
+      <img src="contenidos/img/proyecto-login.png" alt="Sistema de Login">
+      <h3>Sistema de Login Web</h3>
+      <p>
+        Desarrollo de un sistema de autenticación utilizando HTML, CSS y JavaScript,
+        con validación de credenciales, manejo de eventos y diseño responsivo.
+      </p>
+
+      <p>
+        <a href="contenidos/proyectos/login/login.html" target="_blank">🔗 Ver Login 1</a><br>
+        <a href="contenidos/Proyectos/login2/login.html" target="_blank">🔗 Ver Login 2</a>
+      </p>
     </article>
 
-    <article class="project">
-        <h3>Sistema de Inventario en Python</h3>
-        <p>
-            Aplicación desarrollada en Python que permite gestionar productos mediante
-            un menú en consola. El sistema incluye validaciones, persistencia de datos
-            en JSON y puede ser convertido a archivo ejecutable (.exe).
-        </p>
-        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/Proyectos/Inventario" target="_blank">🔗 Ver en GitHub</a> <br>
-        <a href="contenidos/Proyectos/Inventario/Inventario.rar" target="_blank">🔗 Descargar Programa</a> <br>
-        <a href="contenidos/Proyectos/Inventario/README.md" target="_blank">🔗 Leer Informe</a> <br>
+    <!-- INVENTARIO -->
+    <article class="card">
+      <img src="contenidos/img/proyecto-inventario.png" alt="Inventario Python">
+      <h3>Sistema de Inventario en Python</h3>
+      <p>
+        Aplicación de consola desarrollada en Python para gestionar productos,
+        incorporando validaciones, persistencia en JSON y estructura modular.
+      </p>
+
+      <p>
+        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/contenidos/Proyectos/Inventario" target="_blank">
+          🔗 Ver en GitHub
+        </a><br>
+        <a href="contenidos/Proyectos/Inventario/Inventario.rar" target="_blank">
+          🔗 Descargar programa
+        </a><br>
+        <a href="contenidos/Proyectos/Inventario/README.md" target="_blank">
+          🔗 Leer informe
+        </a>
+      </p>
     </article>
 
-    <article class="project">
-        <h3>Juego: Adivina el Número</h3>
-        <p>
-            Aplicación de consola desarrollada en Python, orientada al aprendizaje de lógica de programación, 
-            donde el sistema genera un número aleatorio y el usuario debe adivinarlo. 
-            El programa proporciona pistas dinámicas en función de la entrada del usuario, 
-            aplicando estructuras condicionales para la toma de decisiones.
-        </p>
-        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/Proyectos/juego-adivina-el-numero-main" target="_blank">🔗 Ver en GitHub</a> <br>
-        <a href="contenidos/Proyectos/juego-adivina-el-numero-main/Juego.rar" target="_blank">🔗 Descargar Juego</a> <br>
-        <a href="contenidos/Proyectos/juego-adivina-el-numero-main/README.md" target="_blank">🔗 Leer Informe</a> <br>
+    <!-- JUEGO -->
+    <article class="card">
+      <img src="contenidos/img/proyecto-juego.png" alt="Juego Adivina el Número">
+      <h3>Juego: Adivina el Número</h3>
+      <p>
+        Juego de consola en Python enfocado en el aprendizaje de lógica de programación,
+        uso de números aleatorios y estructuras condicionales.
+      </p>
+
+      <p>
+        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/contenidos/Proyectos/juego-adivina-el-numero-main" target="_blank">
+          🔗 Ver en GitHub
+        </a><br>
+        <a href="contenidos/Proyectos/juego-adivina-el-numero-main/Juego.rar" target="_blank">
+          🔗 Descargar juego
+        </a><br>
+        <a href="contenidos/Proyectos/juego-adivina-el-numero-main/README.md" target="_blank">
+          🔗 Leer informe
+        </a>
+      </p>
     </article>
 
-    <article class="project">
-        <h3>Sistema de Gestión de Reservas</h3>
-        <p>
-            Aplicación desarrollada en Python utilizando Programación Orientada a
-            Objetos para gestionar reservas de clientes.
-        </p>
-        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/Proyectos/Gestion-reservas" target="_blank">🔗 Ver en GitHub</a> <br>
-        <a href="contenidos/Proyectos/Gestion-reservas/frontend/index.html" target="_blank">🔗 Ver Ejemplo</a> <br>
-        <a href="contenidos/Proyectos/juego-adivina-el-numero-main/README.md" target="_blank">🔗 Leer Informe</a> <br>
+    <!-- RESERVAS -->
+    <article class="card">
+      <img src="contenidos/img/proyecto-reservas.png" alt="Gestión de Reservas">
+      <h3>Sistema de Gestión de Reservas</h3>
+      <p>
+        Sistema desarrollado en Python utilizando Programación Orientada a Objetos,
+        enfocado en la administración de reservas y clientes.
+      </p>
+
+      <p>
+        <a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza/tree/main/contenidos/Proyectos/Gestion-reservas" target="_blank">
+          🔗 Ver en GitHub
+        </a><br>
+        <a href="contenidos/Proyectos/Gestion-reservas/frontend/index.html" target="_blank">
+          🔗 Ver ejemplo
+        </a>
+      </p>
     </article>
 
-</main>
-
-<main class="container">
-
-    <h1>Tarjetas de Presentación</h1>
-
-    <section class="cards">
-
-        <article class="card">
-            <div class="card-front">
-                <img src="contenidos/img/perfil.jpeg" alt="Avatar">
-                <h2>Carlos Di Piazza</h2>
-                <p>Desarrollador Junior</p>
-            </div>
-
-            <div class="card-back">
-                <p>📧 carlosmdipiazzaf<br>@gmail.com</p>
-                <p>📱 +56 9 7909 5565</p>
-                <p>🌐 GitHub</p>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-front">
-                <h2>Proyecto</h2>
-                <p>Tarjeta Digital</p>
-            </div>
-
-            <div class="card-back">
-                <p>HTML5</p>
-                <p>CSS3</p>
-                <p>JavaScript</p>
-            </div>
-        </article>
-
-    </section>
-
-</main>
+  </div>
+</section>
 
 <footer class="footer">
-    <p>© 2025 Carlos Di Piazza</p>
+  <p>© 2025 Carlos Di Piazza | Portafolio Profesional</p>
 </footer>
-<script src="contenidos/JS/animaciones.js"></script>
+
+<script src="contenidos/js/main.js"></script>
 </body>
 </html>

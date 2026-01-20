@@ -6,36 +6,48 @@
     <meta name="description" content="Certificados y logros académicos de Carlos Di Piazza">
     <meta name="author" content="Carlos Di Piazza">
 
-    <title>Certificados y Logros | CarlosDP521 Hub</title>
+    <title>Certificados y Logros | CarlosDP521</title>
 
     <link rel="stylesheet" href="contenidos/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="header">
-    <h1>Certificados y Logros</h1>
-    <p>Formación académica y aprendizaje continuo</p>
-    <nav class="nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html" class="activo">Proyectos</a></li>
-            <li><a href="certificados-y-logros.html">Certificados</a></li>
-            <li><a href="habilidades.html">Habilidades</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- ================= NAV ================= -->
+<nav class="navbar">
+    <div class="nav-logo">
+        <span>AP</span> Carlos Di Piazza
+    </div>
 
+    <i class="fas fa-bars hamburger"></i>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="certificados-y-logros.html">Mis Certificados</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- ================= MAIN ================= -->
 <main class="contenedor">
 
-    <h2>Insignias, Certificaciones y Logros</h2>
+    <!-- HERO -->
+    <section class="hero">
+        <h2>Certificados y Logros</h2>
+        <p>
+            Formación académica, certificaciones técnicas y aprendizaje continuo
+            en tecnologías de la información.
+        </p>
+    </section>
 
     <!-- FILTROS -->
     <div class="filters">
-        <button data-filter="all" class="active" aria-label="Mostrar todas">Todas</button>
-        <button data-filter="ccna" aria-label="Filtrar certificaciones CCNA">CCNA</button>
-        <button data-filter="curso" aria-label="Filtrar cursos">Cursos</button>
-        <button data-filter="logro" aria-label="Filtrar logros">Logros</button>
+        <button data-filter="all" class="active">Todas</button>
+        <button data-filter="ccna">CCNA</button>
+        <button data-filter="curso">Cursos</button>
+        <button data-filter="logro">Logros</button>
     </div>
 
     <!-- ================= CCNA ================= -->
@@ -43,140 +55,101 @@
         <h3 class="badge-category">Certificaciones CCNA (Cisco)</h3>
 
         <div class="badges-container">
+
             <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/CCNA Enterprise Networking, Security, and Automation.png" alt="CCNA Enterprise Networking">
-            <h4>CCNA: Enterprise Networking, Security and Automation</h4>
-            <p>Emitido: 10 nov 2020</p>
-            <a href="https://www.credly.com/badges/bb16db14-ffa4-4f46-827b-7830124a7f5a" target="_blank">Ver Insignia</a>
-            <a href="contenidos/Certificados/CCNAv7 Enterprise Networking, Security, and Automation.pdf" target="_blank">Ver Certificado</a>
-        </div>
+                <img src="contenidos/img/CCNA Enterprise Networking, Security, and Automation.png" alt="CCNA Enterprise Networking">
+                <h4>CCNA: Enterprise Networking, Security and Automation</h4>
+                <p>Emitido: 10 nov 2020</p>
+                <a href="https://www.credly.com/badges/bb16db14-ffa4-4f46-827b-7830124a7f5a" target="_blank">Ver Insignia</a>
+                <a href="contenidos/Certificados/CCNAv7 Enterprise Networking, Security, and Automation.pdf" target="_blank">Ver Certificado</a>
+            </div>
 
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/CCNA Switching, Routing, and Wireless Essentials.png" alt="CCNA Switching Routing Wireless">
-            <h4>CCNA: Switching, Routing and Wireless Essentials</h4>
-            <p>Emitido: 07 ago 2020</p>
-            <a href="https://www.credly.com/badges/59a72ad7-eb1a-44eb-b58b-680fbad96959" target="_blank">Ver Insignia</a>
-            <a href="contenidos/Certificados/CCNAv7 Switching, Routing, and Wireless Essentials.pdf" target="_blank">Ver Certificado</a>
-        </div>
+            <div class="badge-card" data-type="ccna">
+                <img src="contenidos/img/CCNA Switching, Routing, and Wireless Essentials.png" alt="CCNA Switching Routing Wireless">
+                <h4>CCNA: Switching, Routing and Wireless Essentials</h4>
+                <p>Emitido: 07 ago 2020</p>
+                <a href="https://www.credly.com/badges/59a72ad7-eb1a-44eb-b58b-680fbad96959" target="_blank">Ver Insignia</a>
+                <a href="contenidos/Certificados/CCNAv7 Switching, Routing, and Wireless Essentials.pdf" target="_blank">Ver Certificado</a>
+            </div>
 
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/CCNA Introduction to Networks.png" alt="CCNA Introduction to Networks">
-            <h4>CCNA: Introduction to Networks</h4>
-            <p>Emitido: 06 may 2020</p>
-            <a href="https://www.credly.com/badges/8d1beb4a-ebbe-4388-8d7f-70b4d4b0b23d" target="_blank">Ver Insignia</a>
-            <a href="contenidos/Certificados/CCNA Introduction to Networks.pdf" target="_blank">Ver Certificado</a>
-        </div>
+            <div class="badge-card" data-type="ccna">
+                <img src="contenidos/img/CCNA Introduction to Networks.png" alt="CCNA Introduction to Networks">
+                <h4>CCNA: Introduction to Networks</h4>
+                <p>Emitido: 06 may 2020</p>
+                <a href="https://www.credly.com/badges/8d1beb4a-ebbe-4388-8d7f-70b4d4b0b23d" target="_blank">Ver Insignia</a>
+                <a href="contenidos/Certificados/CCNA Introduction to Networks.pdf" target="_blank">Ver Certificado</a>
+            </div>
 
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/certificado.png" alt="CCNA Introduction to Networks">
-            <h4>CCNA: Introduction to Networks</h4>
-            <p>Emitido: 05 may 2020</p>
-            <a href="contenidos/Certificados/CCNAv7 Introduction to Networks.pdf" target="_blank">Ver Certificado</a>
-            
-        </div>
+            <div class="badge-card" data-type="ccna">
+                <img src="contenidos/img/certificado.png" alt="CCNA Security">
+                <h4>CCNA Security</h4>
+                <p>Emitido: 27 jul 2017</p>
+                <a href="contenidos/Certificados/CCNA Security.pdf" target="_blank">Ver Certificado</a>
+            </div>
 
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/certificado.png" alt="CCNA Security">
-            <h4>CCNA Security</h4>
-            <p>Emitido: 27 jul 2017</p>
-            <a href="contenidos/Certificados/CCNA Security.pdf" target="_blank">Ver Certificado</a>
-            
-        </div>
-
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/certificado.png" alt="Connecting Networks">
-            <h4>CCNA R&S: Connecting Networks</h4>
-            <p>Emitido: 02 mar 2017</p>
-            <a href="contenidos/Certificados/CCNA R&S Connecting Networks.pdf" target="_blank">Ver Certificado</a>
-        </div>
-
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/certificado.png" alt="Scaling Networks">
-            <h4>CCNA R&S: Scaling Networks</h4>
-            <p>Emitido: 26 jul 2016</p>
-            <a href="contenidos/Certificados/CCNA R&S Scaling Networks.pdf" target="_blank">Ver Certificado</a>
-        </div>
-
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/certificado.png" alt="Routing and Switching Essentials">
-            <h4>CCNA R&S: Routing and Switching Essentials</h4>
-            <p>Emitido: 26 feb 2016</p>
-            <a href="contenidos/Certificados/CCNA R&S Routing and Switching Essentials.pdf" target="_blank">Ver Certificado</a>
-        </div>
-
-        <div class="badge-card" data-type="ccna">
-            <img src="contenidos/img/certificado.png" alt="Introduction to Networks 2015">
-            <h4>CCNA R&S: Introduction to Networks</h4>
-            <p>Emitido: 12 ago 2015</p>
-            <a href="contenidos/Certificados/CCNA R&S Introduction to Networks.pdf" target="_blank">Ver Certificado</a>
         </div>
     </section>
 
     <!-- ================= CURSOS ================= -->
     <section>
-        <h3 class="badge-category">Cursos y Certificaciones Recientes</h3>
+        <h3 class="badge-category">Cursos y Certificaciones</h3>
 
         <div class="badges-container">
-            <!-- contenido intacto -->
+
             <div class="badge-card" data-type="curso">
-            <img src="contenidos/img/IT Essentials.png" alt="IT Essentials">
-            <h4>IT Essentials</h4>
-            <p>Emitido: 11 jul 2025</p>
-            <a href="https://www.credly.com/badges/b0b9734f-3746-4c58-9afa-fcfce6f8c16e" target="_blank">Ver Insignia</a>
-            <a href="contenidos/Certificados/IT Essentials.pdf" target="_blank">Ver Certificado</a>
+                <img src="contenidos/img/IT Essentials.png" alt="IT Essentials">
+                <h4>IT Essentials</h4>
+                <p>Emitido: 11 jul 2025</p>
+                <a href="https://www.credly.com/badges/b0b9734f-3746-4c58-9afa-fcfce6f8c16e" target="_blank">Ver Insignia</a>
+                <a href="contenidos/Certificados/IT Essentials.pdf" target="_blank">Ver Certificado</a>
             </div>
 
             <div class="badge-card" data-type="curso">
-            <img src="contenidos/img/Fundamentos de IA con IBM SkillsBuild.png" alt="Fundamentos de IA">
-            <h4>Fundamentos de IA con IBM SkillsBuild</h4>
-            <p>Emitido: 09 feb 2025</p>
-            <a href="https://www.credly.com/badges/b2354c2e-f14d-4876-89af-0d7149b51b34" target="_blank">Ver Insignia</a>
-            <a href="contenidos/Certificados/Fundamentos de IA con IBM SkillsBuild.pdf" target="_blank">Ver Certificado</a>
+                <img src="contenidos/img/Fundamentos de IA con IBM SkillsBuild.png" alt="Fundamentos de IA">
+                <h4>Fundamentos de IA con IBM SkillsBuild</h4>
+                <p>Emitido: 09 feb 2025</p>
+                <a href="https://www.credly.com/badges/b2354c2e-f14d-4876-89af-0d7149b51b34" target="_blank">Ver Insignia</a>
+                <a href="contenidos/Certificados/Fundamentos de IA con IBM SkillsBuild.pdf" target="_blank">Ver Certificado</a>
             </div>
 
-            <div class="badge-card" data-type="curso">
-            <img src="contenidos/img/Conceptos Básicos de Hardware de Computadora.png" alt="Hardware">
-            <h4>Conceptos Básicos de Hardware de Computadora</h4>
-            <p>Emitido: 13 ene 2025</p>
-            <a href="https://www.credly.com/badges/42a2acaf-34ab-49eb-9e1b-cf6771b34939" target="_blank">Ver Insignia</a>
-            <a href="contenidos/Certificados/Conceptos Básicos de Hardware de Computadora.pdf" target="_blank">Ver Certificado</a>
-            </div>
         </div>
     </section>
 
     <!-- ================= LOGROS ================= -->
     <section>
-        <h3 class="badge-category">Logros por Módulos</h3>
+        <h3 class="badge-category">Logros Académicos</h3>
 
         <div class="badges-container">
-            <!-- contenido intacto -->
-            <div class="badge-card small" data-type="logro">
-            <img src="contenidos/img/Dispositivos-moviles.png" alt="Logros">
-            <h4>Dispositivos móviles</h4>
-            <p>Emitido: 11 ene 2025</p>
+
+            <div class="badge-card" data-type="logro">
+                <img src="contenidos/img/Dispositivos-moviles.png" alt="Dispositivos móviles">
+                <h4>Dispositivos móviles</h4>
+                <p>Emitido: 11 ene 2025</p>
             </div>
 
-            <div class="badge-card small" data-type="logro">
-            <img src="contenidos/img/PC-portatiles.png" alt="Logros">
-            <h4>PC portátiles</h4>
-            <p>Emitido: 11 ene 2025</p>
+            <div class="badge-card" data-type="logro">
+                <img src="contenidos/img/PC-portatiles.png" alt="PC Portátiles">
+                <h4>PC portátiles</h4>
+                <p>Emitido: 11 ene 2025</p>
             </div>
 
-            <div class="badge-card small" data-type="logro">
-            <img src="contenidos/img/Equipos-personales.png" alt="Logros">
-            <h4>Equipos personales</h4>
-            <p>Emitido: 11 ene 2025</p>
+            <div class="badge-card" data-type="logro">
+                <img src="contenidos/img/Equipos-personales.png" alt="Equipos personales">
+                <h4>Equipos personales</h4>
+                <p>Emitido: 11 ene 2025</p>
             </div>
+
         </div>
     </section>
 
 </main>
 
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-    <p>© 2025 Carlos Di Piazza | Certificaciones Académicas</p>
+    © 2025 Carlos Di Piazza | Certificaciones Académicas
 </footer>
 
-<!-- SCRIPT FILTROS -->
+<!-- ================= SCRIPT FILTROS ================= -->
 <script>
 const filterButtons = document.querySelectorAll('.filters button');
 const badges = document.querySelectorAll('.badge-card');
@@ -197,6 +170,8 @@ filterButtons.forEach(button => {
     });
 });
 </script>
+<script src="contenidos/js/certificados.js"></script>
+
 
 </body>
 </html>
