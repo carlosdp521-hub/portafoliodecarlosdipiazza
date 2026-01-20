@@ -37,3 +37,15 @@ const skillObserver = new IntersectionObserver(entries => {
 skillBars.forEach(bar => {
   skillObserver.observe(bar);
 });
+
+// FORMULARIO CONTACTO (SIMULADO)
+const contactForm = document.getElementById("contactForm");
+const msg = document.getElementById("msg");
+
+if(contactForm){
+  contactForm.addEventListener("submit", e => {
+    e.preventDefault();
+    msg.textContent = "Mensaje enviado correctamente (simulación).";
+    contactForm.reset();
+  });
+}

@@ -271,6 +271,82 @@ section h2{
   transition:width 1.4s ease;
 }
 
+/* ================= CONTACTO ================= */
+
+.subtitle{
+  text-align:center;
+  opacity:.8;
+  margin-bottom:40px;
+}
+
+.contact-box{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  background:#111;
+  border:1px solid rgba(255,255,255,.1);
+  color:#fff;
+  padding:12px;
+  border-radius:8px;
+}
+
+.contact-form textarea{
+  min-height:120px;
+  resize:none;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  border:none;
+  padding:12px;
+  border-radius:8px;
+  color:#000;
+  font-weight:700;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 20px rgba(0,229,255,.6);
+}
+
+.form-msg{
+  margin-top:10px;
+  color:var(--accent);
+  font-weight:600;
+}
+
+.contact-info{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  font-size:.95rem;
+}
+
+.contact-info i{
+  color:var(--accent);
+  margin-right:8px;
+}
+
+@media(max-width:768px){
+  .contact-box{
+    grid-template-columns:1fr;
+  }
+}
+
 
 /* =========================================================
    FOOTER
