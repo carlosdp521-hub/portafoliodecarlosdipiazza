@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Carlos Di Piazza</title>
-    <link rel="stylesheet" href="contenidos/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Carlos Di Piazza</title>
+
+  <link rel="stylesheet" href="contenidos/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
-<header class="header">
-    <h1>Contacto</h1>
-    <p>Forma parte de mi red profesional</p>
-    <nav class="nav">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="certificados-y-logros.html" class="activo">Certificados</a></li>
-            <li><a href="habilidades.html">Habilidades</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo"><span>AP</span>Carlos Di Piazza</div>
+  <i class="fas fa-bars hamburger"></i>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="certificados-y-logros.html">Certificados</a></li>
+    <li><a href="habilidades.html">Habilidades</a></li>
+    <li><a href="contacto.html" class="active">Contacto</a></li>
+  </ul>
+</nav>
 
-<main class="contact-container">
-    
+<!-- CONTENIDO -->
+<section>
+  <h2>Contacto Profesional</h2>
+  <p class="subtitle">
+    ¿Buscas un desarrollador junior comprometido y en constante aprendizaje?  
+    Conversemos.
+  </p>
+
+  <div class="contact-box">
+
     <form id="contactForm" class="contact-form">
-        <label>Nombre</label>
-        <input type="text" id="nombre" required>
 
-        <label>Email</label>
-        <input type="email" id="email" required>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Tu nombre completo" required>
 
-        <label>Mensaje</label>
-        <textarea id="mensaje" required></textarea>
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" placeholder="correo@ejemplo.com" required>
 
-        <button type="submit">Enviar</button>
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+
+      <button type="submit" class="btn-primary">
+        <i class="fas fa-paper-plane"></i> Enviar mensaje
+      </button>
+
+      <p id="msg" class="form-msg"></p>
+
     </form>
 
-    <p id="msg">
-        <!-- Mensaje de confirmación se mostrará aquí -->
-    </p>
+    <!-- INFO LATERAL -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> carlosmdipiazzaf@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +56 9 7909 5565</p>
+      <p><i class="fab fa-github"></i> github.com/carlosdp521-hub</p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn (en construcción)</p>
+    </div>
 
-</main>
+  </div>
+</section>
 
 <footer class="footer">
-    <p>© 2025 Carlos Di Piazza</p>
+  <p>© 2025 Carlos Di Piazza | Portafolio Profesional</p>
 </footer>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    document.getElementById("msg").textContent =
-    "Mensaje enviado correctamente (simulación).";
-});
-</script>
-
+<script src="contenidos/js/main.js"></script>
 </body>
 </html>
