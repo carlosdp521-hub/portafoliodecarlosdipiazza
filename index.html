@@ -1,53 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Analista Programador | Carlos Di Piazza</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="contenidos/css/style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Carlos Di Piazza | Analista Programador</title>
+  <meta name="description" content="Portafolio profesional de Carlos Di Piazza, Analista Programador con experiencia en redes, soporte técnico, telecomunicaciones, seguridad electrónica y desarrollo web.">
+  <meta name="author" content="Carlos Di Piazza">
+  <meta name="theme-color" content="#0b1120">
+
+  <meta property="og:title" content="Carlos Di Piazza | Analista Programador">
+  <meta property="og:description" content="Portafolio profesional con experiencia en programación, redes, soporte técnico y automatización.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo-index.css">
 </head>
-
 <body>
 
-<nav class="navbar">
-  <div class="nav-logo"><span>AP</span>Carlos Di Piazza</div>
-  <i class="fas fa-bars hamburger"></i>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Inicio</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="certificados-y-logros.html">Certificados</a></li>
-    <li><a href="habilidades.html">Habilidades</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+  <header id="header">
+    <h1>Carlos Di Piazza</h1>
 
-<section class="hero">
-  <h1>Analista Programador</h1>
-  <p>
-    Portafolio profesional orientado al desarrollo de software, lógica de programación
-    y creación de soluciones tecnológicas eficientes.
-  </p>
+    <nav aria-label="Navegación principal">
+      <a href="#about">Sobre mí</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#experience">Experiencia</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+  </header>
 
-  <div class="buttons">
-    <a class="whatsapp" href="https://chat.whatsapp.com/EtZOYPIxnH9Bp4Kim3hdrU" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-    <a class="discord" href="https://discord.gg/WpMY7eft" target="_blank">
-      <i class="fab fa-discord"></i> Discord
-    </a>
-    <a class="github" href="https://github.com/carlosdp521-hub" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
+  <main>
+    <section class="hero" id="home">
+      <img src="img/perfil.jpeg" alt="Fotografía profesional de Carlos Di Piazza">
+
+      <div class="hero-text">
+        <h2>Hola, soy <span>Carlos Di Piazza</span></h2>
+        <p id="typing"></p>
+
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="docs/CarlosDiPiazza.pdf" download>
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Descargar CV</span>
+          </a>
+
+          <a class="btn btn-secondary" href="#contact">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            <span>Contacto</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>Sobre mí</h2>
+      <p>
+        Soy un profesional con formación en Análisis y Programación Computacional,
+        complementada con experiencia en redes, telecomunicaciones, soporte técnico
+        y seguridad electrónica. Me enfoco en la instalación, configuración,
+        mantenimiento y mejora de soluciones tecnológicas, aportando compromiso,
+        capacidad de análisis, resolución de problemas y aprendizaje continuo.
+      </p>
+    </section>
+
+    <section class="section skills" id="skills">
+      <h2>Habilidades Técnicas</h2>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>Redes y Telecomunicaciones</span>
+          <span>90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="90%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>Hardware y Soporte Técnico</span>
+          <span>85%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="85%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>Bases de Datos</span>
+          <span>80%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="80%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>Programación</span>
+          <span>75%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="75%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-label">
+          <span>Seguridad Electrónica</span>
+          <span>88%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="88%"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Experiencia Profesional</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>ClickSolutions</h3>
+          <p class="card-subtitle">Ayudante Técnico | Agosto 2022 - Enero 2025</p>
+          <p>
+            Participación en instalación, configuración y mantención de sistemas
+            de control de acceso, CCTV y detección de incendios en proyectos
+            desarrollados en distintas comunas de Santiago.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Inge Smart</h3>
+          <p class="card-subtitle">Ayudante Técnico | Abril 2018 - Junio 2018</p>
+          <p>
+            Configuración de antenas Ubiquiti, cámaras y equipos Huawei, además
+            de instalación y mantenimiento de soluciones tecnológicas en terreno.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Inge Smart</h3>
+          <p class="card-subtitle">Práctica Profesional | Enero 2018 - Marzo 2018</p>
+          <p>
+            Soporte en base de datos, verificación biométrica, configuración
+            de switches y detección de fallos de conexión con servidores.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Proyectos Destacados</h2>
+
+      <div class="projects">
+        <article class="project">
+          <h3>Sistema CCTV</h3>
+          <p>
+            Implementación y configuración de sistemas de videovigilancia para
+            espacios corporativos, reforzando monitoreo y seguridad operativa.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Configuración de Redes</h3>
+          <p>
+            Instalación y ajuste de equipos Ubiquiti y otros dispositivos de red
+            para asegurar conectividad estable y cobertura eficiente.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Sistemas Biométricos</h3>
+          <p>
+            Soporte e implementación de soluciones de control de acceso y asistencia
+            mediante tecnologías biométricas.
+          </p>
+        </article>
+
+        <article class="project">
+          <h3>Chatbot para Portafolio</h3>
+          <p>
+            Desarrollo de un asistente automatizado integrado al portafolio,
+            capaz de responder preguntas sobre experiencia, habilidades y contacto.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-ai-container section" id="contact">
+      <div class="contact-section">
+        <h2>Contacto</h2>
+
+        <div class="contact-item">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <a href="tel:+56979095565">+56 9 7909 5565</a>
+        </div>
+
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>Santiago, Chile</span>
+        </div>
+
+        <div class="contact-icons">
+          <a href="mailto:carlosmdipiazzaf@gmail.com" aria-label="Enviar correo">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+56979095565" aria-label="Llamar por teléfono">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="chat-toggle" class="chat-toggle" aria-label="Abrir chatbot">
+    <i class="fas fa-comment-dots" aria-hidden="true"></i>
+  </button>
+
+  <div id="chatbot-box" class="chatbot-box" aria-live="polite">
+    <div class="chatbot-header">
+      <div>
+        <strong>Asistente Virtual</strong>
+        <small>Portafolio de Carlos</small>
+      </div>
+      <button id="chat-close" class="chat-close" aria-label="Cerrar chatbot">✕</button>
+    </div>
+
+    <div class="chat-quick-actions">
+      <button type="button" class="quick-btn" data-question="¿Cuál es su perfil profesional?">Perfil</button>
+      <button type="button" class="quick-btn" data-question="¿Qué experiencia tiene?">Experiencia</button>
+      <button type="button" class="quick-btn" data-question="¿Qué habilidades tiene?">Habilidades</button>
+      <button type="button" class="quick-btn" data-question="¿Cómo puedo contactarlo?">Contacto</button>
+    </div>
+
+    <div id="chat-messages" class="chat-messages"></div>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        type="text"
+        id="chat-input"
+        placeholder="Escribe tu pregunta..."
+        autocomplete="off"
+        maxlength="250"
+      >
+      <button type="submit">Enviar</button>
+    </form>
   </div>
-</section>
 
-<footer class="footer">
-  <p>© 2025 Carlos Di Piazza | Portafolio Profesional</p>
-</footer>
+  <footer>
+    <p>© 2026 Carlos Di Piazza. Todos los derechos reservados.</p>
+  </footer>
 
-<script src="contenidos/js/main.js"></script>
+  <script src="js/chatbot.js" defer></script>
+  <script src="js/min.js" defer></script>
 </body>
 </html>
