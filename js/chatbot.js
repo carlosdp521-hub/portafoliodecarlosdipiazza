@@ -65,7 +65,7 @@ if (
     setLoadingState(true);
 
     try {
-      const response = await fetch("http://localhost:3000/api/chat", {
+      const response = await fetch("https://carlosdp521-hub.github.io/portafoliodecarlosdipiazza/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
