@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trayectoria técnica y perfil profesional de Carlos Di Piazza.">
+  <title>Sobre mí | Carlos Di Piazza</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <canvas class="galaxy-canvas" id="galaxyCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Logo"><span>Carlos Di Piazza</span></a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button"><span class="theme-toggle-dot"></span><span>Tema</span></button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Inicio</a>
+          <a href="about.html">Sobre mí</a>
+          <a href="projects.html">Proyectos</a>
+          <a href="skills.html">Habilidades</a>
+          <a href="contact.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="panel">
+        <div class="container panel-head" data-reveal>
+          <p class="eyebrow">Sobre mí</p>
+          <h1>Trayectoria técnica con evolución hacia desarrollo.</h1>
+          <p class="lead">Mi perfil combina experiencia operativa en terreno, soporte tecnológico e infraestructura con una proyección cada vez más fuerte hacia programación, diseño web y productos digitales.</p>
+        </div>
+
+        <div class="container about-grid">
+          <article class="glass-card" data-reveal>
+            <p class="eyebrow">Perfil</p>
+            <h2>Base técnica sólida</h2>
+            <p>Tengo experiencia en instalación, configuración y mantención de sistemas computacionales, redes, telecomunicaciones, CCTV, control de acceso, detección de incendios y soporte a usuarios.</p>
+          </article>
+          <article class="glass-card" data-reveal>
+            <p class="eyebrow">Proyección</p>
+            <h2>Enfoque de crecimiento</h2>
+            <p>Actualmente estoy fortaleciendo mi perfil con formación en análisis y programación computacional, buscando integrar buenas prácticas de desarrollo, UI y estructura de proyectos profesionales.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel-tight">
+        <div class="container timeline-grid">
+          <article class="timeline-card" data-reveal>
+            <small>Formación actual</small>
+            <h3>Instituto Profesional IACC</h3>
+            <p>Análisis y Programación Computacional, con foco en algoritmos, lógica, estructuras de control, bases de datos y desarrollo de soluciones.</p>
+          </article>
+          <article class="timeline-card" data-reveal>
+            <small>Base previa</small>
+            <h3>AIEP</h3>
+            <p>Técnico en Instalación y Mantención de Redes, formación clave para entender infraestructura, continuidad operativa y soporte técnico real.</p>
+          </article>
+          <article class="timeline-card" data-reveal>
+            <small>Fortaleza destacada</small>
+            <h3>Resolución de problemas</h3>
+            <p>Me adapto bien a escenarios técnicos complejos, priorizando orden, continuidad, atención a usuarios y soluciones concretas.</p>
+          </article>
+          <article class="timeline-card" data-reveal>
+            <small>Meta profesional</small>
+            <h3>Perfil híbrido</h3>
+            <p>Quiero consolidarme como analista programador con visión integral: frontend, lógica, soporte, documentación y mejora continua.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div><h3>Carlos Di Piazza</h3><p>Perfil técnico con enfoque profesional.</p></div>
+        <div class="footer-links"><a href="projects.html">Proyectos</a><a href="contact.html">Contacto</a><a href="#top">Volver arriba</a></div>
+      </div>
+      <div class="container"><small>© <span id="currentYear"></span> Carlos Di Piazza.</small></div>
+    </footer>
+  </div>
+
+  <script src="data/site-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

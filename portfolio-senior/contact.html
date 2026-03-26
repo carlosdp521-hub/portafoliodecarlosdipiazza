@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de contacto de Carlos Di Piazza.">
+  <title>Contacto | Carlos Di Piazza</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <canvas class="galaxy-canvas" id="galaxyCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Logo"><span>Carlos Di Piazza</span></a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button"><span class="theme-toggle-dot"></span><span>Tema</span></button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Inicio</a>
+          <a href="about.html">Sobre mí</a>
+          <a href="projects.html">Proyectos</a>
+          <a href="skills.html">Habilidades</a>
+          <a href="contact.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="panel">
+        <div class="container panel-head" data-reveal>
+          <p class="eyebrow">Contacto</p>
+          <h1>Conectemos para oportunidades y colaboración.</h1>
+          <p class="lead">Esta sección mantiene el estilo premium del sitio y conserva un formulario rápido que abre tu cliente de correo sin depender de servidor.</p>
+        </div>
+
+        <div class="container contact-grid">
+          <article class="contact-card" data-reveal>
+            <p class="eyebrow">Datos directos</p>
+            <h2>Canales de contacto</h2>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a></li>
+              <li><strong>Teléfono:</strong> <a href="tel:+56979095565">+56 9 7909 5565</a></li>
+              <li><strong>Ubicación:</strong> Santiago de Chile</li>
+              <li><strong>Disponibilidad:</strong> Abierto a nuevos desafíos profesionales.</li>
+            </ul>
+          </article>
+
+          <article class="contact-card" data-reveal>
+            <p class="eyebrow">Mensaje</p>
+            <h2>Formulario rápido</h2>
+            <form class="contact-form" id="contactForm">
+              <input id="nombre" type="text" placeholder="Tu nombre" autocomplete="name">
+              <input id="email" type="email" placeholder="Tu correo" autocomplete="email">
+              <input id="asunto" type="text" placeholder="Asunto">
+              <textarea id="mensaje" rows="6" placeholder="Escribe tu mensaje"></textarea>
+              <button class="btn btn-primary" type="submit">Abrir correo</button>
+            </form>
+            <p class="note">El formulario prepara automáticamente un mensaje en tu aplicación de correo.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div><h3>Carlos Di Piazza</h3><p>Contacto profesional listo para usar.</p></div>
+        <div class="footer-links"><a href="index.html">Inicio</a><a href="projects.html">Proyectos</a><a href="#top">Volver arriba</a></div>
+      </div>
+      <div class="container"><small>© <span id="currentYear"></span> Carlos Di Piazza.</small></div>
+    </footer>
+  </div>
+
+  <script src="data/site-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

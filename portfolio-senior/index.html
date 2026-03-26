@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio premium de Carlos Di Piazza con galaxia animada, chatbot estilo ChatGPT, integración con GitHub y diseño profesional.">
+  <meta name="theme-color" content="#060816">
+  <title>Carlos Di Piazza | Portfolio Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <canvas class="galaxy-canvas" id="galaxyCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Ir al inicio">
+          <img src="assets/logo.svg" alt="Logo de Carlos Di Piazza">
+          <span>Carlos Di Piazza</span>
+        </a>
+
+        <div class="header-actions">
+          <button class="theme-toggle" type="button" aria-label="Cambiar tema del sitio">
+            <span class="theme-toggle-dot" aria-hidden="true"></span>
+            <span>Tema</span>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Inicio</a>
+          <a href="about.html">Sobre mí</a>
+          <a href="projects.html">Proyectos</a>
+          <a href="skills.html">Habilidades</a>
+          <a href="contact.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">Portfolio engineer / 2026</p>
+            <h1>Diseño web premium con mentalidad técnica real.</h1>
+            <p class="lead">Este sitio fue rediseñado con fondo galaxia animado, cursor interactivo, secciones con movimiento estilo Apple, chatbot local tipo ChatGPT y una base preparada para conectar repositorios de GitHub en vivo.</p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="projects.html">Explorar proyectos</a>
+              <a class="btn btn-secondary" href="contact.html">Contactar</a>
+              <a class="btn btn-ghost" href="docs/CarlosDiPiazza-CV.pdf" target="_blank" rel="noopener">Descargar CV</a>
+            </div>
+
+            <div class="hero-kpis">
+              <article class="kpi"><strong>UI premium</strong><span>Estética profesional moderna</span></article>
+              <article class="kpi"><strong>GitHub ready</strong><span>Repos y métricas automáticas</span></article>
+              <article class="kpi"><strong>Chat local</strong><span>Sin backend obligatorio</span></article>
+            </div>
+          </div>
+
+          <div class="hero-card" data-reveal>
+            <div class="orbit-lines" aria-hidden="true"></div>
+            <div class="profile-panel">
+              <div class="profile-photo">
+                <img src="img/profile-tech.svg" alt="Retrato ilustrado de estilo tecnológico para el portafolio de Carlos Di Piazza">
+              </div>
+              <div class="profile-info">
+                <div>
+                  <p class="eyebrow">Carlos Di Piazza</p>
+                  <h2>Analista Programador</h2>
+                  <p>Soporte TI, infraestructura, desarrollo web y mejora continua con foco en soluciones funcionales.</p>
+                </div>
+                <div class="profile-meta">
+                  <span>Santiago de Chile</span>
+                  <span>Frontend + Infraestructura</span>
+                  <span>Disponible</span>
+                </div>
+              </div>
+              <aside class="floating-note">
+                <strong>Senior visual system</strong>
+                <span>Glassmorphism técnico, brillo dinámico y arquitectura lista para escalar.</span>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-tight">
+        <div class="container panel-head" data-reveal>
+          <p class="eyebrow">Diferencial</p>
+          <h2>Un portafolio que se siente como producto.</h2>
+          <p class="lead">No es solo una página informativa. Ahora funciona como experiencia digital: narrativa visual clara, identidad técnica, movimiento cuidado y componentes pensados para destacar tu perfil profesional.</p>
+        </div>
+        <div class="container feature-grid">
+          <article class="glass-card" data-reveal>
+            <div class="icon-dot">✦</div>
+            <h3>Fondo galaxia animado</h3>
+            <p>Canvas dinámico con desplazamiento suave según el puntero para lograr profundidad sin recargar la navegación.</p>
+          </article>
+          <article class="glass-card" data-reveal>
+            <div class="icon-dot">◎</div>
+            <h3>Estética tipo ingeniero senior</h3>
+            <p>Tipografía limpia, jerarquías visuales fuertes, paneles técnicos y contraste diseñado para mostrar dominio profesional.</p>
+          </article>
+          <article class="glass-card" data-reveal>
+            <div class="icon-dot">↗</div>
+            <h3>Preparado para GitHub Pages</h3>
+            <p>Estructura simple, sin dependencias de build, ideal para publicar rápido y mantener fácilmente.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="container panel-head" data-reveal>
+          <p class="eyebrow">Narrativa visual</p>
+          <h2>Animaciones estilo Apple, pero con identidad propia.</h2>
+        </div>
+        <div class="container apple-stack">
+          <article class="stack-card" data-reveal>
+            <p class="eyebrow">Paso 01</p>
+            <h3>Entrada cinematográfica del héroe</h3>
+            <p>El inicio prioriza mensaje, valor profesional y percepción premium desde el primer scroll.</p>
+          </article>
+          <article class="stack-card" data-reveal>
+            <p class="eyebrow">Paso 02</p>
+            <h3>Paneles y tarjetas con profundidad</h3>
+            <p>Capas translúcidas, sombras suaves y elementos flotantes para una interfaz más madura.</p>
+          </article>
+          <article class="stack-card" data-reveal>
+            <p class="eyebrow">Paso 03</p>
+            <h3>Proyectos y datos con contexto</h3>
+            <p>La información no aparece suelta: cada bloque se organiza como una vitrina de producto profesional.</p>
+          </article>
+          <article class="stack-card" data-reveal>
+            <p class="eyebrow">Paso 04</p>
+            <h3>Interacción precisa</h3>
+            <p>Cursor reactivo, chips, transiciones y llamadas a la acción diseñadas para invitar a explorar.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="container chat-layout">
+          <div data-reveal>
+            <p class="eyebrow">Asistente local</p>
+            <h2>Chatbot estilo ChatGPT, integrado al portafolio.</h2>
+            <p class="lead">Responde preguntas sobre experiencia, estudios, habilidades, contacto y conexión con GitHub usando datos locales del CV. Funciona sin servidor y se puede ampliar más adelante con API real.</p>
+            <div class="chat-chips">
+              <button type="button" data-question="¿Cuál es tu perfil profesional?">Perfil</button>
+              <button type="button" data-question="¿Qué tecnologías manejas?">Tecnologías</button>
+              <button type="button" data-question="¿Qué experiencia técnica tienes?">Experiencia</button>
+              <button type="button" data-question="¿Cómo se conecta este sitio con GitHub?">GitHub</button>
+            </div>
+          </div>
+
+          <div class="chat-shell" data-reveal>
+            <div class="chat-toolbar">
+              <strong>Asistente IA local</strong>
+              <span class="note">Sin backend</span>
+            </div>
+            <div class="chatbox" id="chatbox" aria-live="polite">
+              <div class="chat-message bot">
+                <div class="chat-avatar">AI</div>
+                <div class="chat-bubble">Hola. Puedo responder preguntas sobre la trayectoria, habilidades, contacto y estructura técnica de este portafolio.</div>
+              </div>
+            </div>
+            <form class="chat-form" id="chatForm">
+              <input class="chat-input" type="text" id="question" placeholder="Escribe tu pregunta..." autocomplete="off">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <h3>Carlos Di Piazza</h3>
+          <p>Portafolio premium desarrollado con HTML, CSS y JavaScript.</p>
+        </div>
+        <div class="footer-links">
+          <a href="projects.html">Proyectos</a>
+          <a href="contact.html">Contacto</a>
+          <a href="#top">Volver arriba</a>
+        </div>
+      </div>
+      <div class="container">
+        <small>© <span id="currentYear"></span> Carlos Di Piazza. Diseño optimizado para GitHub Pages y portafolio profesional.</small>
+      </div>
+    </footer>
+  </div>
+
+  <script src="data/site-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

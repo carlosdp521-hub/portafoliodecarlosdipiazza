@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Habilidades técnicas y stack profesional de Carlos Di Piazza.">
+  <title>Habilidades | Carlos Di Piazza</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <canvas class="galaxy-canvas" id="galaxyCanvas" aria-hidden="true"></canvas>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html"><img src="assets/logo.svg" alt="Logo"><span>Carlos Di Piazza</span></a>
+        <div class="header-actions">
+          <button class="theme-toggle" type="button"><span class="theme-toggle-dot"></span><span>Tema</span></button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+        </div>
+        <nav class="nav" id="site-nav">
+          <a href="index.html">Inicio</a>
+          <a href="about.html">Sobre mí</a>
+          <a href="projects.html">Proyectos</a>
+          <a href="skills.html">Habilidades</a>
+          <a href="contact.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="panel">
+        <div class="container panel-head" data-reveal>
+          <p class="eyebrow">Habilidades</p>
+          <h1>Capacidades técnicas con lectura rápida y visual.</h1>
+          <p class="lead">La página mezcla una presentación clara del stack con barras de dominio, etiquetas prácticas y una organización más cercana a portfolios de ingeniería moderna.</p>
+        </div>
+
+        <div class="container skills-grid">
+          <article class="skill-card" data-reveal>
+            <p class="eyebrow">Stack principal</p>
+            <h2>Tecnologías y áreas</h2>
+            <div class="tag-list">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>jQuery</span><span>SQL</span><span>Responsive Design</span><span>Soporte técnico</span><span>Redes</span><span>Telecomunicaciones</span><span>CCTV</span><span>Control de acceso</span><span>GitHub Pages</span>
+            </div>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <p class="eyebrow">Dominio estimado</p>
+            <h2>Nivel técnico</h2>
+            <div class="skill-row"><div class="skill-head"><span>HTML / CSS</span><span>93%</span></div><div class="skill-track"><span style="width:93%"></span></div></div>
+            <div class="skill-row"><div class="skill-head"><span>JavaScript</span><span>84%</span></div><div class="skill-track"><span style="width:84%"></span></div></div>
+            <div class="skill-row"><div class="skill-head"><span>Diseño UI responsivo</span><span>90%</span></div><div class="skill-track"><span style="width:90%"></span></div></div>
+            <div class="skill-row"><div class="skill-head"><span>Soporte técnico</span><span>95%</span></div><div class="skill-track"><span style="width:95%"></span></div></div>
+            <div class="skill-row"><div class="skill-head"><span>Redes</span><span>92%</span></div><div class="skill-track"><span style="width:92%"></span></div></div>
+            <div class="skill-row"><div class="skill-head"><span>Bases de datos</span><span>80%</span></div><div class="skill-track"><span style="width:80%"></span></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel panel-tight">
+        <div class="container feature-grid">
+          <article class="glass-card" data-reveal>
+            <div class="icon-dot">∿</div>
+            <h3>Frontend presentable</h3>
+            <p>Capacidad para construir interfaces visualmente sólidas, ordenadas y publicables en entornos reales.</p>
+          </article>
+          <article class="glass-card" data-reveal>
+            <div class="icon-dot">⚙</div>
+            <h3>Base operativa real</h3>
+            <p>La experiencia en soporte y redes aporta criterio técnico más allá de la interfaz.</p>
+          </article>
+          <article class="glass-card" data-reveal>
+            <div class="icon-dot">⬢</div>
+            <h3>Perfil híbrido</h3>
+            <p>Combinación de infraestructura, programación y comunicación visual para crecer hacia proyectos más grandes.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div><h3>Carlos Di Piazza</h3><p>Habilidades presentadas con enfoque profesional.</p></div>
+        <div class="footer-links"><a href="projects.html">Proyectos</a><a href="contact.html">Contacto</a><a href="#top">Volver arriba</a></div>
+      </div>
+      <div class="container"><small>© <span id="currentYear"></span> Carlos Di Piazza.</small></div>
+    </footer>
+  </div>
+
+  <script src="data/site-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
