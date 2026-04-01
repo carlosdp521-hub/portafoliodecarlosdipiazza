@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante de gastronomía chilena con platos típicos, promociones y especialidades de la casa.">
+    <meta name="keywords" content="restaurante, gastronomía chilena, pastel de choclo, menú, comida chilena">
+    <meta name="author" content="Carlos Matías Di Piazza">
+    <title>Restaurante Sabores de Chile</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Cocina tradicional chilena</span>
+            <h1>🍽 Restaurante Sabores de Chile</h1>
+            <p>
+                Tradición, sabor y cultura en cada preparación. Disfruta una experiencia gastronómica
+                chilena con platos típicos, postres caseros y especialidades de la casa.
+            </p>
+            <div class="hero-actions">
+                <a href="#menu" class="btn btn-principal">Ver menú</a>
+                <a href="#plato-semana" class="btn btn-secundario">Plato de la semana</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-contenedor">
+            <a href="#inicio" class="logo">Sabores de Chile</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#especialidades">Especialidades</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#plato-semana">Plato de la Semana</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="contenedor">
+        <section id="quienes-somos" class="card-seccion reveal">
+            <h2>Quiénes Somos</h2>
+            <p>
+                Restaurante Sabores de Chile es un espacio gastronómico ubicado en Santiago, orientado a
+                rescatar la cocina tradicional chilena mediante preparaciones elaboradas con ingredientes
+                frescos, recetas típicas y una atención cercana para clientes nacionales e internacionales.
+            </p>
+            <p>
+                Nuestro objetivo es ofrecer una experiencia culinaria auténtica, donde cada plato represente
+                parte de la identidad cultural del país, destacando sabores caseros, productos locales y
+                presentaciones atractivas.
+            </p>
+        </section>
+
+        <section id="menu" class="card-seccion reveal">
+            <h2>Menú</h2>
+
+            <h3>Platos</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plato</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Empanada de Pino</td>
+                            <td>Rellena con carne, cebolla, aceituna y huevo</td>
+                            <td>$3.500</td>
+                        </tr>
+                        <tr>
+                            <td>Pastel de Choclo</td>
+                            <td>Preparación tradicional con pino y cubierta de choclo</td>
+                            <td>$7.500</td>
+                        </tr>
+                        <tr>
+                            <td>Cazuela de Vacuno</td>
+                            <td>Caldo casero con carne, papa, zapallo y verduras</td>
+                            <td>$6.900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Bebidas</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bebida</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mote con Huesillos</td>
+                            <td>Bebida tradicional chilena servida fría</td>
+                            <td>$2.800</td>
+                        </tr>
+                        <tr>
+                            <td>Jugo Natural</td>
+                            <td>Sabores de frutilla, mango o chirimoya</td>
+                            <td>$2.400</td>
+                        </tr>
+                        <tr>
+                            <td>Bebida Gaseosa</td>
+                            <td>Formato individual de 350 ml</td>
+                            <td>$1.900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Postres</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Postre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Leche Asada</td>
+                            <td>Postre casero tradicional chileno</td>
+                            <td>$3.200</td>
+                        </tr>
+                        <tr>
+                            <td>Kuchen de Manzana</td>
+                            <td>Receta inspirada en la repostería del sur de Chile</td>
+                            <td>$3.600</td>
+                        </tr>
+                        <tr>
+                            <td>Helado Artesanal</td>
+                            <td>Sabores surtidos elaborados en casa</td>
+                            <td>$2.900</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="especialidades" class="card-seccion reveal">
+            <h2>Especialidades de la Casa</h2>
+            <dl class="lista-definicion">
+                <dt>Curanto</dt>
+                <dd>
+                    Preparación típica del sur de Chile que combina mariscos, carnes, papas y otros
+                    ingredientes cocidos lentamente para lograr un sabor intenso y tradicional.
+                </dd>
+
+                <dt>Asado al Palo</dt>
+                <dd>
+                    Carne cocinada de forma lenta al calor del fuego, destacada por su textura suave y
+                    su característico sabor ahumado.
+                </dd>
+            </dl>
+        </section>
+
+        <section id="promociones" class="card-seccion reveal">
+            <h2>Promociones Especiales</h2>
+            <ul class="promociones">
+                <li><strong>Lunes Chileno:</strong> 2 empanadas de pino + bebida por $5.500.</li>
+                <li><strong>Almuerzo Ejecutivo:</strong> 15% de descuento en platos de fondo entre 13:00 y 15:00 hrs.</li>
+                <li><strong>Promo Dulce:</strong> Postre gratis en la compra de un plato principal y bebida.</li>
+            </ul>
+        </section>
+
+        <section id="plato-semana" class="card-seccion reveal">
+            <h2>Plato de la Semana: Pastel de Choclo</h2>
+
+            <p>
+                El pastel de choclo es uno de los platos más representativos de la gastronomía chilena.
+                Se prepara con una base de pino de carne, cebolla, huevo, aceitunas y, en algunas versiones,
+                pollo, cubierto con una mezcla de choclo molido gratinada al horno hasta obtener una superficie dorada.
+            </p>
+
+            <p>
+                Esta receta destaca por su sabor casero, su aroma característico y su estrecha relación con la
+                cocina tradicional del centro de Chile, siendo una preparación muy valorada tanto por familias
+                chilenas como por turistas.
+            </p>
+
+            <div class="galeria">
+                <figure>
+                    <img src="img/pastel-choclo-1.png" alt="Imagen del pastel de choclo tradicional servido en fuente de greda">
+                    <figcaption>Pastel de choclo tradicional servido en fuente de greda.</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/pastel-choclo-2.png" alt="Imagen promocional del pastel de choclo chileno">
+                    <figcaption>Versión promocional del plato típico chileno.</figcaption>
+                </figure>
+            </div>
+
+            <div class="multimedia">
+                <h3>Audio relacionado con su preparación</h3>
+                <audio controls>
+                    <source src="audio/pastel-choclo.mp3" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+            </div>
+
+            <a class="boton-enlace" href="https://es.wikipedia.org/wiki/Pastel_de_choclo" target="_blank" rel="noopener noreferrer">
+                Leer más sobre el pastel de choclo
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Restaurante Sabores de Chile | Santiago de Chile</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
