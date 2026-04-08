@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio web del restaurante Sabores de Chile con menú, promociones, formularios, contacto y videos.">
+  <meta name="keywords" content="restaurante, comida chilena, menú, promociones, formularios, iframe, HTML, CSS, JavaScript">
+  <meta name="author" content="Carlos Matías Di Piazza">
+  <title>Restaurante Sabores de Chile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <span class="hero-badge">Cocina tradicional chilena</span>
+      <h1>🍽️ Restaurante Sabores de Chile</h1>
+      <p>
+        Tradición, sabor y cultura en cada preparación. Disfruta una experiencia gastronómica chilena con platos típicos,
+        postres caseros, promociones especiales, formularios interactivos y videos relacionados.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-principal">Ver menú</a>
+        <a href="#registro" class="btn btn-secundario">Registrarse</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENÚ DE NAVEGACIÓN -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-contenedor">
+      <a href="#inicio" class="logo">Sabores de Chile</a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quienes-somos">Quiénes somos</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#promociones">Promociones</a></li>
+        <li><a href="#acceso">Acceso</a></li>
+        <li><a href="#registro">Registro</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor">
+
+    <section id="quienes-somos" class="card-seccion reveal">
+      <h2>Quiénes Somos</h2>
+      <p>
+        Restaurante Sabores de Chile es un espacio gastronómico orientado a rescatar la cocina tradicional chilena mediante
+        preparaciones elaboradas con ingredientes frescos, recetas típicas y una atención cercana para clientes nacionales e internacionales.
+      </p>
+      <p>
+        Nuestro objetivo es ofrecer una experiencia culinaria auténtica, donde cada plato represente parte de la identidad cultural del país,
+        destacando sabores caseros, productos locales y presentaciones atractivas.
+      </p>
+    </section>
+
+    <section id="menu" class="card-seccion reveal">
+      <h2>Menú</h2>
+
+      <h3>Platos principales</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Plato</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Empanada de Pino</td>
+              <td>Rellena con carne, cebolla, aceituna y huevo</td>
+              <td>$3.500</td>
+            </tr>
+            <tr>
+              <td>Pastel de Choclo</td>
+              <td>Preparación tradicional con pino y cubierta de choclo</td>
+              <td>$7.500</td>
+            </tr>
+            <tr>
+              <td>Cazuela de Vacuno</td>
+              <td>Caldo casero con carne, papa, zapallo y verduras</td>
+              <td>$6.900</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Bebidas</h3>
+      <div class="grid">
+        <article class="card">
+          <h3>Mote con Huesillos</h3>
+          <p>Bebida tradicional chilena servida fría.</p>
+          <span class="precio">$2.800</span>
+        </article>
+
+        <article class="card">
+          <h3>Jugo Natural</h3>
+          <p>Sabores de frutilla, mango o chirimoya.</p>
+          <span class="precio">$2.400</span>
+        </article>
+
+        <article class="card">
+          <h3>Bebida Gaseosa</h3>
+          <p>Formato individual de 350 ml.</p>
+          <span class="precio">$1.900</span>
+        </article>
+      </div>
+
+      <h3>Postres</h3>
+      <div class="grid">
+        <article class="card">
+          <h3>Leche Asada</h3>
+          <p>Postre casero tradicional chileno.</p>
+          <span class="precio">$3.200</span>
+        </article>
+
+        <article class="card">
+          <h3>Kuchen de Manzana</h3>
+          <p>Inspirado en la repostería del sur de Chile.</p>
+          <span class="precio">$3.600</span>
+        </article>
+
+        <article class="card">
+          <h3>Helado Artesanal</h3>
+          <p>Sabores surtidos elaborados en casa.</p>
+          <span class="precio">$2.900</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="especialidades" class="card-seccion reveal">
+      <h2>Especialidades de la Casa</h2>
+      <dl class="lista-definicion">
+        <dt>Curanto en olla</dt>
+        <dd>Preparación típica del sur de Chile que combina mariscos, carnes, papas y otros ingredientes cocidos lentamente.</dd>
+
+        <dt>Asado al palo</dt>
+        <dd>Carne cocinada de forma lenta al calor del fuego, destacada por su textura suave y sabor ahumado.</dd>
+
+        <dt>Chupe de mariscos</dt>
+        <dd>Receta cremosa y sabrosa preparada con productos del mar y gratinada al horno.</dd>
+      </dl>
+    </section>
+
+    <section id="promociones" class="card-seccion reveal">
+      <h2>Promociones Especiales</h2>
+      <div class="grid">
+        <article class="card promo">
+          <h3>🎉 Lunes Chileno</h3>
+          <p><strong>2 empanadas de pino + bebida por $5.500</strong></p>
+          <p>Promoción válida para consumo en local.</p>
+        </article>
+
+        <article class="card promo">
+          <h3>💰 Almuerzo Ejecutivo</h3>
+          <p><strong>15% de descuento en platos de fondo</strong></p>
+          <p>Disponible entre 13:00 y 15:00 hrs.</p>
+        </article>
+
+        <article class="card promo">
+          <h3>⭐ Promo Dulce</h3>
+          <p><strong>Postre gratis</strong></p>
+          <p>En la compra de un plato principal más bebida.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card-seccion reveal">
+      <h2>Acceso y Registro de Usuarios</h2>
+
+      <div class="forms-grid">
+        <section id="acceso" class="subpanel">
+          <h3>Formulario de acceso</h3>
+          <form action="#" method="post" class="formulario-simple">
+            <label for="usuario">Nombre de usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario" required>
+
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
+
+            <div class="actions">
+              <input type="submit" value="Ingresar">
+            </div>
+          </form>
+        </section>
+
+        <section id="registro" class="subpanel">
+          <h3>Formulario de registro</h3>
+          <form action="#" method="post" class="formulario-registro">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre completo" required>
+
+            <label for="tipo_documento">Tipo de documento</label>
+            <select id="tipo_documento" name="tipo_documento" required>
+              <option value="">Seleccione una opción</option>
+              <option value="dni">DNI</option>
+              <option value="rut">RUT</option>
+              <option value="cedula">Cédula</option>
+              <option value="pasaporte">Pasaporte</option>
+            </select>
+
+            <label for="numero_documento">Número de documento</label>
+            <input type="text" id="numero_documento" name="numero_documento" placeholder="Ingrese su documento" required>
+
+            <label for="fecha_nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+            <span class="field-title">Sexo</span>
+            <div class="radio-group">
+              <label><input type="radio" name="sexo" value="masculino" required> Masculino</label>
+              <label><input type="radio" name="sexo" value="femenino"> Femenino</label>
+            </div>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required>
+
+            <label for="telefono">Teléfono móvil</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono móvil" required>
+
+            <label for="comentarios">Comentarios</label>
+            <textarea id="comentarios" name="comentarios" placeholder="Escriba aquí sus comentarios"></textarea>
+
+            <div class="actions">
+              <input type="submit" value="Registrar">
+              <input type="reset" value="Limpiar">
+            </div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <section id="videos" class="card-seccion reveal">
+      <h2>Pastel de Choclo Chileno | Receta tradicional</h2>
+      <p>
+        Disfruta del sabor auténtico del campo chileno con esta receta de Pastel de Choclo. 🌽
+        Plato típico de nuestras cocinas, el pastel de choclo combina maíz molido con un delicioso pino de carne y un toque dulce inconfundible. 
+        Aprende a prepararlo paso a paso y lleva a tu mesa una tradición chilena que encanta a todos.
+      </p>
+
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/75el7a9_HaQ?si=ft7V1ZNwuwsurU9O" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section id="contacto" class="card-seccion reveal">
+      <h2>Contacto y reservas</h2>
+
+      <div class="contacto-grid">
+        <div class="contacto-info">
+          <p><strong>Dirección:</strong> Av. Providencia 1234, Santiago</p>
+          <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
+          <p><strong>Correo:</strong> contacto@saboresdechile.cl</p>
+          <p><strong>Horario:</strong> Lunes a domingo, 12:00 a 23:00 hrs.</p>
+        </div>
+
+        <form class="formulario" id="form-contacto">
+          <label for="contacto-nombre">Nombre completo</label>
+          <input type="text" id="contacto-nombre" placeholder="Nombre completo" required>
+
+          <label for="contacto-correo">Correo electrónico</label>
+          <input type="email" id="contacto-correo" placeholder="Correo electrónico" required>
+
+          <label for="contacto-fecha">Fecha de reserva</label>
+          <input type="text" id="contacto-fecha" placeholder="Fecha de reserva">
+
+          <label for="contacto-mensaje">Solicitud</label>
+          <textarea id="contacto-mensaje" rows="4" placeholder="Escribe tu solicitud"></textarea>
+
+          <button type="submit">Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <button id="btnArriba" title="Volver arriba" aria-label="Volver arriba">↑</button>
+
+  <footer class="footer">
+    <div class="contenedor">
+      <p><strong>Sabores de Chile</strong> | Santiago de Chile | © 2026 Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
