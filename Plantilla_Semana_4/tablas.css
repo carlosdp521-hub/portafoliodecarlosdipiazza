@@ -1,0 +1,25 @@
+.tabla-menu {
+    width: 85%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tabla-menu th {
+    background-color: #8b0000;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.tabla-menu td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.tabla-menu tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

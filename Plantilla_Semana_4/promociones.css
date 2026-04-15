@@ -1,0 +1,16 @@
+.lista-promociones {
+    list-style-type: square;
+    background-color: #fff3cd;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    border-left: 6px solid #d4a017;
+    border-radius: 10px;
+}
+
+.lista-promociones li {
+    color: #5a3e1b;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}

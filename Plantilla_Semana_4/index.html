@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sitio web del restaurante Sabores de Chile con menú, promociones, multimedia y formularios interactivos.">
+  <meta name="keywords" content="restaurante, comida chilena, menú, reservas, promociones, HTML5, CSS3, JavaScript">
+  <meta name="author" content="Carlos Matías Di Piazza">
+  <meta name="theme-color" content="#8b0000">
+  <title>Sabores de Chile | Gastronomía chilena</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="hero" id="inicio">
+    <nav class="navbar" aria-label="Principal">
+      <a href="#inicio" class="logo" aria-label="Ir al inicio de Sabores de Chile">
+        <span class="logo-mark">SC</span>
+        <span>Sabores de Chile</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="menu">
+        <li><a href="#informacion">Información</a></li>
+        <li><a href="#quienes-somos">Quiénes somos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#menu-restaurante">Menú</a></li>
+        <li><a href="#promociones">Promociones</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#formularios">Formularios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content wrapper">
+      <div class="hero-texto reveal">
+        <p class="eyebrow">Gastronomía chilena tradicional</p>
+        <h1>Una experiencia auténtica en cada plato</h1>
+        <p>
+          Disfruta preparaciones típicas, ambiente familiar y sabores que representan la identidad culinaria de Chile.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#reservas">Reservar mesa</a>
+          <a class="btn btn-secondary" href="#menu-restaurante">Ver menú</a>
+        </div>
+      </div>
+
+      <div class="hero-card reveal delay-1" aria-label="Resumen del restaurante">
+        <div class="stat-card">
+          <h2>Sabores de Chile SpA</h2>
+          <p><strong>Ubicación:</strong> Santiago de Chile</p>
+          <p><strong>Horario:</strong> Lunes a domingo, 12:00 a 23:00 hrs</p>
+          <p><strong>Especialidad:</strong> Cocina chilena tradicional</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="section wrapper reveal" id="informacion">
+      <div class="section-heading">
+        <p class="section-kicker">Información general</p>
+        <h2>Datos del restaurante</h2>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>Denominación legal</h3>
+          <p>Restaurante Sabores de Chile SpA</p>
+        </article>
+        <article class="info-card">
+          <h3>Dirección</h3>
+          <p>Av. Libertador Bernardo O'Higgins 2450, Santiago, Chile</p>
+        </article>
+        <article class="info-card">
+          <h3>Atención</h3>
+          <p>Servicio en salón, reservas familiares y atención para turistas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt wrapper reveal" id="quienes-somos">
+      <div class="section-heading">
+        <p class="section-kicker">Nuestra identidad</p>
+        <h2>Quiénes somos</h2>
+      </div>
+
+      <div class="two-columns">
+        <div>
+          <p>
+            Sabores de Chile es un restaurante orientado a rescatar la tradición culinaria chilena mediante platos típicos,
+            postres caseros, bebidas representativas y un ambiente acogedor para familias, turistas y amantes de la cocina nacional.
+          </p>
+          <p>
+            Nuestro compromiso es brindar una experiencia gastronómica auténtica, utilizando ingredientes frescos,
+            recetas tradicionales y una atención cercana que represente la cultura y hospitalidad chilena.
+          </p>
+        </div>
+
+        <aside class="highlight-box">
+          <h3>Nuestra propuesta</h3>
+          <ul>
+            <li>Recetas tradicionales chilenas</li>
+            <li>Ingredientes frescos y preparación casera</li>
+            <li>Espacio cómodo para reservas familiares</li>
+            <li>Atención cálida y personalizada</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section wrapper reveal" id="galeria">
+      <div class="section-heading">
+        <p class="section-kicker">Sabores visuales</p>
+        <h2>Galería de imágenes</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvMdrCaW52m92DTHO7EkTib2xpmfQ0nPNdTg&s" alt="Pastel de choclo servido en fuente de greda">
+          <figcaption>Pastel de choclo</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://cdn0.recetasgratis.net/es/posts/3/1/0/empanadas_de_pino_al_horno_77013_1200.jpg" alt="Empanadas chilenas recién horneadas">
+          <figcaption>Empanadas de pino</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="https://cloudfront-us-east-1.images.arcpublishing.com/copesa/F3K5PQNPDNB5JDDD6HJRK5ATN4.jpeg" alt="Cazuela chilena con verduras y carne">
+          <figcaption>Cazuela tradicional</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section-alt wrapper reveal" id="menu-restaurante">
+      <div class="section-heading">
+        <p class="section-kicker">Carta principal</p>
+        <h2>Menú del restaurante</h2>
+      </div>
+
+      <div class="menu-filters" role="tablist" aria-label="Filtrar menú">
+        <button class="filter-btn active" data-filter="all" type="button">Todo</button>
+        <button class="filter-btn" data-filter="platos" type="button">Platos</button>
+        <button class="filter-btn" data-filter="bebidas" type="button">Bebidas</button>
+        <button class="filter-btn" data-filter="postres" type="button">Postres</button>
+      </div>
+
+      <div class="menu-table" data-category="platos">
+        <h3>Platos</h3>
+        <div class="table-responsive">
+          <table class="tabla-menu">
+            <caption>Platos típicos disponibles</caption>
+            <thead>
+              <tr>
+                <th scope="col">Plato</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Plato">Pastel de choclo</td>
+                <td data-label="Descripción">Preparación tradicional con carne, pollo, huevo y cubierta de choclo.</td>
+                <td data-label="Precio">$8.500</td>
+              </tr>
+              <tr>
+                <td data-label="Plato">Cazuela de vacuno</td>
+                <td data-label="Descripción">Caldo casero con carne, papa, zapallo, arroz y verduras.</td>
+                <td data-label="Precio">$7.900</td>
+              </tr>
+              <tr>
+                <td data-label="Plato">Porotos con riendas</td>
+                <td data-label="Descripción">Guiso típico chileno con porotos, zapallo y tallarines.</td>
+                <td data-label="Precio">$6.800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="menu-table" data-category="bebidas">
+        <h3>Bebidas</h3>
+        <div class="table-responsive">
+          <table class="tabla-menu">
+            <caption>Bebidas del restaurante</caption>
+            <thead>
+              <tr>
+                <th scope="col">Bebida</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Bebida">Mote con huesillo</td>
+                <td data-label="Descripción">Bebida tradicional chilena con mote cocido y durazno deshidratado.</td>
+                <td data-label="Precio">$3.000</td>
+              </tr>
+              <tr>
+                <td data-label="Bebida">Jugo natural</td>
+                <td data-label="Descripción">Jugo de frutas de temporada.</td>
+                <td data-label="Precio">$2.500</td>
+              </tr>
+              <tr>
+                <td data-label="Bebida">Bebida gaseosa</td>
+                <td data-label="Descripción">Variedades de cola, naranja y limón.</td>
+                <td data-label="Precio">$1.800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="menu-table" data-category="postres">
+        <h3>Postres</h3>
+        <div class="table-responsive">
+          <table class="tabla-menu">
+            <caption>Postres caseros</caption>
+            <thead>
+              <tr>
+                <th scope="col">Postre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Precio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Postre">Leche asada</td>
+                <td data-label="Descripción">Postre casero preparado al horno con textura suave.</td>
+                <td data-label="Precio">$3.500</td>
+              </tr>
+              <tr>
+                <td data-label="Postre">Kuchen de manzana</td>
+                <td data-label="Descripción">Preparación inspirada en el sur de Chile, con relleno de manzana.</td>
+                <td data-label="Precio">$3.800</td>
+              </tr>
+              <tr>
+                <td data-label="Postre">Sopaipillas pasadas</td>
+                <td data-label="Descripción">Sopaipillas bañadas en chancaca especiada.</td>
+                <td data-label="Precio">$3.200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrapper reveal" id="especialidades">
+      <div class="section-heading">
+        <p class="section-kicker">Selección destacada</p>
+        <h2>Especialidades de la casa</h2>
+      </div>
+
+      <div class="cards-grid">
+        <article class="feature-card">
+          <h3>Curanto en olla</h3>
+          <p>Preparación inspirada en la tradición chilota con mariscos, carnes y papas.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Asado a la chilena</h3>
+          <p>Cortes seleccionados acompañados de ensaladas frescas y pebre casero.</p>
+        </article>
+        <article class="feature-card featured-week">
+          <span class="badge">Plato de la semana</span>
+          <h3>Pastel de choclo premium</h3>
+          <p>Incluye ensalada chilena y jugo natural como acompañamiento especial.</p>
+          <p class="price">Precio especial: $7.490</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt wrapper reveal" id="promociones">
+      <div class="section-heading">
+        <p class="section-kicker">Beneficios vigentes</p>
+        <h2>Promociones especiales</h2>
+      </div>
+
+      <div class="promo-grid">
+        <article class="promo-card">
+          <h3>Promo 1</h3>
+          <p>Empanada + bebida por <strong>$4.990</strong>.</p>
+        </article>
+        <article class="promo-card">
+          <h3>Promo 2</h3>
+          <p>Postre gratis en compras sobre <strong>$20.000</strong>.</p>
+        </article>
+        <article class="promo-card">
+          <h3>Promo 3</h3>
+          <p><strong>15% de descuento</strong> en reservas familiares los domingos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrapper reveal" id="multimedia">
+      <div class="section-heading">
+        <p class="section-kicker">Experiencia interactiva</p>
+        <h2>Audio y video relacionado</h2>
+      </div>
+
+      <div class="media-grid">
+        <article class="media-card">
+          <h3>Ambientación musical</h3>
+          <p>Reemplaza el archivo por tu audio local si deseas usar uno propio.</p>
+          <audio controls>
+            <source src="audio/folclore-chileno.wav" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+          </audio>
+        </article>
+
+        <article class="media-card">
+          <h3>Video gastronómico</h3>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/75el7a9_HaQ?si=OXw5dbiwA7CHf8rW"
+              title="Video de gastronomía chilena"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt wrapper reveal" id="formularios">
+      <div class="section-heading">
+        <p class="section-kicker">Interacción del usuario</p>
+        <h2>Formularios del sitio</h2>
+      </div>
+
+      <div class="forms-grid">
+        <article class="form-card" id="reservas">
+          <h3>Reserva en línea</h3>
+          <form class="formulario" id="formReserva" novalidate>
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre completo" required minlength="3">
+            </div>
+
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input id="correo" name="correo" type="email" placeholder="Ingrese su correo electrónico" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input id="fecha" name="fecha" type="date" required>
+              </div>
+              <div class="form-group">
+                <label for="hora">Hora</label>
+                <input id="hora" name="hora" type="time" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="personas">Cantidad de personas</label>
+              <select id="personas" name="personas" required>
+                <option value="">Seleccione cantidad de personas</option>
+                <option value="2">2 personas</option>
+                <option value="4">4 personas</option>
+                <option value="6">6 personas</option>
+                <option value="8">8 personas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Observaciones</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Observaciones adicionales"></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Enviar reserva</button>
+            <p class="form-message" id="mensajeReserva" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <article class="form-card" id="registro">
+          <h3>Registro de nuevo usuario</h3>
+          <form class="formulario" id="formRegistro" novalidate>
+            <div class="form-group">
+              <label for="usuario">Nombre de usuario</label>
+              <input id="usuario" name="usuario" type="text" placeholder="Nombre de usuario" required minlength="4">
+            </div>
+
+            <div class="form-group">
+              <label for="emailRegistro">Correo electrónico</label>
+              <input id="emailRegistro" name="emailRegistro" type="email" placeholder="Correo electrónico" required>
+            </div>
+
+            <div class="form-group password-group">
+              <label for="clave">Contraseña</label>
+              <div class="password-wrapper">
+                <input id="clave" name="clave" type="password" placeholder="Contraseña" required minlength="6">
+                <button type="button" class="toggle-password" id="togglePassword" aria-label="Mostrar u ocultar contraseña">Ver</button>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Registrarse</button>
+            <p class="form-message" id="mensajeRegistro" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="wrapper footer-content">
+      <div>
+        <h2>Sabores de Chile</h2>
+        <p>Tradición gastronómica chilena en el corazón de Santiago.</p>
+      </div>
+      <div>
+        <p><strong>Dirección:</strong> Av. Libertador Bernardo O'Higgins 2450</p>
+        <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
+        <p><strong>Email:</strong> contacto@saboresdechile.cl</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">↑</button>
+</body>
+</html>
