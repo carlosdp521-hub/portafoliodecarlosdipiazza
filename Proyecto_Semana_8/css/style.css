@@ -1,0 +1,531 @@
+/* =========================================================
+   SITIO WEB RESPONSIVO - RESTAURANTE SABORES DE CHILE
+   Tecnologías: HTML5, CSS3, Flexbox y Media Queries
+   ========================================================= */
+
+:root {
+  --rojo: #8b1e1e;
+  --rojo-claro: #b83232;
+  --crema: #fff8ef;
+  --amarillo: #f6c453;
+  --oscuro: #242424;
+  --gris: #666;
+  --blanco: #ffffff;
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --radio: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--crema);
+  color: var(--oscuro);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+/* ================= HEADER Y NAVEGACIÓN FLEXIBLE ================= */
+
+.encabezado {
+  background: var(--rojo);
+  color: var(--blanco);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--sombra);
+}
+
+.encabezado__contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  gap: 20px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.marca__logo {
+  font-size: 2.2rem;
+  background: rgba(255, 255, 255, 0.14);
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.marca h1 {
+  font-size: 1.6rem;
+}
+
+.marca p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.btn-menu {
+  display: none;
+  background: var(--amarillo);
+  color: var(--oscuro);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.navegacion {
+  background: var(--rojo-claro);
+}
+
+/* Contenedor flexible */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Permite adaptación */
+  gap: 10px;
+  list-style: none;
+  padding: 12px;
+}
+
+/* Elementos flexibles */
+.menu__item {
+  order: 0;
+}
+
+.menu__item a {
+  color: var(--blanco);
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 10px;
+  display: block;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menu__item a:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 72vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  color: var(--blanco);
+  display: flex;
+  align-items: center;
+}
+
+.hero__contenido {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+}
+
+.hero__botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* ================= COMPONENTES GENERALES ================= */
+
+.seccion {
+  padding: 70px 0;
+}
+
+.seccion--clara {
+  background: #fff1dc;
+}
+
+.etiqueta {
+  color: var(--amarillo);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  color: var(--rojo);
+  margin-bottom: 18px;
+}
+
+.descripcion-seccion {
+  max-width: 760px;
+  text-align: center;
+  margin: 0 auto 30px;
+  color: var(--gris);
+}
+
+.boton {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.boton:hover {
+  transform: translateY(-3px);
+}
+
+.boton--principal {
+  background: var(--amarillo);
+  color: var(--oscuro);
+}
+
+.boton--secundario {
+  background: var(--blanco);
+  color: var(--rojo);
+}
+
+/* ================= SECCIÓN NOSOTROS ================= */
+
+.layout-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.bloque-texto {
+  flex: 1 1 540px;
+}
+
+.bloque-texto h2 {
+  font-size: 2rem;
+  color: var(--rojo);
+  margin-bottom: 15px;
+}
+
+.bloque-texto p {
+  margin-bottom: 12px;
+}
+
+.tarjeta-info {
+  flex: 1 1 320px;
+  background: var(--blanco);
+  padding: 28px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.tarjeta-info h3 {
+  color: var(--rojo);
+  margin-bottom: 15px;
+}
+
+.tarjeta-info ul {
+  padding-left: 20px;
+}
+
+/* ================= MENÚ DE PLATOS CON FLEXBOX ================= */
+
+.contenedor-platos {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.plato {
+  flex: 1 1 240px;
+  max-width: 270px;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.plato:hover {
+  transform: translateY(-6px);
+}
+
+.plato img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.plato__contenido {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.plato h3 {
+  color: var(--rojo);
+  margin-bottom: 8px;
+}
+
+.precio {
+  margin-top: auto;
+  color: var(--rojo-claro);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* ================= GALERÍA FLEXIBLE ================= */
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.galeria__item {
+  flex: 1 1 280px;
+  max-width: 350px;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.galeria__item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.galeria__item figcaption {
+  padding: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+/* ================= PROMOCIONES ================= */
+
+.promociones {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.promo {
+  flex: 1 1 320px;
+  background: var(--blanco);
+  border-radius: var(--radio);
+  padding: 28px;
+  box-shadow: var(--sombra);
+  text-align: center;
+}
+
+.promo h2 {
+  color: var(--rojo);
+  margin-bottom: 10px;
+}
+
+.promo strong {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 1.5rem;
+  color: var(--rojo-claro);
+}
+
+.promo--destacada {
+  border: 3px solid var(--amarillo);
+}
+
+/* ================= FORMULARIO ================= */
+
+.formulario {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--blanco);
+  padding: 30px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.grupo-formulario label {
+  font-weight: bold;
+  color: var(--rojo);
+}
+
+.grupo-formulario input,
+.grupo-formulario textarea {
+  border: 1px solid #ddd;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+/* ================= FOOTER ================= */
+
+.pie {
+  background: var(--rojo);
+  color: var(--blanco);
+  padding: 25px 0;
+  text-align: center;
+}
+
+/* ================= MEDIA QUERIES ================= */
+
+/* Tabletas */
+@media (max-width: 768px) {
+  .btn-menu {
+    display: block;
+  }
+
+  .navegacion {
+    display: none;
+  }
+
+  .navegacion.activa {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .menu__item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .layout-flex {
+    flex-direction: column;
+  }
+
+  .contenedor-platos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plato {
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeria__item {
+    max-width: 420px;
+    width: 100%;
+  }
+
+  .promociones {
+    flex-direction: column;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .marca h1 {
+    font-size: 1.25rem;
+  }
+
+  .marca p {
+    display: none;
+  }
+
+  .marca__logo {
+    width: 46px;
+    height: 46px;
+    font-size: 1.7rem;
+  }
+
+  .hero {
+    min-height: 62vh;
+  }
+
+  .hero__botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .seccion {
+    padding: 45px 0;
+  }
+
+  .formulario {
+    padding: 22px;
+  }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurante Sabores de Chile | Gastronomía Chilena</title>
+  <meta name="description" content="Sitio web responsivo del Restaurante Sabores de Chile, especializado en platos típicos chilenos.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="encabezado" id="inicio">
+    <div class="contenedor encabezado__contenido">
+      <div class="marca">
+        <span class="marca__logo">🇨🇱</span>
+        <div>
+          <h1>Sabores de Chile</h1>
+          <p>Restaurante de gastronomía chilena tradicional</p>
+        </div>
+      </div>
+
+      <button class="btn-menu" id="btnMenu" aria-label="Abrir menú de navegación">
+        ☰
+      </button>
+    </div>
+
+    <nav class="navegacion" id="navegacion">
+      <ul class="menu">
+        <li class="menu__item"><a href="#inicio">Inicio</a></li>
+        <li class="menu__item"><a href="#nosotros">Nosotros</a></li>
+        <li class="menu__item"><a href="#menu">Menú</a></li>
+        <li class="menu__item"><a href="#plato-semana">Plato de la Semana</a></li>
+        <li class="menu__item"><a href="#promociones">Promociones</a></li>
+        <li class="menu__item"><a href="#reserva">Reserva</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="contenedor hero__contenido">
+        <p class="etiqueta">Cocina chilena · Santiago de Chile</p>
+        <h2>Tradición, sabor y experiencia en cada plato</h2>
+        <p>
+          Disfruta preparaciones típicas de Chile en un espacio familiar,
+          cálido y adaptado para que puedas revisar nuestro menú desde cualquier dispositivo.
+        </p>
+        <div class="hero__botones">
+          <a class="boton boton--principal" href="#menu">Ver menú</a>
+          <a class="boton boton--secundario" href="#reserva">Reservar mesa</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="nosotros">
+      <div class="contenedor layout-flex">
+        <article class="bloque-texto">
+          <p class="etiqueta">Quiénes somos</p>
+          <h2>Restaurante familiar especializado en platos típicos</h2>
+          <p>
+            Sabores de Chile nace con el propósito de promover la gastronomía nacional
+            mediante preparaciones tradicionales como pastel de choclo, empanadas de pino,
+            cazuela, charquicán y mote con huesillos.
+          </p>
+          <p>
+            El sitio web fue diseñado con HTML5, CSS3, Flexbox y media queries para asegurar
+            una correcta visualización en computadores, tabletas y smartphones.
+          </p>
+        </article>
+
+        <aside class="tarjeta-info">
+          <h3>Diseño adaptable aplicado</h3>
+          <ul>
+            <li>Menú flexible con Flexbox.</li>
+            <li>Tarjetas de platos responsivas.</li>
+            <li>Galería adaptable.</li>
+            <li>Media queries para móviles.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seccion seccion--clara" id="menu">
+      <div class="contenedor">
+        <p class="etiqueta centrado">Menú principal</p>
+        <h2 class="titulo-seccion">Platos típicos chilenos</h2>
+
+        <div class="contenedor-platos">
+          <article class="plato">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80" alt="Pastel de choclo servido en plato tradicional">
+            <div class="plato__contenido">
+              <h3>Pastel de Choclo</h3>
+              <p>Preparación chilena con pastelera de choclo, carne, pollo, huevo y aceitunas.</p>
+              <span class="precio">$8.990</span>
+            </div>
+          </article>
+
+          <article class="plato">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Empanadas tradicionales">
+            <div class="plato__contenido">
+              <h3>Empanadas de Pino</h3>
+              <p>Empanadas horneadas con carne, cebolla, huevo, pasas y aceituna.</p>
+              <span class="precio">$3.200</span>
+            </div>
+          </article>
+
+          <article class="plato">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Cazuela chilena caliente">
+            <div class="plato__contenido">
+              <h3>Cazuela Chilena</h3>
+              <p>Caldo tradicional con carne, zapallo, choclo, papa, arroz y verduras.</p>
+              <span class="precio">$7.990</span>
+            </div>
+          </article>
+
+          <article class="plato">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80" alt="Plato tradicional chileno">
+            <div class="plato__contenido">
+              <h3>Charquicán</h3>
+              <p>Guiso típico preparado con verduras, carne y aliños tradicionales.</p>
+              <span class="precio">$6.990</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="plato-semana">
+      <div class="contenedor">
+        <p class="etiqueta centrado">Especial recomendado</p>
+        <h2 class="titulo-seccion">Plato de la Semana: Pastel de Choclo</h2>
+        <p class="descripcion-seccion">
+          Esta sección incorpora una galería de imágenes flexible, optimizada para ajustarse
+          automáticamente a pantallas de escritorio, tabletas y smartphones.
+        </p>
+
+        <div class="galeria">
+          <figure class="galeria__item">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=80" alt="Mesa con comida tradicional">
+            <figcaption>Presentación familiar</figcaption>
+          </figure>
+
+          <figure class="galeria__item">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80" alt="Preparación gastronómica">
+            <figcaption>Ingredientes frescos</figcaption>
+          </figure>
+
+          <figure class="galeria__item">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Plato servido en restaurante">
+            <figcaption>Receta tradicional</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion--clara" id="promociones">
+      <div class="contenedor promociones">
+        <article class="promo">
+          <h2>Promoción familiar</h2>
+          <p>Menú chileno para 4 personas con entrada, plato principal y bebida.</p>
+          <strong>$29.990</strong>
+        </article>
+
+        <article class="promo promo--destacada">
+          <h2>Almuerzo ejecutivo</h2>
+          <p>Disponible de lunes a viernes entre 12:00 y 15:00 horas.</p>
+          <strong>$6.990</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" id="reserva">
+      <div class="contenedor">
+        <p class="etiqueta centrado">Reserva online</p>
+        <h2 class="titulo-seccion">Reserva tu mesa</h2>
+
+        <form class="formulario">
+          <div class="grupo-formulario">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Ejemplo: Carlos Di Piazza" required>
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" placeholder="correo@ejemplo.com" required>
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="personas">Cantidad de personas</label>
+            <input type="number" id="personas" min="1" max="12" placeholder="4" required>
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="4" placeholder="Indica fecha, hora o solicitud especial"></textarea>
+          </div>
+
+          <button class="boton boton--principal" type="submit">Enviar reserva</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__contenido">
+      <p>© 2026 Restaurante Sabores de Chile. Sitio web responsivo desarrollado con HTML5, CSS3, Flexbox y media queries.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
