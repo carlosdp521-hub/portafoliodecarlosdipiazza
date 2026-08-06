@@ -13,40 +13,63 @@
   <meta property="og:description" content="Portafolio profesional con experiencia en programación, redes, soporte técnico y automatización.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CL">
+  <meta property="og:url" content="https://tusitio.com/">
+  <meta property="og:image" content="img/perfil.jpeg">
+  <meta property="og:image:alt" content="Foto profesional de Carlos Di Piazza">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Carlos Di Piazza | Analista Programador">
+  <meta name="twitter:description" content="Portafolio profesional con experiencia en redes, soporte técnico y seguridad electrónica.">
+  <meta name="keywords" content="Portafolio, Carlos Di Piazza, Analista Programador, Redes, CCTV, Seguridad Electrónica, Soporte Técnico, Automatización, Telecomunicaciones">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/estilo-index.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
-  <header id="header">
+  <header id="header" role="banner">
     <h1>Carlos Di Piazza</h1>
 
-    <nav aria-label="Navegación principal">
+    <nav class="primary-nav" aria-label="Navegación principal">
+      <a href="#home">Inicio</a>
       <a href="#about">Sobre mí</a>
       <a href="#skills">Habilidades</a>
       <a href="#experience">Experiencia</a>
+      <a href="#services">Servicios</a>
       <a href="#projects">Proyectos</a>
       <a href="#contact">Contacto</a>
+      <a href="#github">GitHub</a>
     </nav>
+
+    <button id="theme-switcher" type="button" class="theme-switcher" aria-label="Cambiar tema de color">
+      <i class="fas fa-paint-brush" aria-hidden="true"></i>
+    </button>
   </header>
 
-  <main>
+  <main id="main-content" role="main">
     <section class="hero" id="home">
-      <img src="img/perfil.jpeg" alt="Fotografía profesional de Carlos Di Piazza">
+      <img src="img/perfil.jpeg" alt="Fotografía profesional de Carlos Di Piazza" loading="lazy" decoding="async">
 
       <div class="hero-text">
+        <p class="hero-pretitle">Especialista en redes, seguridad electrónica y soluciones TI</p>
         <h2>Hola, soy <span>Carlos Di Piazza</span></h2>
         <p id="typing"></p>
+
+        <ul class="hero-highlights" aria-label="Principales áreas de experiencia">
+          <li>Instalación y mantención de redes LAN/WAN</li>
+          <li>Sistemas CCTV, control de acceso y biometría</li>
+          <li>Soporte técnico y automatización de procesos</li>
+        </ul>
+
+        <div class="hero-badges">
+          <span>Proyectos reales</span>
+          <span>Clientes corporativos</span>
+          <span>Soporte 24/7</span>
+        </div>
 
         <div class="hero-buttons">
           <a class="btn btn-primary" href="docs/CarlosDiPiazza.pdf" download>
@@ -58,6 +81,11 @@
             <i class="fas fa-paper-plane" aria-hidden="true"></i>
             <span>Contacto</span>
           </a>
+
+          <a class="btn btn-secondary" href="#github">
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <span>Ver GitHub</span>
+          </a>
         </div>
       </div>
     </section>
@@ -67,10 +95,21 @@
       <p>
         Soy un profesional con formación en Análisis y Programación Computacional,
         complementada con experiencia en redes, telecomunicaciones, soporte técnico
-        y seguridad electrónica. Me enfoco en la instalación, configuración,
-        mantenimiento y mejora de soluciones tecnológicas, aportando compromiso,
-        capacidad de análisis, resolución de problemas y aprendizaje continuo.
+        y seguridad electrónica. Me enfoco en instalación, configuración,
+        mantenimiento y mejora de soluciones tecnológicas, con compromiso, análisis
+        y aprendizaje continuo.
       </p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Mi enfoque</h3>
+          <p>Entregar soluciones técnicas eficientes, documentadas y orientadas a la continuidad del servicio.</p>
+        </div>
+        <div class="about-card">
+          <h3>Lo que aporto</h3>
+          <p>Experiencia práctica en proyectos de infraestructura, seguridad electrónica y soporte operativo en terreno.</p>
+        </div>
+      </div>
     </section>
 
     <section class="section skills" id="skills">
@@ -161,40 +200,96 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
-      <h2>Proyectos Destacados</h2>
+    <section class="section why" id="why">
+      <h2>Por qué elegirme</h2>
 
-      <div class="projects">
-        <article class="project">
-          <h3>Sistema CCTV</h3>
-          <p>
-            Implementación y configuración de sistemas de videovigilancia para
-            espacios corporativos, reforzando monitoreo y seguridad operativa.
-          </p>
+      <div class="why-grid">
+        <article class="why-card">
+          <h3>Soluciones prácticas</h3>
+          <p>Trabajo con un enfoque técnico y organizado para que tus sistemas funcionen sin interrupciones.</p>
+        </article>
+        <article class="why-card">
+          <h3>Experiencia en terreno</h3>
+          <p>He participado en instalaciones de redes, CCTV y seguridad electrónica en distintos tipos de proyectos.</p>
+        </article>
+        <article class="why-card">
+          <h3>Comunicación clara</h3>
+          <p>Entrego documentación y reportes claros para que clientes y equipos sepan siempre el estado del trabajo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="github">
+      <h2>Repositorios de GitHub</h2>
+
+      <p>Explora proyectos reales y ejercicios prácticos desarrollados durante mi formación y experiencia profesional.</p>
+
+      <div class="github-grid">
+        <article class="repo-card">
+          <h3><a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza" target="_blank" rel="noopener noreferrer">Portafolio personal</a></h3>
+          <p>Diseño y desarrollo del portafolio actual con HTML, CSS y JavaScript.</p>
         </article>
 
-        <article class="project">
-          <h3>Configuración de Redes</h3>
-          <p>
-            Instalación y ajuste de equipos Ubiquiti y otros dispositivos de red
-            para asegurar conectividad estable y cobertura eficiente.
-          </p>
+        <article class="repo-card">
+          <h3><a href="https://github.com/carlosdp521-hub/TechStore-Proyecto-Web" target="_blank" rel="noopener noreferrer">TechStore Proyecto Web</a></h3>
+          <p>Desarrollo de sitio e-commerce con PHP para tienda tecnológica.</p>
         </article>
 
-        <article class="project">
-          <h3>Sistemas Biométricos</h3>
-          <p>
-            Soporte e implementación de soluciones de control de acceso y asistencia
-            mediante tecnologías biométricas.
-          </p>
+        <article class="repo-card">
+          <h3><a href="https://github.com/carlosdp521-hub/Evaluacion_Final_Programacion_Avanzada" target="_blank" rel="noopener noreferrer">Evaluación Final Programación Avanzada</a></h3>
+          <p>Proyecto avanzado en Python con lógica y soluciones integradas.</p>
         </article>
 
-        <article class="project">
-          <h3>Chatbot para Portafolio</h3>
-          <p>
-            Desarrollo de un asistente automatizado integrado al portafolio,
-            capaz de responder preguntas sobre experiencia, habilidades y contacto.
-          </p>
+        <article class="repo-card">
+          <h3><a href="https://github.com/carlosdp521-hub/LectMoCity---Sistema-Integral-de-Gesti-n-Bibliotecaria-en-Java" target="_blank" rel="noopener noreferrer">LectMoCity</a></h3>
+          <p>Sistema integral de gestión bibliotecaria desarrollado en Java.</p>
+        </article>
+
+        <article class="repo-card">
+          <h3><a href="https://github.com/carlosdp521-hub/juego-adivina-el-numero" target="_blank" rel="noopener noreferrer">Juego Adivina el Número</a></h3>
+          <p>Juego de lógica en Python con versión ejecutable para usuario final.</p>
+        </article>
+
+        <article class="repo-card">
+          <h3><a href="https://github.com/carlosdp521-hub/proyecto-restaurante-8" target="_blank" rel="noopener noreferrer">Proyecto Restaurante 8</a></h3>
+          <p>Proyecto web con diseño responsive y componentes de menú y pedidos.</p>
+        </article>
+      </div>
+
+      <div class="repo-footer">
+        <a class="btn btn-primary" href="https://github.com/carlosdp521-hub?tab=repositories" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>Ver todos los repositorios</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <h2>Servicios</h2>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
+          <h3>Instalación de redes</h3>
+          <p>Diseño, configuración y mantención de redes LAN/WAN con equipos Ubiquiti y soluciones de conectividad estable.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-shield" aria-hidden="true"></i></div>
+          <h3>Seguridad electrónica</h3>
+          <p>Implementación de CCTV, control de acceso, detección de incendios y soluciones biométricas para entornos comerciales.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
+          <h3>Soporte técnico TI</h3>
+          <p>Resolución de incidencias, mantenimiento integral de hardware y software, y atención a usuarios para garantizar continuidad operativa.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+          <h3>Desarrollo y automatización</h3>
+          <p>Desarrollo de herramientas web ligeras, asistentes virtuales y automatización de procesos para optimizar tareas técnicas.</p>
         </article>
       </div>
     </section>
@@ -218,6 +313,8 @@
           <span>Santiago, Chile</span>
         </div>
 
+        <p class="contact-description">¿Buscas un apoyo técnico confiable en redes o seguridad electrónica? Escríbeme y coordinamos tu proyecto.</p>
+
         <div class="contact-icons">
           <a href="mailto:carlosmdipiazzaf@gmail.com" aria-label="Enviar correo">
             <i class="fas fa-envelope"></i>
@@ -229,6 +326,17 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-content">
+      <p>Portafolio de Carlos Di Piazza — Analista Programador con foco en redes, seguridad y soporte TI.</p>
+      <p>© 2026 • Disponible para proyectos técnicos y desarrollo web.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
 
   <button id="chat-toggle" class="chat-toggle" aria-label="Abrir chatbot">
     <i class="fas fa-comment-dots" aria-hidden="true"></i>
@@ -247,6 +355,8 @@
       <button type="button" class="quick-btn" data-question="¿Cuál es su perfil profesional?">Perfil</button>
       <button type="button" class="quick-btn" data-question="¿Qué experiencia tiene?">Experiencia</button>
       <button type="button" class="quick-btn" data-question="¿Qué habilidades tiene?">Habilidades</button>
+      <button type="button" class="quick-btn" data-question="¿Qué servicios ofrece?">Servicios</button>
+      <button type="button" class="quick-btn" data-question="¿Qué estudios tiene?">Estudios</button>
       <button type="button" class="quick-btn" data-question="¿Cómo puedo contactarlo?">Contacto</button>
     </div>
 
@@ -264,13 +374,9 @@
     </form>
   </div>
 
-  <footer>
-    <p>© 2026 Carlos Di Piazza. Todos los derechos reservados.</p>
-  </footer>
-
   <script src="data/cv-data.js"></script>
   <script src="js/chatbot.js"></script>
-  <script src="js/min.js"></script>
   <script src="js/theme-cycle.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>

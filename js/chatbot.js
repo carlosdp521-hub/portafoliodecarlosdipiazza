@@ -188,13 +188,17 @@ if (
       return "Entre sus experiencias destacadas están la participación en proyectos de instalación y configuración de redes en edificios corporativos y municipales, implementación de sistemas de seguridad electrónica y soporte en proyectos tecnológicos con documentación técnica y capacitaciones internas.";
     }
 
-    if (includesAny(msg, ["servicios", "ofrece", "especialidades", "areas"])) {
+    if (includesAny(msg, ["servicios", "ofrece", "especialidades", "areas", "area"])) {
       return `Carlos puede aportar en las siguientes áreas: ${CV_DATA.services.join(", ")}.`;
     }
 
     if (
       includesAny(msg, [
         "contacto",
+        "contactar",
+        "contactarlo",
+        "contactame",
+        "contactarme",
         "correo",
         "email",
         "telefono",

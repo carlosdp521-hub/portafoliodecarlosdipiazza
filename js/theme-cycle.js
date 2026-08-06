@@ -8,26 +8,55 @@ const themes = [
 
 let currentTheme = 0;
 
-function applyTheme(theme){
+function applyTheme(theme) {
   document.body.classList.remove(...themes);
   document.body.classList.add(theme);
 }
 
-function changeTheme(){
-  currentTheme++;
+function saveTheme(theme) {
+  try {
+    localStorage.setItem("selectedTheme", theme);
+  } catch (error) {
+    console.warn("No se pudo guardar el tema:", error);
+  }
+}
 
-  if(currentTheme >= themes.length){
+function loadTheme() {
+  try {
+    const stored = localStorage.getItem("selectedTheme");
+    return themes.includes(stored) ? stored : themes[0];
+  } catch (error) {
+    return themes[0];
+  }
+}
+
+function changeTheme() {
+  currentTheme++;
+  if (currentTheme >= themes.length) {
+    currentTheme = 0;
+  }
+
+  const nextTheme = themes[currentTheme];
+  applyTheme(nextTheme);
+  saveTheme(nextTheme);
+}
+
+function initTheme() {
+  const initialTheme = loadTheme();
+  currentTheme = themes.indexOf(initialTheme);
+  if (currentTheme === -1) {
     currentTheme = 0;
   }
 
   applyTheme(themes[currentTheme]);
+  setInterval(changeTheme, 12000);
+
+  const themeSwitcher = document.getElementById("theme-switcher");
+  if (themeSwitcher) {
+    themeSwitcher.addEventListener("click", () => {
+      changeTheme();
+    });
+  }
 }
 
-function initTheme(){
-
-  applyTheme(themes[0]);
-
-  setInterval(changeTheme,12000);
-}
-
-document.addEventListener("DOMContentLoaded",initTheme);
+document.addEventListener("DOMContentLoaded", initTheme);

@@ -12,12 +12,13 @@ Portafolio profesional estático con chatbot automatizado basado en CV.
 - Secciones animadas
 - Habilidades con barras dinámicas
 - Chatbot sin servidor
+- Cambio de tema y navegación activa
 - Compatible con GitHub Pages
 
 ## Estructura
 - `index.html`: página principal
 - `css/estilo-index.css`: estilos
-- `js/min.js`: animaciones del sitio
+- `js/site.js`: animaciones y comportamiento del sitio
 - `js/chatbot.js`: lógica del chatbot
 - `data/cv-data.js`: base de conocimiento del asistente
 - `docs/CarlosDiPiazza.pdf`: CV descargable
