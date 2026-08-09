@@ -3,380 +3,455 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Carlos Di Piazza | Analista Programador</title>
-  <meta name="description" content="Portafolio profesional de Carlos Di Piazza, Analista Programador con experiencia en redes, soporte técnico, telecomunicaciones, seguridad electrónica y desarrollo web.">
+  <meta name="description" content="Portafolio profesional de Carlos Di Piazza, Analista Programador con experiencia en redes, telecomunicaciones, seguridad electrónica, soporte técnico y desarrollo de software.">
   <meta name="author" content="Carlos Di Piazza">
-  <meta name="theme-color" content="#0b1120">
+  <meta name="theme-color" content="#0d6efd">
+  <title>Carlos Di Piazza | Analista Programador</title>
 
-  <meta property="og:title" content="Carlos Di Piazza | Analista Programador">
-  <meta property="og:description" content="Portafolio profesional con experiencia en programación, redes, soporte técnico y automatización.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_CL">
-  <meta property="og:url" content="https://tusitio.com/">
-  <meta property="og:image" content="img/perfil.jpeg">
-  <meta property="og:image:alt" content="Foto profesional de Carlos Di Piazza">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Carlos Di Piazza | Analista Programador">
-  <meta name="twitter:description" content="Portafolio profesional con experiencia en redes, soporte técnico y seguridad electrónica.">
-  <meta name="keywords" content="Portafolio, Carlos Di Piazza, Analista Programador, Redes, CCTV, Seguridad Electrónica, Soporte Técnico, Automatización, Telecomunicaciones">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/estilo-index.css">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
-  <header id="header" role="banner">
-    <h1>Carlos Di Piazza</h1>
+<body class="bg-light text-body">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-    <nav class="primary-nav" aria-label="Navegación principal">
-      <a href="#home">Inicio</a>
-      <a href="#about">Sobre mí</a>
-      <a href="#skills">Habilidades</a>
-      <a href="#experience">Experiencia</a>
-      <a href="#services">Servicios</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#contact">Contacto</a>
-      <a href="#github">GitHub</a>
+  <header class="site-header shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3" aria-label="Navegación principal">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio" aria-label="Ir al inicio">Carlos Di Piazza</a>
+
+        <button class="navbar-toggler" type="button"
+          data-bs-toggle="collapse" data-bs-target="#main-nav"
+          aria-controls="main-nav" aria-expanded="false"
+          aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="main-nav">
+          <ul class="navbar-nav gap-lg-2">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cv">CV</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <button class="theme-toggle ms-lg-3" id="theme-toggle" type="button"
+          aria-label="Activar modo oscuro" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span class="theme-label">Modo oscuro</span>
+        </button>
+      </div>
     </nav>
-
-    <button id="theme-switcher" type="button" class="theme-switcher" aria-label="Cambiar tema de color">
-      <i class="fas fa-paint-brush" aria-hidden="true"></i>
-    </button>
   </header>
 
-  <main id="main-content" role="main">
-    <section class="hero" id="home">
-      <img src="img/perfil.jpeg" alt="Fotografía profesional de Carlos Di Piazza" loading="lazy" decoding="async">
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-7">
+            <p class="eyebrow text-primary">Analista Programador</p>
+            <h1 id="hero-title">Hola, soy <span>Carlos Di Piazza</span></h1>
+            <p class="lead">
+              Técnico en Instalación y Mantención de Redes con formación en Análisis y
+              Programación Computacional. Desarrollo soluciones de redes, ciberseguridad,
+              soporte y sistemas tecnológicos para entornos corporativos y municipales.
+            </p>
 
-      <div class="hero-text">
-        <p class="hero-pretitle">Especialista en redes, seguridad electrónica y soluciones TI</p>
-        <h2>Hola, soy <span>Carlos Di Piazza</span></h2>
-        <p id="typing"></p>
+            <div class="hero-actions d-flex flex-column flex-sm-row gap-3 mt-4">
+              <a href="#proyectos" class="btn btn-primary btn-lg">Ver proyectos</a>
+              <a href="#cv" class="btn btn-outline-primary btn-lg">Ver mi CV</a>
+              <a href="CarlosDiPiazza.pdf" class="btn btn-light btn-lg" download>Descargar CV</a>
+            </div>
 
-        <ul class="hero-highlights" aria-label="Principales áreas de experiencia">
-          <li>Instalación y mantención de redes LAN/WAN</li>
-          <li>Sistemas CCTV, control de acceso y biometría</li>
-          <li>Soporte técnico y automatización de procesos</li>
-        </ul>
+            <div class="contact-strip mt-4" aria-label="Información de contacto">
+              <span>📞 +56 9 7909 5565</span>
+              <span>✉️ carlosmdipiazzaf@gmail.com</span>
+              <span>📍 Santiago de Chile</span>
+            </div>
+          </div>
 
-        <div class="hero-badges">
-          <span>Proyectos reales</span>
-          <span>Clientes corporativos</span>
-          <span>Soporte 24/7</span>
-        </div>
-
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="docs/CarlosDiPiazza.pdf" download>
-            <i class="fas fa-download" aria-hidden="true"></i>
-            <span>Descargar CV</span>
-          </a>
-
-          <a class="btn btn-secondary" href="#contact">
-            <i class="fas fa-paper-plane" aria-hidden="true"></i>
-            <span>Contacto</span>
-          </a>
-
-          <a class="btn btn-secondary" href="#github">
-            <i class="fab fa-github" aria-hidden="true"></i>
-            <span>Ver GitHub</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <h2>Sobre mí</h2>
-      <p>
-        Soy un profesional con formación en Análisis y Programación Computacional,
-        complementada con experiencia en redes, telecomunicaciones, soporte técnico
-        y seguridad electrónica. Me enfoco en instalación, configuración,
-        mantenimiento y mejora de soluciones tecnológicas, con compromiso, análisis
-        y aprendizaje continuo.
-      </p>
-
-      <div class="about-grid">
-        <div class="about-card">
-          <h3>Mi enfoque</h3>
-          <p>Entregar soluciones técnicas eficientes, documentadas y orientadas a la continuidad del servicio.</p>
-        </div>
-        <div class="about-card">
-          <h3>Lo que aporto</h3>
-          <p>Experiencia práctica en proyectos de infraestructura, seguridad electrónica y soporte operativo en terreno.</p>
+          <div class="col-lg-5">
+            <div class="hero-card card border-0">
+              <div class="card-body p-4 p-xl-5">
+                <p class="hero-card-title mb-3">Perfil profesional</p>
+                <p class="mb-4">
+                  Experiencia práctica en redes, telecomunicaciones, CCTV, control de acceso,
+                  sistemas biométricos, soporte técnico y desarrollo de soluciones de software.
+                </p>
+                <div class="mini-stats" aria-label="Áreas principales">
+                  <div><strong>Redes</strong><span>Infraestructura</span></div>
+                  <div><strong>Seguridad</strong><span>CCTV y CCAA</span></div>
+                  <div><strong>Software</strong><span>Python y Java</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section skills" id="skills">
-      <h2>Habilidades Técnicas</h2>
+    <section class="section" id="sobre-mi" aria-labelledby="sobre-mi-title">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-7">
+            <p class="eyebrow text-primary">Perfil</p>
+            <h2 id="sobre-mi-title">Sobre mí</h2>
+            <p>
+              Técnico en Instalación y Mantención de Redes con estudios complementarios en
+              Análisis y Programación Computacional. Cuento con experiencia en instalación,
+              configuración y mantención de sistemas computacionales, redes, telecomunicaciones
+              y seguridad electrónica.
+            </p>
+            <p class="mb-0">
+              He desarrollado competencias en análisis, diseño y programación de sistemas,
+              gestión de bases de datos y resolución de problemas tecnológicos. Me adapto a
+              entornos dinámicos y valoro el trabajo colaborativo.
+            </p>
+          </div>
 
-      <div class="skill">
-        <div class="skill-label">
-          <span>Redes y Telecomunicaciones</span>
-          <span>90%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="90%"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-label">
-          <span>Hardware y Soporte Técnico</span>
-          <span>85%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="85%"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-label">
-          <span>Bases de Datos</span>
-          <span>80%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="80%"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-label">
-          <span>Programación</span>
-          <span>75%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="75%"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <div class="skill-label">
-          <span>Seguridad Electrónica</span>
-          <span>88%</span>
-        </div>
-        <div class="skill-bar">
-          <div class="skill-fill" data-width="88%"></div>
+          <div class="col-lg-5">
+            <div class="about-box p-4 p-xl-5 shadow-sm">
+              <p class="eyebrow mb-3">Fortalezas</p>
+              <ul class="mb-0">
+                <li>Redes y telecomunicaciones</li>
+                <li>Seguridad electrónica y CCTV</li>
+                <li>Sistemas biométricos y bases de datos</li>
+                <li>Soporte técnico y resolución de incidentes</li>
+                <li>Programación y desarrollo de proyectos</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="experience">
-      <h2>Experiencia Profesional</h2>
+    <section class="section section-alt" id="experiencia" aria-labelledby="experiencia-title">
+      <div class="container">
+        <p class="eyebrow text-primary">Trayectoria</p>
+        <h2 id="experiencia-title">Experiencia laboral</h2>
 
-      <div class="cards">
-        <article class="card">
-          <h3>ClickSolutions</h3>
-          <p class="card-subtitle">Ayudante Técnico | Agosto 2022 - Enero 2025</p>
-          <p>
-            Participación en instalación, configuración y mantención de sistemas
-            de control de acceso, CCTV y detección de incendios en proyectos
-            desarrollados en distintas comunas de Santiago.
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4">
+            <article class="card timeline-card h-100">
+              <div class="card-body">
+                <span class="date-badge">Agosto 2022 — Enero 2025</span>
+                <h3 class="h5 mt-3">Ayudante Técnico · ClickSolutions</h3>
+                <ul>
+                  <li>Configuración de CCAA, CCTV y detección de incendios.</li>
+                  <li>Instalación y mantención en edificios corporativos.</li>
+                  <li>Participación en proyectos de seguridad electrónica.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="card timeline-card h-100">
+              <div class="card-body">
+                <span class="date-badge">Abril 2018 — Junio 2018</span>
+                <h3 class="h5 mt-3">Ayudante Técnico · Inge Smart</h3>
+                <ul>
+                  <li>Configuración de antenas Ubiquiti, cámaras y equipos Huawei.</li>
+                  <li>Documentación y reportes de telecomunicaciones.</li>
+                  <li>Instalación, mantención y configuración de equipos.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="card timeline-card h-100">
+              <div class="card-body">
+                <span class="date-badge">Enero 2018 — Marzo 2018</span>
+                <h3 class="h5 mt-3">Práctica Profesional · Inge Smart</h3>
+                <ul>
+                  <li>Mantenimiento de base de datos de asistencia.</li>
+                  <li>Verificación de sistemas biométricos.</li>
+                  <li>Configuración de switches y solución de conectividad.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="educacion" aria-labelledby="educacion-title">
+      <div class="container">
+        <p class="eyebrow text-primary">Formación</p>
+        <h2 id="educacion-title">Educación</h2>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-4">
+            <article class="education-card h-100">
+              <span class="education-icon" aria-hidden="true">🎓</span>
+              <h3 class="h5">Técnico en Análisis y Programación Computacional</h3>
+              <p class="mb-1"><strong>Instituto Profesional IACC</strong></p>
+              <p class="text-muted mb-0">Actualmente en curso</p>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="education-card h-100">
+              <span class="education-icon" aria-hidden="true">🖧</span>
+              <h3 class="h5">Técnico en Instalación y Mantención de Redes</h3>
+              <p class="mb-1"><strong>AIEP</strong></p>
+              <p class="text-muted mb-0">2017 — 2021 · Título obtenido</p>
+            </article>
+          </div>
+
+          <div class="col-lg-4">
+            <article class="education-card h-100">
+              <span class="education-icon" aria-hidden="true">📚</span>
+              <h3 class="h5">Liceo Polivalente Libertador General José de San Martín</h3>
+              <p class="text-muted mb-0">
+                2010 — 2013 · Formación media y reconocimiento por logros académicos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="proyectos" aria-labelledby="proyectos-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow text-primary">Portafolio</p>
+          <h2 id="proyectos-title">Proyectos y experiencia aplicada</h2>
+          <p class="section-intro">
+            Una selección de trabajos de infraestructura, seguridad electrónica,
+            soporte y desarrollo de software.
           </p>
-        </article>
-
-        <article class="card">
-          <h3>Inge Smart</h3>
-          <p class="card-subtitle">Ayudante Técnico | Abril 2018 - Junio 2018</p>
-          <p>
-            Configuración de antenas Ubiquiti, cámaras y equipos Huawei, además
-            de instalación y mantenimiento de soluciones tecnológicas en terreno.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Inge Smart</h3>
-          <p class="card-subtitle">Práctica Profesional | Enero 2018 - Marzo 2018</p>
-          <p>
-            Soporte en base de datos, verificación biométrica, configuración
-            de switches y detección de fallos de conexión con servidores.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section why" id="why">
-      <h2>Por qué elegirme</h2>
-
-      <div class="why-grid">
-        <article class="why-card">
-          <h3>Soluciones prácticas</h3>
-          <p>Trabajo con un enfoque técnico y organizado para que tus sistemas funcionen sin interrupciones.</p>
-        </article>
-        <article class="why-card">
-          <h3>Experiencia en terreno</h3>
-          <p>He participado en instalaciones de redes, CCTV y seguridad electrónica en distintos tipos de proyectos.</p>
-        </article>
-        <article class="why-card">
-          <h3>Comunicación clara</h3>
-          <p>Entrego documentación y reportes claros para que clientes y equipos sepan siempre el estado del trabajo.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="github">
-      <h2>Repositorios de GitHub</h2>
-
-      <p>Explora proyectos reales y ejercicios prácticos desarrollados durante mi formación y experiencia profesional.</p>
-
-      <div class="github-grid">
-        <article class="repo-card">
-          <h3><a href="https://github.com/carlosdp521-hub/portafoliodecarlosdipiazza" target="_blank" rel="noopener noreferrer">Portafolio personal</a></h3>
-          <p>Diseño y desarrollo del portafolio actual con HTML, CSS y JavaScript.</p>
-        </article>
-
-        <article class="repo-card">
-          <h3><a href="https://github.com/carlosdp521-hub/TechStore-Proyecto-Web" target="_blank" rel="noopener noreferrer">TechStore Proyecto Web</a></h3>
-          <p>Desarrollo de sitio e-commerce con PHP para tienda tecnológica.</p>
-        </article>
-
-        <article class="repo-card">
-          <h3><a href="https://github.com/carlosdp521-hub/Evaluacion_Final_Programacion_Avanzada" target="_blank" rel="noopener noreferrer">Evaluación Final Programación Avanzada</a></h3>
-          <p>Proyecto avanzado en Python con lógica y soluciones integradas.</p>
-        </article>
-
-        <article class="repo-card">
-          <h3><a href="https://github.com/carlosdp521-hub/LectMoCity---Sistema-Integral-de-Gesti-n-Bibliotecaria-en-Java" target="_blank" rel="noopener noreferrer">LectMoCity</a></h3>
-          <p>Sistema integral de gestión bibliotecaria desarrollado en Java.</p>
-        </article>
-
-        <article class="repo-card">
-          <h3><a href="https://github.com/carlosdp521-hub/juego-adivina-el-numero" target="_blank" rel="noopener noreferrer">Juego Adivina el Número</a></h3>
-          <p>Juego de lógica en Python con versión ejecutable para usuario final.</p>
-        </article>
-
-        <article class="repo-card">
-          <h3><a href="https://github.com/carlosdp521-hub/proyecto-restaurante-8" target="_blank" rel="noopener noreferrer">Proyecto Restaurante 8</a></h3>
-          <p>Proyecto web con diseño responsive y componentes de menú y pedidos.</p>
-        </article>
-      </div>
-
-      <div class="repo-footer">
-        <a class="btn btn-primary" href="https://github.com/carlosdp521-hub?tab=repositories" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github" aria-hidden="true"></i>
-          <span>Ver todos los repositorios</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section services" id="services">
-      <h2>Servicios</h2>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="service-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
-          <h3>Instalación de redes</h3>
-          <p>Diseño, configuración y mantención de redes LAN/WAN con equipos Ubiquiti y soluciones de conectividad estable.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon"><i class="fas fa-shield" aria-hidden="true"></i></div>
-          <h3>Seguridad electrónica</h3>
-          <p>Implementación de CCTV, control de acceso, detección de incendios y soluciones biométricas para entornos comerciales.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon"><i class="fas fa-headset" aria-hidden="true"></i></div>
-          <h3>Soporte técnico TI</h3>
-          <p>Resolución de incidencias, mantenimiento integral de hardware y software, y atención a usuarios para garantizar continuidad operativa.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
-          <h3>Desarrollo y automatización</h3>
-          <p>Desarrollo de herramientas web ligeras, asistentes virtuales y automatización de procesos para optimizar tareas técnicas.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact-ai-container section" id="contact">
-      <div class="contact-section">
-        <h2>Contacto</h2>
-
-        <div class="contact-item">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
-          <a href="mailto:carlosmdipiazzaf@gmail.com">carlosmdipiazzaf@gmail.com</a>
         </div>
 
-        <div class="contact-item">
-          <i class="fas fa-phone" aria-hidden="true"></i>
-          <a href="tel:+56979095565">+56 9 7909 5565</a>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card h-100">
+              <span class="project-number">01</span>
+              <h3>Seguridad para edificios corporativos</h3>
+              <p>Instalación, configuración y mantención de CCTV, control de acceso y detección de incendios.</p>
+              <div class="project-tags"><span>CCTV</span><span>CCAA</span><span>Soporte</span></div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card h-100">
+              <span class="project-number">02</span>
+              <h3>Telecomunicaciones municipales</h3>
+              <p>Configuración de antenas Ubiquiti, cámaras y equipos Huawei, junto con documentación técnica.</p>
+              <div class="project-tags"><span>Ubiquiti</span><span>Huawei</span><span>Redes</span></div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card h-100">
+              <span class="project-number">03</span>
+              <h3>Soporte de sistemas biométricos</h3>
+              <p>Mantención de bases de datos de asistencia, verificación de dispositivos y resolución de conectividad.</p>
+              <div class="project-tags"><span>Biometría</span><span>Bases de datos</span><span>Switches</span></div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card h-100">
+              <span class="project-number">04</span>
+              <h3>LectMoCity</h3>
+              <p>Sistema integral de gestión bibliotecaria desarrollado en Java como parte de la formación en programación.</p>
+              <div class="project-tags"><span>Java</span><span>Gestión</span></div>
+              <a class="project-link" href="https://github.com/carlosdp521-hub/LectMoCity---Sistema-Integral-de-Gesti-n-Bibliotecaria-en-Java" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card h-100">
+              <span class="project-number">05</span>
+              <h3>Sistema de Gestión de Vehículos · v3.0</h3>
+              <p>Proyecto desarrollado en Python para aplicar programación avanzada y resolver necesidades de gestión de vehículos.</p>
+              <div class="project-tags"><span>Python</span><span>Gestión</span></div>
+              <a class="project-link" href="https://github.com/carlosdp521-hub/Evaluacion_Final_Programacion_Avanzada" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card h-100">
+              <span class="project-number">06</span>
+              <h3>Juego Adivina el Número</h3>
+              <p>Juego de lógica desarrollado en Python, disponible también como ejecutable.</p>
+              <div class="project-tags"><span>Python</span><span>Lógica</span></div>
+              <a class="project-link" href="https://github.com/carlosdp521-hub/juego-adivina-el-numero" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="habilidades" aria-labelledby="habilidades-title">
+      <div class="container">
+        <p class="eyebrow text-primary">Competencias</p>
+        <h2 id="habilidades-title">Habilidades</h2>
+
+        <div class="row g-4 mt-2">
+          <div class="col-md-6">
+            <div class="skill-box h-100">
+              <h3 class="h5">Habilidades técnicas</h3>
+              <div class="skill-list">
+                <span>Redes y telecomunicaciones</span>
+                <span>CCTV y seguridad electrónica</span>
+                <span>Sistemas operativos y hardware</span>
+                <span>Python</span>
+                <span>Java</span>
+                <span>Bases de datos</span>
+                <span>Soporte técnico</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="skill-box h-100">
+              <h3 class="h5">Habilidades profesionales</h3>
+              <div class="skill-list">
+                <span>Trabajo en equipo</span>
+                <span>Responsabilidad</span>
+                <span>Proactividad</span>
+                <span>Resolución de problemas</span>
+                <span>Adaptación</span>
+                <span>Comunicación con usuarios</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-          <span>Santiago, Chile</span>
+        <div class="highlight-box mt-4">
+          <h3 class="h5">Logros y valores profesionales</h3>
+          <ul class="mb-0">
+            <li>Participación en proyectos de redes y seguridad electrónica.</li>
+            <li>Implementación y soporte de CCTV, detección de incendios y biometría.</li>
+            <li>Apoyo en capacitaciones internas a usuarios.</li>
+            <li>Actualización constante en tecnología, redes y programación.</li>
+            <li>Voluntariado en alfabetización digital y soporte tecnológico.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="cv" aria-labelledby="cv-title">
+      <div class="container">
+        <p class="eyebrow text-primary">Documentación</p>
+        <h2 id="cv-title">Currículum</h2>
+        <p class="section-intro">Revisa mi CV en PDF o ábrelo en una nueva pestaña.</p>
+
+        <div class="cv-viewer shadow-sm rounded-4 overflow-hidden">
+          <iframe src="CarlosDiPiazza.pdf#view=FitH" title="Currículum de Carlos Di Piazza"></iframe>
         </div>
 
-        <p class="contact-description">¿Buscas un apoyo técnico confiable en redes o seguridad electrónica? Escríbeme y coordinamos tu proyecto.</p>
+        <div class="mt-3 d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="CarlosDiPiazza.pdf" download>Descargar CV</a>
+          <a class="btn btn-outline-secondary" href="CarlosDiPiazza.pdf" target="_blank" rel="noopener noreferrer">Abrir PDF</a>
+        </div>
+      </div>
+    </section>
 
-        <div class="contact-icons">
-          <a href="mailto:carlosmdipiazzaf@gmail.com" aria-label="Enviar correo">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="tel:+56979095565" aria-label="Llamar por teléfono">
-            <i class="fas fa-phone"></i>
-          </a>
+    <section class="section" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <p class="eyebrow text-primary">Contacto</p>
+            <h2 id="contacto-title">Hablemos de tu proyecto</h2>
+            <p>
+              Si necesitas apoyo en desarrollo, redes, soporte técnico o soluciones
+              tecnológicas, puedes escribirme directamente.
+            </p>
+
+            <div class="contact-links mt-4">
+              <a href="mailto:carlosmdipiazzaf@gmail.com">✉️ carlosmdipiazzaf@gmail.com</a>
+              <a href="tel:+56979095565">📞 +56 9 7909 5565</a>
+              <a href="https://github.com/carlosdp521-hub" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form id="contact-form" class="contact-form p-4 p-lg-5 rounded-4 bg-white"
+              action="https://formsubmit.co/ajax/carlosmdipiazzaf@gmail.com" method="POST">
+              <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+              <div class="mb-3">
+                <label class="form-label" for="contact-name">Nombre</label>
+                <input id="contact-name" type="text" name="name" class="form-control"
+                  placeholder="Tu nombre" autocomplete="name" maxlength="80" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="contact-email">Email</label>
+                <input id="contact-email" type="email" name="email" class="form-control"
+                  placeholder="tu@email.com" autocomplete="email" maxlength="120" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="contact-message">Mensaje</label>
+                <textarea id="contact-message" name="message" rows="5" class="form-control"
+                  placeholder="Cuéntame sobre tu proyecto" maxlength="1500" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <span class="button-label">Enviar mensaje</span>
+              </button>
+              <p id="form-status" class="form-status mt-3 mb-0" role="status" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-content">
-      <p>Portafolio de Carlos Di Piazza — Analista Programador con foco en redes, seguridad y soporte TI.</p>
-      <p>© 2026 • Disponible para proyectos técnicos y desarrollo web.</p>
+  <footer class="site-footer py-4 text-light">
+    <div class="container footer-inner d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <p class="mb-0">© <span id="year"></span> Carlos Di Piazza · Portafolio personal.</p>
+      <p class="mb-0">HTML · CSS · JavaScript · Bootstrap</p>
     </div>
   </footer>
 
-  <button id="back-to-top" class="back-to-top" type="button" aria-label="Volver arriba">
-    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  <button class="assistant-toggle" id="assistant-toggle" type="button"
+    aria-label="Abrir asistente virtual" aria-expanded="false" aria-controls="virtual-assistant">
+    <span aria-hidden="true">💬</span>
+    <span>Asistente virtual</span>
   </button>
 
-  <button id="chat-toggle" class="chat-toggle" aria-label="Abrir chatbot">
-    <i class="fas fa-comment-dots" aria-hidden="true"></i>
-  </button>
-
-  <div id="chatbot-box" class="chatbot-box" aria-live="polite">
-    <div class="chatbot-header">
+  <aside class="virtual-assistant" id="virtual-assistant"
+    aria-label="Asistente virtual" aria-hidden="true">
+    <div class="assistant-header">
       <div>
-        <strong>Asistente Virtual</strong>
-        <small>Portafolio de Carlos</small>
+        <p class="assistant-kicker">Portafolio de Carlos</p>
+        <h2>Asistente virtual</h2>
       </div>
-      <button id="chat-close" class="chat-close" aria-label="Cerrar chatbot">✕</button>
+      <button class="assistant-close" id="assistant-close" type="button" aria-label="Cerrar asistente">×</button>
     </div>
 
-    <div class="chat-quick-actions">
-      <button type="button" class="quick-btn" data-question="¿Cuál es su perfil profesional?">Perfil</button>
-      <button type="button" class="quick-btn" data-question="¿Qué experiencia tiene?">Experiencia</button>
-      <button type="button" class="quick-btn" data-question="¿Qué habilidades tiene?">Habilidades</button>
-      <button type="button" class="quick-btn" data-question="¿Qué servicios ofrece?">Servicios</button>
-      <button type="button" class="quick-btn" data-question="¿Qué estudios tiene?">Estudios</button>
-      <button type="button" class="quick-btn" data-question="¿Cómo puedo contactarlo?">Contacto</button>
+    <div class="assistant-messages" id="assistant-messages" role="log"
+      aria-live="polite" aria-label="Conversación con el asistente"></div>
+
+    <div class="assistant-suggestions" aria-label="Preguntas sugeridas">
+      <button type="button" data-question="Cuéntame sobre tu perfil">Perfil</button>
+      <button type="button" data-question="¿Qué experiencia tienes?">Experiencia</button>
+      <button type="button" data-question="¿Cuáles son tus habilidades?">Habilidades</button>
+      <button type="button" data-question="¿Qué proyectos tienes?">Proyectos</button>
+      <button type="button" data-question="¿Cómo puedo contactarte?">Contacto</button>
     </div>
 
-    <div id="chat-messages" class="chat-messages"></div>
-
-    <form id="chat-form" class="chat-form">
-      <input
-        type="text"
-        id="chat-input"
-        placeholder="Escribe tu pregunta..."
-        autocomplete="off"
-        maxlength="250"
-      >
+    <form class="assistant-form" id="assistant-form">
+      <label class="visually-hidden" for="assistant-input">Escribe tu pregunta</label>
+      <input id="assistant-input" type="text" maxlength="250" autocomplete="off"
+        placeholder="Escribe tu pregunta..." required>
       <button type="submit">Enviar</button>
     </form>
-  </div>
+  </aside>
 
-  <script src="data/cv-data.js"></script>
-  <script src="js/chatbot.js"></script>
-  <script src="js/theme-cycle.js"></script>
-  <script src="js/site.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
