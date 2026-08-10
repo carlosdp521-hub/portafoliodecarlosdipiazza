@@ -280,6 +280,11 @@ a { transition: color .2s ease, background-color .2s ease, border-color .2s ease
   display: grid;
   gap: .55rem;
 }
+.certificate-grid {
+  display: grid;
+  gap: .7rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .certificate-item {
   align-items: center;
   background: var(--soft);
@@ -599,6 +604,7 @@ html[data-theme="dark"] .assistant-form input::placeholder { color: #93a2b5; }
 @media (max-width: 767.98px) {
   .section { padding-block: 4rem; }
   .mini-stats { grid-template-columns: 1fr; }
+  .certificate-grid { grid-template-columns: 1fr; }
   .cv-viewer, .cv-viewer iframe { min-height: 560px; height: 560px; }
 }
 
