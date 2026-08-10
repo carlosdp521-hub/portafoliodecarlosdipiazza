@@ -276,6 +276,32 @@ a { transition: color .2s ease, background-color .2s ease, border-color .2s ease
   margin-bottom: 1rem;
 }
 
+.certificate-links {
+  display: grid;
+  gap: .55rem;
+}
+.certificate-item {
+  align-items: center;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: .7rem;
+  display: flex;
+  font-size: .88rem;
+  font-weight: 750;
+  justify-content: space-between;
+  padding: .6rem .75rem;
+}
+.certificate-item > div { display: flex; gap: .4rem; }
+.certificate-item a {
+  color: var(--brand);
+  text-decoration: none;
+}
+.certificate-item a:hover { color: var(--brand-dark); text-decoration: underline; }
+.certificate-item:hover {
+  background: #eaf3ff;
+  border-color: #9ec5fe;
+}
+
 .project-card { padding: 1.8rem; }
 .project-number {
   color: var(--brand);
@@ -545,6 +571,13 @@ html[data-theme="dark"] .text-muted {
 }
 html[data-theme="dark"] .project-tags span {
   background: #1b365c;
+  color: #b8d5ff;
+}
+html[data-theme="dark"] .certificate-item {
+  background: #1b365c;
+  border-color: #3a4b65;
+}
+html[data-theme="dark"] .certificate-item a {
   color: #b8d5ff;
 }
 html[data-theme="dark"] .form-control,

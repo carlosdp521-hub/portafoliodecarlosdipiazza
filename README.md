@@ -23,8 +23,7 @@ Sitio web estático que presenta el perfil profesional, experiencia, formación,
 - `index.html`: página principal.
 - `css/style.css`: estilos y diseño adaptable.
 - `js/script.js`: tema, navegación, formulario y asistente virtual.
-- `CarlosDiPiazza.pdf`: currículum descargable.
-- `DIPLOMADO EN FUNDAMENTOS DE PROGRAMACIÓN Y BASE DE DATOS_.pdf`: certificado de diplomado.
+- `data/`: documentos PDF del portafolio, incluidos el currículum, diploma y certificados.
 
 ## Publicación en GitHub Pages
 
