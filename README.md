@@ -1,28 +1,36 @@
-Portafolio de Carlos Di Piazza
-Portafolio profesional estático con chatbot automatizado basado en CV.
+# Portafolio de Carlos Di Piazza
 
-Tecnologías
-HTML5
-CSS3
-JavaScript
-Características
-Diseño responsive
-Secciones animadas
-Habilidades con barras dinámicas
-Chatbot sin servidor
-Cambio de tema y navegación activa
-Compatible con GitHub Pages
-Estructura
-index.html: página principal
-css/estilo-index.css: estilos
-js/site.js: animaciones y comportamiento del sitio
-js/chatbot.js: lógica del chatbot
-data/cv-data.js: base de conocimiento del asistente
-docs/CarlosDiPiazza.pdf: CV descargable
-Publicación en GitHub Pages
-Subir el proyecto a un repositorio
-Ir a Settings > Pages
-Seleccionar la rama principal
-Publicar desde la carpeta raíz
-Nota
-Este chatbot funciona sin backend y responde usando la información del CV.
+Sitio web estático que presenta el perfil profesional, experiencia, formación, proyectos, habilidades y currículum de Carlos Di Piazza.
+
+## Tecnologías
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5 (cargado desde CDN)
+
+## Características
+
+- Diseño adaptable a dispositivos móviles.
+- Navegación por secciones con enlace activo.
+- Modo claro y oscuro, con la preferencia guardada en el navegador.
+- Formulario de contacto mediante FormSubmit.
+- Asistente virtual informativo, sin backend.
+- CV visible y descargable en PDF.
+
+## Estructura
+
+- `index.html`: página principal.
+- `css/style.css`: estilos y diseño adaptable.
+- `js/script.js`: tema, navegación, formulario y asistente virtual.
+- `CarlosDiPiazza.pdf`: currículum descargable.
+- `DIPLOMADO EN FUNDAMENTOS DE PROGRAMACIÓN Y BASE DE DATOS_.pdf`: certificado de diplomado.
+
+## Publicación en GitHub Pages
+
+1. Sube estos archivos a la rama que publicarás.
+2. En el repositorio, abre **Settings > Pages**.
+3. Selecciona **Deploy from a branch**, la rama y la carpeta raíz (`/`).
+4. Guarda los cambios y espera la publicación.
+
+El sitio no necesita compilación ni dependencias locales.
