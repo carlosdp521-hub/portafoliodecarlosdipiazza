@@ -24,6 +24,8 @@ Sitio web estático que presenta el perfil profesional, experiencia, formación,
 - `css/style.css`: estilos y diseño adaptable.
 - `js/script.js`: tema, navegación, formulario y asistente virtual.
 - `data/`: documentos PDF del portafolio, incluidos el currículum, diploma y certificados.
+- `proyectos-webs/Lex_Asociados/`: sitio web responsivo de muestra para un estudio jurídico, independiente del portafolio principal.
+- `proyectos-webs/GourmetShop/`: tienda gourmet demostrativa con catálogo filtrable y carrito de compras simulado.
 
 ## Publicación en GitHub Pages
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GourmetShop: tienda online de productos gourmet seleccionados.">
+  <title>GourmetShop | Sabores que inspiran</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="Inicio de GourmetShop"><span>G</span>GourmetShop</a>
+      <nav aria-label="Navegación principal">
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nuestra selección</a>
+      </nav>
+      <button class="cart-button" id="cartButton" type="button" aria-expanded="false" aria-controls="cartPanel">
+        Carrito <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">SABORES SELECCIONADOS</p>
+        <h1>Lo extraordinario<br>empieza en la mesa.</h1>
+        <p>Productos de origen, pequeños productores y sabores que convierten cada comida en una ocasión especial.</p>
+        <a class="button" href="#productos">Explorar productos</a>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Beneficios de GourmetShop">
+      <div class="container benefits-grid">
+        <p><strong>Origen cuidado</strong><span>Productores que conocemos.</span></p>
+        <p><strong>Despacho rápido</strong><span>Envíos a todo Chile.</span></p>
+        <p><strong>Compra segura</strong><span>Pago protegido en línea.</span></p>
+      </div>
+    </section>
+
+    <section class="products-section container" id="productos" aria-labelledby="products-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">DESPENSA GOURMET</p><h2 id="products-title">Elegidos para disfrutar</h2></div>
+        <div class="filters" role="group" aria-label="Filtrar productos">
+          <button class="filter active" type="button" data-category="todos">Todos</button>
+          <button class="filter" type="button" data-category="aceites">Aceites</button>
+          <button class="filter" type="button" data-category="dulces">Dulces</button>
+          <button class="filter" type="button" data-category="sales">Sales y especias</button>
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <section class="story" id="nosotros">
+      <div class="container story-grid">
+        <div class="story-art" aria-hidden="true"><span>✦</span><span>✦</span><span>✦</span></div>
+        <div><p class="eyebrow">NUESTRA SELECCIÓN</p><h2>Una despensa con historia.</h2><p>Buscamos ingredientes honestos y singulares para que descubras nuevos rituales en tu cocina. Cada producto tiene un origen, una técnica y alguien detrás que merece ser conocido.</p><a href="#productos" class="text-link">Conocer la colección <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-heading"><h2>Tu selección</h2><button class="close-button" id="closeCart" type="button" aria-label="Cerrar carrito">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Tu carrito está vacío.</p></div>
+    <div class="cart-summary"><p>Total <strong id="cartTotal">$0</strong></p><button id="checkoutButton" class="button" type="button">Finalizar compra</button><p id="cartMessage" class="cart-message" role="status"></p></div>
+  </aside>
+  <div class="overlay" id="overlay" hidden></div>
+
+  <footer><div class="container"><a class="brand" href="#inicio"><span>G</span>GourmetShop</a><p>Sabores seleccionados para compartir.</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
